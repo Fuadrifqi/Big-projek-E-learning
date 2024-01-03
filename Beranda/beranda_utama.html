@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-learning</title>
     <link rel="stylesheet" href="beranda.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,7 +30,19 @@
                     <a>Paket Soal</a>
                 </li>
             </ul>
-            <span class="login">Masuk</span>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img" >
+                    </div>
+                </div>
+
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'halaman-tujuan.html';
+                    }
+                </script>
+            </div>
         </div>
         <div class="content-container">
             <div class="content">
@@ -52,9 +65,7 @@
                 </div>
 
                 <script>
-                    // Fungsi untuk berpindah halaman
                     function pindahHalaman1() {
-                        // Ganti 'halaman-tujuan.html' dengan nama file halaman tujuan Anda
                         window.location.href = 'halaman-tujuan.html';
                     }
                 </script>
@@ -68,9 +79,7 @@
                 </div>
 
                 <script>
-                    // Fungsi untuk berpindah halaman
                     function pindahHalaman2() {
-                        // Ganti 'halaman-tujuan.html' dengan nama file halaman tujuan Anda
                         window.location.href = "soal_skd.html";
                     }
                 </script>
@@ -84,9 +93,7 @@
                 </div>
 
                 <script>
-                    // Fungsi untuk berpindah halaman
                     function pindahHalaman3() {
-                        // Ganti 'halaman-tujuan.html' dengan nama file halaman tujuan Anda
                         window.location.href = 'halaman-tujuan.html';
                     }
                 </script>
@@ -100,16 +107,15 @@
                 </div>
 
                 <script>
-                    // Fungsi untuk berpindah halaman
                     function pindahHalaman4() {
-                        // Ganti 'halaman-tujuan.html' dengan nama file halaman tujuan Anda
-                        window.location.href = 'kosong.html';
+                        window.location.href = 'https://deepai.org/chat';
                     }
                 </script>
             </div>
         </div>
         <div class="testimoni">
             <h4>Testimonial</h4>
+            <p>Berikut ulasan dari beberapa teman-teman kita yang telah mengakses dan belajar di Smartlearning</p>
             <div class="all-coment">
                 <div class="img-profil">
                     <img src="foto1.jpg" class="profil">
@@ -139,20 +145,21 @@
                     <h4>Ikuti Kami</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
+                        <i class="fa-solid fa-user"></i>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h4>Layanan</h4>
                     <ul>
-                        <li><a href="#">Chat bot</a></li>
+                        <li><a href="https://deepai.org/chat">Chat bot</a></li>
                         <li><a href="#">Hubungi Kami</a></li>
-                        <li><a href="#">Soal CPNS</a></li>
+                        <li><a href="soal_skd.html">Soal CPNS</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Jelajahi</h4>
                     <ul>
-                        <li><a href="#">Informasi resmi</a></li>
+                        <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
                         <li><a href="#">Tips dan trik</a></li>
                         <li><a href="#">Teknis SKD</a></li>
                     </ul>
