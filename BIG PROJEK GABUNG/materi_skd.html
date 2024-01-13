@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #container {
+            width: 100%;
+        }
+
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+        /*konten utama */
+        .main-content {
+            margin: 20px;
+        }
+        .description {
+            margin: 30px;
+        }
+        .description  h3 {
+            font-size: 25px;
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .description p {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .main-content b {
+            font-family: sans-serif;
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .main-content a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .main-content a:hover {
+            color: rgb(255, 251, 0);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+        .left-content {
+            width: 28%;
+            height: 5cm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            margin: 5px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #b6b6b6;
+        }
+        .center-content {
+            width: 27%;
+            height: 5cm;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            margin: 5px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #b6b6b6;
+        }
+        .right-content {
+            width: 28%;
+            height: 5cm;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            margin: 5px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #b6b6b6;
+        }
+        /*footer*/
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body> 
+    <div id="container">
+        <div class="navbar-container">
+            <ul class="ul">
+                <img src="LOGO.png" class="logo">
+                <li>
+                    <a href="beranda.html">Beranda</a>
+                </li>
+                <li>
+                    <a href="tentang.html">Tentang</a>
+                </li>
+                <li>
+                    <a href="keunggulan.html">Keunggulan</a>
+                </li>
+                <li>
+                    <a href="materi3.html">Materi</a>
+                </li>
+                <li>
+                    <a href="Menu paket soal.html">Paket Soal</a>
+                </li>
+            </ul>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img">
+                    </div>
+                </div>
+
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'Login.html';
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="main-content">
+            <div>
+                <div class="description">
+                    <h3>Materi Pada Tes SKD CPNS</h3>
+                    <p>Silahkan klik teks pada kolom di bawah ini untuk mengakses informasi terkait materi SKD </p>
+                </div>
+                <div class="left-content">
+                    <b>
+                        <a href="">TWK</a>
+                    </b>
+                </div>
+                <div class="center-content">
+                    <b>
+                        <a href="">TIU</a>
+                    </b>
+                </div>
+                <div class="right-content">
+                    <b>
+                        <a href="">TIU</a>
+                    </b>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="soal_skd.html">Soal CPNS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Jelajahi</h4>
+                    <ul>
+                        <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                        <li><a href="#">Tips dan trik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

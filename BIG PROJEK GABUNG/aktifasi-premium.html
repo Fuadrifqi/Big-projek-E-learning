@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(207, 149, 238);
+            background: linear-gradient(90deg, rgb(231, 200, 248) 0%, rgba(249, 249, 249, 1) 39%, rgb(177, 181, 248) 100%);
+        }
+
+        .quiz-container {
+            background-color: white;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .activation {
+            color: white;
+            border: #ccc;
+            border-radius: 3px;
+            padding: 5px;
+            background-color: rgb(14, 160, 14);
+        }
+        .activation:hover {
+            background-color: rgb(69, 182, 69);
+        }
+        .Back {
+            text-align: center;
+            margin-bottom: 1cm;
+        }
+        .Back a {
+            font-family: sans-serif;
+            background-color: red;
+            color: white;
+            border-radius: 6px;
+            padding: 15px;
+            text-decoration: none;
+        }
+        .Back a:hover {
+            background-color: rgb(236, 59, 59);
+        }
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #timer {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <h2>PAKET SOAL PREMIUM</h2>
+        <form id="activationForm">
+            <label for="activationCode">Masukkan Kode Aktivasi:</label>
+            <input type="text" id="activationCode" name="activationCode" required>
+            <button type="button" class="activation" onclick="activateTest()">Aktivasi</button>
+        </form>
+
+        <div id="quiz" style="display: none;">
+            <h2>Test Wawasan Kebangsaan</h2>
+            <div id="timer">Waktu: <span id="time"></span></div>
+            <form id="quiz-form">
+                <div class="question">
+                    <p>1. Menurut pernyataan dalam pembukaan UUD 1945, perjuangan kemerdekaan merupakan tindakan yang
+                        diberkati oleh Allah karena...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="a" data-score="0"> A) Kehidupan kebangsaan yang bebas
+                            merupakan keinginan luhur</li>
+                        <li><input type="radio" name="q1" value="b" data-score="5"> B) Bangsa Indonesia adalah bangsa
+                            yang religius</li>
+                        <li><input type="radio" name="q1" value="c" data-score="0"> C) Kemerdekaan itu sudah lama
+                            diperjuangkan</li>
+                        <li><input type="radio" name="q1" value="d" data-score="0"> D) Banyak pengorbanan yang harus
+                            diberikan untuk mendapatkan kemerdekaan</li>
+                        <li><input type="radio" name="q1" value="e" data-score="0"> E) Kemerdekaan karunia Allah yang
+                            tidak perlu diperjuangkan
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>2. Rumusan dan susunan Pancasila yang benar dan sah tercantum dalam...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="a" data-score="0"> A) Pidato Moh. Yamin tanggal 29 Mei
+                            1945</li>
+                        <li><input type="radio" name="q2" value="b" data-score="0"> B) Piagam Jakarta</li>
+                        <li><input type="radio" name="q2" value="c" data-score="0"> C) Pidato Bung Karno tanggal 1 Juni
+                            1945</li>
+                        <li><input type="radio" name="q2" value="d" data-score="5"> D) Pembukaan UUD 1945</li>
+                        <li><input type="radio" name="q2" value="e" data-score="0"> E) Mukadimah Konstitusi Sementara
+                            RIS</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>3. Pembangunan tidak boleh bersifat pragmatis, hal ini berarti...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q3" value="a" data-score="5"> A) Pembangunan tidak hanya
+                            mementingkan tindakan nyata dan mengabaikan pertimbangan etis</li>
+                        <li><input type="radio" name="q3" value="b" data-score="0"> B) Pembangunan tidak boleh secara
+                            mutlak melayani ideologi tertentu dan mengabaikan manusia nyata</li>
+                        <li><input type="radio" name="q3" value="c" data-score="0"> C) Pembangunan tidak boleh
+                            mengorbankan manusia nyata melainkan menghormati harkat dan martabat bangsa</li>
+                        <li><input type="radio" name="q3" value="d" data-score="0"> D) Pembangunan melibatkan masyarakat
+                            sebagai tujuan pembangunan, keputusan yang menyangkut kebutuhan mereka</li>
+                        <li><input type="radio" name="q3" value="e" data-score="0"> E) Pembangunan mengutamakan mereka
+                            yang paling lemah untuk menghapuskan kemiskinan struktural</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>4. Pak Suyatno adalah orang yang sombong. Ia selalu menilai orang dari kekayaan dan kedudukannya.
+                        Sikap Pak Suyatno bertentangan dengan sila...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q4" value="a" data-score="0"> A) Ketuhanan Yang Maha Esa</li>
+                        <li><input type="radio" name="q4" value="b" data-score="5"> B) Kemanusiaan yang adil dan beradab
+                        </li>
+                        <li><input type="radio" name="q4" value="c" data-score="0"> C) Persatuan Indonesia</li>
+                        <li><input type="radio" name="q4" value="d" data-score="0"> D) Kerakyatan yang dipimpin oleh
+                            hikmat kebijaksanaan dalam permusyawarataan perwakilan</li>
+                        <li><input type="radio" name="q4" value="e" data-score="0"> E) Keadilan bagi seluruh rakyat
+                            Indonesia</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>5. Pancasila sebagai paradigma pembangunan politik harus mampu...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q5" value="a" data-score="5"> A) Menjadikan rakyat sebagai subjek
+                            politik bukan objek politik</li>
+                        <li><input type="radio" name="q5" value="b" data-score="0"> B) Menjadi sumber dari segala sumber
+                            hukum</li>
+                        <li><input type="radio" name="q5" value="c" data-score="0"> C) Pengontrol atas kekuasaan yang
+                            absolut</li>
+                        <li><input type="radio" name="q5" value="d" data-score="0"> D) Pedoman hidup berkebangsaan</li>
+                        <li><input type="radio" name="q5" value="e" data-score="0"> E) Memberi perlindungan hak asasi
+                            bagi rakyat</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>6. Mengembangkan sikap bahwa bangsa Indonesia merupakan bagian dari seluruh umat manusia
+                        merupakan perwujudan sila...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q6" value="a" data-score="0"> A) Pertama</li>
+                        <li><input type="radio" name="q6" value="b" data-score="5"> B) Kedua</li>
+                        <li><input type="radio" name="q6" value="c" data-score="0"> C) Ketiga</li>
+                        <li><input type="radio" name="q6" value="d" data-score="0"> D) Keempat</li>
+                        <li><input type="radio" name="q6" value="e" data-score="0"> E) Kelima</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>7. Pembangunan yang dilaksanakan mengacu pada standar nilai Pancasila adalah maksud dari...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q7" value="a" data-score="0"> A) Pancasila sebagai ideologi
+                            terbuka</li>
+                        <li><input type="radio" name="q7" value="b" data-score="0"> B) PPancasila sebagai ideologi
+                            tertutup</li>
+                        <li><input type="radio" name="q7" value="c" data-score="0"> C) Pancasila sebagai nilai
+                            instrumental</li>
+                        <li><input type="radio" name="q7" value="d" data-score="0"> D) Pancasila sebagai dasar negara
+                        </li>
+                        <li><input type="radio" name="q7" value="e" data-score="5"> E) Pancasila sebagai paradigma
+                            pembangunan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>8. Setiap siswa peserta kesenian adalah peserta bela diri atau renang. Tidak ada peserta bela
+                        diri atau renang yang bukan peserta melukis. Inda bukan peserta melukis.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q8" value="a" data-score="5"> A) Inda adalah bukan peserta bela
+                            diri maupun kesenian.</li>
+                        <li><input type="radio" name="q8" value="b" data-score="0"> B) Inda adalah peserta melukis dan
+                            bukan peserta kesenian.</li>
+                        <li><input type="radio" name="q8" value="c" data-score="0"> C) Inda adalah bukan peserta
+                            kesenian, tetapi peserta renang.</li>
+                        <li><input type="radio" name="q8" value="d" data-score="0"> D) Inda adalah peserta renang dan
+                            bukan peserta melukis.</li>
+                        <li><input type="radio" name="q8" value="e" data-score="0"> E) Inda adalah bukan peserta
+                            kesenian tetapi peserta bela diri.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>9. PNS yang kreatif itu adalah PNS yang...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q9" value="a" data-score="0"> A) Bisa membagi waktunya</li>
+                        <li><input type="radio" name="q9" value="b" data-score="0"> B) Cepat kerjanya</li>
+                        <li><input type="radio" name="q9" value="c" data-score="0"> C) Bisa membunuh rutinitasnya</li>
+                        <li><input type="radio" name="q9" value="d" data-score="5"> D) Menikmati pekerjaannya</li>
+                        <li><input type="radio" name="q9" value="e" data-score="0"> E) Aneh</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>10. Anggota yang memiliki anak lebih dari tiga orang menerima piagam dan hadiah. Dedo menerima
+                        piagam organisasi, tetapi tidak menerima hadiah.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q10" value="a" data-score="5"> A) Dedo adalah anggota organisasi
+                            yang anaknya kurang dari tiga orang.</li>
+                        <li><input type="radio" name="q10" value="b" data-score="0"> B) Dedo adalah anggota organisasi
+                            yang anaknya lebih dari tiga orang.</li>
+                        <li><input type="radio" name="q10" value="c" data-score="0"> C) Dedo adalah anggota organisasi
+                            yang berhak menerima hadiah.</li>
+                        <li><input type="radio" name="q10" value="d" data-score="0"> D) Dedo adalah bukan anggota
+                            organisasi yang berhak menerima hadiah.</li>
+                        <li><input type="radio" name="q10" value="e" data-score="0"> E) Dedo adalah bukan anggota yang
+                            anaknya lebih dari tiga orang.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>11. Orang yang mengusulkan pertama kali agar Bhinneka Tunggal Ika dijadikan semboyan Bangsa
+                        adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q11" value="a" data-score="0"> A) Ir Soekarno</li>
+                        <li><input type="radio" name="q11" value="b" data-score="0"> B) Moh Hatta</li>
+                        <li><input type="radio" name="q11" value="c" data-score="5"> C) Muh Yamin</li>
+                        <li><input type="radio" name="q11" value="d" data-score="0"> D) Mpu Tantular</li>
+                        <li><input type="radio" name="q11" value="e" data-score="0"> E) H.O.S. Tjokroaminoto</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>12. Pasal 18, Pasal 18A, dan Pasal 18 B dalam perubahan UUD 1945 berisi tentang ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q12" value="a" data-score="0"> A) Hak Asasi Manusia</li>
+                        <li><input type="radio" name="q12" value="b" data-score="0"> B) Kebebasan Beragama</li>
+                        <li><input type="radio" name="q12" value="c" data-score="5"> C) Pemerintah daerah</li>
+                        <li><input type="radio" name="q12" value="d" data-score="0"> D) Demokrasi</li>
+                        <li><input type="radio" name="q12" value="e" data-score="0"> E) Kedaulatan Wilayah RI</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>13. Sistem pemerintahan presidensial disebut juga sebagai fixed executive karena ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q13" value="a" data-score="5"> A) Masa jabatan para menteri tidak
+                            ditentukan oleh kepercayaan parlemen</li>
+                        <li><input type="radio" name="q13" value="b" data-score="0"> B) Kabinet dapat dijatuhkan oleh
+                            parlemen melalui mosi tidak percaya</li>
+                        <li><input type="radio" name="q13" value="c" data-score="0"> C) Para menteri tidak bertanggung
+                            jawab kepada parlemen</li>
+                        <li><input type="radio" name="q13" value="d" data-score="0"> D) Para menteri bertanggung jawab
+                            kepada presiden</li>
+                        <li><input type="radio" name="q13" value="e" data-score="0"> E) Presiden sewaktu-waktu dapat
+                            membubarkan kabinet</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>14. Gubernur, bupati, dan walikota, masing-masing sebagai kepala pemerintah daerah provinsi,
+                        kabupaten, kota dipilih melalui ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q14" value="a" data-score="5"> A) Mekanisme demokratis</li>
+                        <li><input type="radio" name="q14" value="b" data-score="0"> B) Pemilihan langsung</li>
+                        <li><input type="radio" name="q14" value="c" data-score="0"> C) Pemilihan oleh parpol mayoritas
+                        </li>
+                        <li><input type="radio" name="q14" value="d" data-score="0"> D) Pemilihan oleh kalangan menengah
+                            atas</li>
+                        <li><input type="radio" name="q14" value="e" data-score="0"> E) Semua jawaban salah</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>15. Otonomi Daerah diatur dalam Undang-Undang (UU) nomor ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q15" value="a" data-score="0"> A) 25 tahun 1992</li>
+                        <li><input type="radio" name="q15" value="b" data-score="0"> B) 25 tahun 1999</li>
+                        <li><input type="radio" name="q15" value="c" data-score="0"> C) 8 tahun 2001</li>
+                        <li><input type="radio" name="q15" value="d" data-score="0"> D) 23 tahun 2004</li>
+                        <li><input type="radio" name="q15" value="e" data-score="5"> E) 32 tahun 2004</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>16. Sumber hukum yang berasal dari keyakinan kesadaran individu dan pendapat umum disebut sumber
+                        hukum ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q16" value="a" data-score="0"> A) Formal</li>
+                        <li><input type="radio" name="q16" value="b" data-score="0"> B) Material</li>
+                        <li><input type="radio" name="q16" value="c" data-score="0"> C) Yurisprudensi
+                        <li>
+                        <li><input type="radio" name="q16" value="d" data-score="0"> D) Traktat</li>
+                        <li><input type="radio" name="q16" value="e" data-score="5"> E) Konvensi</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>17. Upaya pemerintah dalam pemberantasan tindakan pidana korupsi diatur dalam ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q17" value="a" data-score="0"> A) UU No. 20 Tahun 1971 jo UU No.
+                            22 Tahun 1999</li>
+                        <li><input type="radio" name="q17" value="b" data-score="5"> B) UU No. 31 Tahun 1999 jo UU No.
+                            20 Tahun 2001</li>
+                        <li><input type="radio" name="q17" value="c" data-score="0"> C) UU No. 3 Tahun 1971 jo UU No. 2
+                            Tahun 2000</li>
+                        <li><input type="radio" name="q17" value="d" data-score="0"> D) UU No. 4 Tahun 1967 jo UU No. 1
+                            Tahun 2001</li>
+                        <li><input type="radio" name="q17" value="e" data-score="0"> E) UU No. 4 Tahun 1967 jo UU No. 2
+                            Tahun 2001</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>18. Berdasarkan paham yang dianut, demokrasi diklasifikasikan menjadi tiga bagian, yaitu ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q18" value="a" data-score="0"> A) Demokrasi langsung, tidak
+                            langsung, dan demokrasi terpimpin</li>
+                        <li><input type="radio" name="q18" value="b" data-score="5"> B) Demokrasi Liberal, komunis, dan
+                            gabungan</li>
+                        <li><input type="radio" name="q18" value="c" data-score="0"> C) Demokrasi terpimpin, Pancasila,
+                            dan parlementer</li>
+                        <li><input type="radio" name="q18" value="d" data-score="0"> D) Demokrasi langsung, Pancasila
+                            dan parlementer</li>
+                        <li><input type="radio" name="q18" value="e" data-score="0"> E) Demokrasi referendum, dengan
+                            pemisahan kekuasaan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>19. Pancasila bagi bangsa Indonesia merupakan:</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q19" value="a" data-score="5"> A) Pandangan hidup</li>
+                        <li><input type="radio" name="q19" value="b" data-score="0"> B) Falsafah dan dasar negara</li>
+                        <li><input type="radio" name="q19" value="c" data-score="0"> C) Sumber hukum</li>
+                        <li><input type="radio" name="q19" value="d" data-score="0"> D) Landasan UUD 1945</li>
+                        <li><input type="radio" name="q19" value="e" data-score="0"> E) Semua benar</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>20. Magna Charta merupakan kontrak atau perjanjian antara beberapa bangsawan dan raja. Di
+                        Inggris, yang berisikan tentang hal-hal berikut ini, kecuali...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q20" value="a" data-score="0"> A) Raja beserta keturunannya
+                            berjanji akan menghormati kemerdekaan, hak, dan kebebasan Gereja Inggris.</li>
+                        <li><input type="radio" name="q20" value="b" data-score="0"> B) Kekuasaan raja harus dibatasi.
+                        </li>
+                        <li><input type="radio" name="q20" value="c" data-score="0"> C) Hak Asasi Manusia (HAM) lebih
+                            penting daripada kedaulatan, hukum atau kekuasaan.</li>
+                        <li><input type="radio" name="q20" value="d" data-score="0"> D) Raja berjanji kepada penduduk
+                            kerajaan yang bebas untuk memberikan hak-hak.</li>
+                        <li><input type="radio" name="q20" value="e" data-score="5"> E) Petugas pajak dapat menarik uang
+                            iuran pajak tanpa pengecualian.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>21. Pergantian sistem pemerintahan yang berlaku di Indonesia pada tahun 1945 didasarkan pada ...
+                    </p>
+                    <ul class="options">
+                        <li><input type="radio" name="q21" value="a" data-score="0"> A) Maklumat Wakil Presiden Nomor IX
+                            Tanggal 16 Oktober 1945</li>
+                        <li><input type="radio" name="q21" value="b" data-score="0"> B) Maklumat Wakil Presiden Nomor XI
+                            Tanggal 16 Oktober 1945</li>
+                        <li><input type="radio" name="q21" value="c" data-score="0"> C) Maklumat Wakil Presiden Nomor
+                            XII Tanggal 16 Oktober 1945</li>
+                        <li><input type="radio" name="q21" value="d" data-score="0"> D) Maklumat Pemerintah Tanggal 3
+                            November 1945</li>
+                        <li><input type="radio" name="q21" value="e" data-score="5"> E) Maklumat Pemerintah Tanggal 14
+                            November 1945</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>22. Pergantian sistem pemerintahan yang berlaku di Indonesia pada tahun 1945 didasarkan pada ...
+                    </p>
+                    <ul class="options">
+                        <li><input type="radio" name="q22" value="a" data-score="0"> A) Maklumat Wakil Presiden Nomor IX
+                            Tanggal 16 Oktober 1945</li>
+                        <li><input type="radio" name="q22" value="b" data-score="0"> B) Maklumat Wakil Presiden Nomor XI
+                            Tanggal 16 Oktober 1945</li>
+                        <li><input type="radio" name="q22" value="c" data-score="0"> C) Maklumat Wakil Presiden Nomor
+                            XII Tanggal 16 Oktober 1945</li>
+                        <li><input type="radio" name="q22" value="d" data-score="0"> D) Maklumat Pemerintah Tanggal 3
+                            November 1945</li>
+                        <li><input type="radio" name="q22" value="e" data-score="5"> E) Maklumat Pemerintah Tanggal 14
+                            November 1945</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>23. Berikut ini yang termasuk dimensi realitas sila ke-3 Pancasila, kecuali...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q23" value="a" data-score="0"> A) Menghindari sikap chauvinisme
+                            dan primodialisme secara tepat</li>
+                        <li><input type="radio" name="q23" value="b" data-score="0"> B) Memajukan pergaulan demi
+                            kemajuan bangsa</li>
+                        <li><input type="radio" name="q23" value="c" data-score="0"> C) Membina hubungan baik dengan
+                            semua unsur bangsa</li>
+                        <li><input type="radio" name="q23" value="d" data-score="5"> D) Mengembangkan sikap saling
+                            tenggang rasa dan tepa salira</li>
+                        <li><input type="radio" name="q23" value="e" data-score="0"> E) Rela berkorban demi kepentingan
+                            bangsa dan negara</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>24. Salah satu bentuk pengamalan sila ke-4 di bawah ini adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q24" value="a" data-score="5"> A) Kita tidak boleh memaksakan
+                            kehendak kita kepada orang lain</li>
+                        <li><input type="radio" name="q24" value="b" data-score="0"> B) Mengembangkan sikap hormat
+                            menghormati dan bekerja sama dengan bangsa lain</li>
+                        <li><input type="radio" name="q24" value="c" data-score="0"> C) Menjunjung tinggi hak asasi
+                            manusia</li>
+                        <li><input type="radio" name="q24" value="d" data-score="0"> D) Menyadari bahwa kita mempunyai
+                            hak dan kewajiban yang sama</li>
+                        <li><input type="radio" name="q24" value="e" data-score="0"> E) Mengembangkan sikap saling
+                            mencintai sesama manusia</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>25. Kemajemukan sosial budaya dalam masyarakat Indonesia mempunyai pengaruh positif terhadap
+                        usaha untuk meningkatkan ketahanan nasional dalam bentuk potensi...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q25" value="a" data-score="5"> A) Akulturasi budaya</li>
+                        <li><input type="radio" name="q25" value="b" data-score="0"> B) Integritas sosial</li>
+                        <li><input type="radio" name="q25" value="c" data-score="0"> C) Sumber daya alam</li>
+                        <li><input type="radio" name="q25" value="d" data-score="0"> D) Sumber daya manusia</li>
+                        <li><input type="radio" name="q25" value="e" data-score="0"> E) Keberhasilan pembangunan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>26. Negara menjamin setiap warga negaranya untuk beribadah sesuai dengan keyakinannya. Hal ini
+                        merupakan pengamalan sila ke...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q26" value="a" data-score="5"> A) 1</li>
+                        <li><input type="radio" name="q26" value="b" data-score="0"> B) 2</li>
+                        <li><input type="radio" name="q26" value="c" data-score="0"> C) 3</li>
+                        <li><input type="radio" name="q26" value="d" data-score="0"> D) 4</li>
+                        <li><input type="radio" name="q26" value="e" data-score="0"> E) 5</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>27. Pancasila digunakan sebagai sumber nilai-nilai yang menjadi dasar timbulnya
+                        peraturan-peraturan hukum di negara kita merupakan fungsi dan peranan Pancasila sebagai...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q27" value="a" data-score="0"> A) Dasar negara</li>
+                        <li><input type="radio" name="q27" value="b" data-score="0"> B) Pandangan hidup</li>
+                        <li><input type="radio" name="q27" value="c" data-score="0"> C) Perjanjian luhur</li>
+                        <li><input type="radio" name="q27" value="d" data-score="5"> D) Sumber hukum dasar nasional</li>
+                        <li><input type="radio" name="q27" value="e" data-score="0"> E) Kepribadian bangsa</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>28. Salah satu ancaman bagi negara kesatuan adalah adanya kelompok tertentu yang ingin memisahkan
+                        diri dari negara Indonesia. Jika ada ancaman tersebut, sikap yang sebaiknya ditunjukkan
+                        adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q28" value="a" data-score="0"> A) Mencari akar munculnya kelompok
+                            separatis</li>
+                        <li><input type="radio" name="q28" value="b" data-score="0"> B) Meningkatkan rasa empati
+                            terhadap kaum separatis</li>
+                        <li><input type="radio" name="q28" value="c" data-score="0"> C) Menggalang dukungan untuk
+                            melawan secara militer</li>
+                        <li><input type="radio" name="q28" value="d" data-score="5"> D) Menjaga keamanan dan ketertiban
+                            masyarakat</li>
+                        <li><input type="radio" name="q28" value="e" data-score="0"> E) Memaklumi adanya kelompok
+                            separatis</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>29. Di dalam pengertian wawasan Nusantara, wawasan mengandung arti.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q29" value="a" data-score="5"> A) Pandangan, tinjauan, dan
+                            penglihatan</li>
+                        <li><input type="radio" name="q29" value="b" data-score="0"> B) Pengetahuan dan pengertian</li>
+                        <li><input type="radio" name="q29" value="c" data-score="0"> C) Ruang lingkup kajian</li>
+                        <li><input type="radio" name="q29" value="d" data-score="0"> D) Nawas diri</li>
+                        <li><input type="radio" name="q29" value="e" data-score="0"> E) Teliti dan cermat serta
+                            bijaksana</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>30. Maraknya praktik korupsi di kalangan pejabat publik saat ini merupakan dampak dari...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q30" value="a" data-score="0"> A) Rendahnya pendidikan agama bagi
+                            pejabat publik</li>
+                        <li><input type="radio" name="q30" value="b" data-score="0"> B) Tidak adanya pengawasan secara
+                            langsung</li>
+                        <li><input type="radio" name="q30" value="c" data-score="0"> C) Rendahnya gaji yang diterima
+                        </li>
+                        <li><input type="radio" name="q30" value="d" data-score="0"> D) Tidak mampu keluar dari sistem
+                            yang ada</li>
+                        <li><input type="radio" name="q30" value="e" data-score="5"> E) Lemahnya integritas dalam diri
+                        </li>
+                    </ul>
+                </div>
+
+
+                <h2>Test Intelegensia Umum</h2>
+
+                <div class="question">
+                    <p>1. Bias</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="a" data-score="5"> A) Simpangan</li>
+                        <li><input type="radio" name="q1" value="b" data-score="0"> B) Percepatan</li>
+                        <li><input type="radio" name="q1" value="c" data-score="0"> C) Kecepatan</li>
+                        <li><input type="radio" name="q1" value="d" data-score="0"> D) Perpindahan</li>
+                        <li><input type="radio" name="q1" value="e" data-score="0"> E) Keadaan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>2. Penulisan nama gelar yang benar adalah ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="a" data-score="5"> A) Prof. Dr. Oka mahendra, s.t.</li>
+                        <li><input type="radio" name="q2" value="b" data-score="0"> B) Prof. Dr. Oka mahendra, st.</li>
+                        <li><input type="radio" name="q2" value="c" data-score="0"> C) Prof dr oka mahendra st</li>
+                        <li><input type="radio" name="q2" value="d" data-score="0"> D) Prof. Dr. Oka mahendra, st.</li>
+                        <li><input type="radio" name="q2" value="e" data-score="0"> E) Prof. Dr. Oka mahendra, s.t.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>3. Umur Roni 4 tahun lebih muda dari pada umur Elsa. Bila jumlah umur keduanya 34 tahun, maka
+                        umur Elsa saat ini adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q3" value="a" data-score="0"> A) 15 tahun</li>
+                        <li><input type="radio" name="q3" value="b" data-score="0"> B) 17 tahun</li>
+                        <li><input type="radio" name="q3" value="c" data-score="0"> C) 22 tahun</li>
+                        <li><input type="radio" name="q3" value="d" data-score="0"> D) 21 tahun</li>
+                        <li><input type="radio" name="q3" value="e" data-score="5"> E) 19 tahun</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>4. Hasil dari 12,5% dari 800 kg adalah... kuintal.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q4" value="a" data-score="5"> A) 1</li>
+                        <li><input type="radio" name="q4" value="b" data-score="0"> B) 10</li>
+                        <li><input type="radio" name="q4" value="c" data-score="0"> C) 100</li>
+                        <li><input type="radio" name="q4" value="d" data-score="0"> D) 1000</li>
+                        <li><input type="radio" name="q4" value="e" data-score="0"> E) 1500</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>5. Hayati >< . . .</p>
+                            <ul class="options">
+                                <li><input type="radio" name="q5" value="a" data-score="5"> A) Mati</li>
+                                <li><input type="radio" name="q5" value="b" data-score="0"> B) Hidup</li>
+                                <li><input type="radio" name="q5" value="c" data-score="0"> C) Tumbuhan</li>
+                                <li><input type="radio" name="q5" value="d" data-score="0"> D) Sakit</li>
+                                <li><input type="radio" name="q5" value="e" data-score="0"> E) Demam</li>
+                            </ul>
+                </div>
+
+                <div class="question">
+                    <p>6. Kadal: Reptil=...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q6" value="a" data-score="0"> A) Kuda: Omnivore</li>
+                        <li><input type="radio" name="q6" value="b" data-score="0"> B) Lele: Amphibi</li>
+                        <li><input type="radio" name="q6" value="c" data-score="0"> C) Ikan: Avertebrata</li>
+                        <li><input type="radio" name="q6" value="d" data-score="5"> D) Burung: Aves</li>
+                        <li><input type="radio" name="q6" value="e" data-score="0"> E) Kuda Nil: Mamalia</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>7. Wahana adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q7" value="a" data-score="0"> A) Alat transportasi</li>
+                        <li><input type="radio" name="q7" value="b" data-score="5"> B) Tempat bermain</li>
+                        <li><input type="radio" name="q7" value="c" data-score="0"> C) Lautan pasir</li>
+                        <li><input type="radio" name="q7" value="d" data-score="0"> D) Sauna</li>
+                        <li><input type="radio" name="q7" value="e" data-score="0"> E) Menarik</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>8. Seremoni berarti...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q8" value="a" data-score="0"> A) Makanan istimewa</li>
+                        <li><input type="radio" name="q8" value="b" data-score="0"> B) Kemewahan</li>
+                        <li><input type="radio" name="q8" value="c" data-score="0"> C) Kekayaan</li>
+                        <li><input type="radio" name="q8" value="d" data-score="0"> D) Gaya berpakaian</li>
+                        <li><input type="radio" name="q8" value="e" data-score="5"> E) Perayaan upacara</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>9. Apakah arti lawan kata dari "Hiperbola"?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q9" value="a" data-score="0"> A) Olahraga</li>
+                        <li><input type="radio" name="q9" value="b" data-score="5"> B) Apa adanya</li>
+                        <li><input type="radio" name="q9" value="c" data-score="0"> C) Penjaga</li>
+                        <li><input type="radio" name="q9" value="d" data-score="0"> D) Kurang</li>
+                        <li><input type="radio" name="q9" value="e" data-score="0"> E) Lebih</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>10. Kapabel berarti...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q10" value="a" data-score="0"> A) Panjang.</li>
+                        <li><input type="radio" name="q10" value="b" data-score="0"> B) Bodoh</li>
+                        <li><input type="radio" name="q10" value="c" data-score="0"> C) Cakap</li>
+                        <li><input type="radio" name="q10" value="d" data-score="5"> D) Sanggup</li>
+                        <li><input type="radio" name="q10" value="e" data-score="0"> E) Pintar</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>11. Jika "kekang" berlawanan dengan...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q11" value="a" data-score="0"> A) Hewan</li>
+                        <li><input type="radio" name="q11" value="b" data-score="5"> B) Bebas</li>
+                        <li><input type="radio" name="q11" value="c" data-score="0"> C) Batas</li>
+                        <li><input type="radio" name="q11" value="d" data-score="0"> D) Kebas</li>
+                        <li><input type="radio" name="q11" value="e" data-score="0"> E) Sampai</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>12. "Kolektif" adalah lawan kata dari...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q12" value="a" data-score="0"> A) Pasif</li>
+                        <li><input type="radio" name="q12" value="b" data-score="0"> B) Aktif</li>
+                        <li><input type="radio" name="q12" value="c" data-score="0"> C) Terpisah</li>
+                        <li><input type="radio" name="q12" value="d" data-score="5"> D) Individual</li>
+                        <li><input type="radio" name="q12" value="e" data-score="0"> E) Serentas</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>13. Jika nelayan menggunakan perahu, maka penulis menggunakan...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q13" value="a" data-score="5"> A) Buku</li>
+                        <li><input type="radio" name="q13" value="b" data-score="0"> B) Pensil</li>
+                        <li><input type="radio" name="q13" value="c" data-score="0"> C) Traktor</li>
+                        <li><input type="radio" name="q13" value="d" data-score="0"> D) Kertas</li>
+                        <li><input type="radio" name="q13" value="e" data-score="0"> E) Tinta</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>14. Suatu seri angka sebagai berikut: 2, 4, 7, 11, 16, ..., seri selanjutnya adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q14" value="a" data-score="0"> A) 17, 18</li>
+                        <li><input type="radio" name="q14" value="b" data-score="0"> B) 20, 22</li>
+                        <li><input type="radio" name="q14" value="c" data-score="0"> C) 22, 29</li>
+                        <li><input type="radio" name="q14" value="d" data-score="5"> D) 24, 32</li>
+                        <li><input type="radio" name="q14" value="e" data-score="0"> E) 29, 35</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>15. Luas kebun Pak Soleh sama dengan luas kebun Pak Anton. Luas kebun Pak Soleh lebih sempit
+                        daripada Luas kebun Pak Kino. Pak Ahmad adalah saudara sepupu Pak Kino yang memiliki luas kebun
+                        lebih sempit daripada Pak Anton. Urutan dari yang paling luas adalah ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q15" value="a" data-score="0"> A) Pak Soleh, Pak Kino, Pak Anton,
+                            Pak Ahmad.</li>
+                        <li><input type="radio" name="q15" value="b" data-score="0"> B) Pak Ahmad, Pak Soleh, Pak Anton,
+                            Pak Kino.</li>
+                        <li><input type="radio" name="q15" value="c" data-score="0"> C) Pak Anton, Pak Soleh, Pak Kino,
+                            Pak Ahmad.</li>
+                        <li><input type="radio" name="q15" value="d" data-score="5"> D) Pak Kino, Pak Soleh, Pak Anton,
+                            Pak Ahmad.</li>
+                        <li><input type="radio" name="q15" value="e" data-score="0"> E) Pak Kino, Pak Soleh, Pak Ahmad,
+                            Pak Anton.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>16. Air : Haus = Uap air: ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q16" value="a" data-score="0"> A) Embun</li>
+                        <li><input type="radio" name="q16" value="b" data-score="0"> B) Basah</li>
+                        <li><input type="radio" name="q16" value="c" data-score="5"> C) Kering
+                        <li>
+                        <li><input type="radio" name="q16" value="d" data-score="0"> D) Lembab</li>
+                        <li><input type="radio" name="q16" value="e" data-score="0"> E) Hangat</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>17 .3, 9, 12, 26, 29, 51, 54, ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q17" value="a" data-score="5"> A) 84</li>
+                        <li><input type="radio" name="q17" value="b" data-score="0"> B) 88</li>
+                        <li><input type="radio" name="q17" value="c" data-score="0"> C) 82</li>
+                        <li><input type="radio" name="q17" value="d" data-score="0"> D) 86</li>
+                        <li><input type="radio" name="q17" value="e" data-score="0"> E) 80</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>18. Gelap = Sejuk : ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q18" value="a" data-score="0"> A) lampu - suhu</li>
+                        <li><input type="radio" name="q18" value="b" data-score="0"> B) kafe - rumah kaca</li>
+                        <li><input type="radio" name="q18" value="c" data-score="0"> C) terang - panas</li>
+                        <li><input type="radio" name="q18" value="d" data-score="0"> D) senter - selimut</li>
+                        <li><input type="radio" name="q18" value="e" data-score="5"> E) redup - dingin</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>19. Jika 20 ekor kambing mampu menghabiskan rumput sebanyak 4 lapangan selama 8 hari, maka 16
+                        ekor kambing mampu menghabiskan rumput sebanyak 8 lapangan selama hari.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q19" value="a" data-score="0"> A) 8</li>
+                        <li><input type="radio" name="q19" value="b" data-score="0"> B) 12</li>
+                        <li><input type="radio" name="q19" value="c" data-score="0"> C) 14</li>
+                        <li><input type="radio" name="q19" value="d" data-score="0"> D) 16</li>
+                        <li><input type="radio" name="q19" value="e" data-score="5"> E) 20</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>20. Lima orang bersahabat yaitu Adi, Teti, Moli, Heli, dan Nety menonton film di bioskop. Mereka
+                        membeli tiket pada baris A, B, C, D, E, dengan posisi A merupakan baris terdepan. Moli duduk
+                        lebih depan dibandingkan Teti. Heni di antara Teti dan Moli. Adi di depan Moli dan Nety tepat di
+                        belakang Teti. Dari informasi tersebut yang duduk pada barisan A dan D adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q20" value="a" data-score="0"> A) Heni dan Moli</li>
+                        <li><input type="radio" name="q20" value="b" data-score="0"> B) Adi dan Nety</li>
+                        <li><input type="radio" name="q20" value="c" data-score="5"> C) Adi dan Teti</li>
+                        <li><input type="radio" name="q20" value="d" data-score="0"> D) Heni dan Neti</li>
+                        <li><input type="radio" name="q20" value="e" data-score="0"> E) Moli dan Teti</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>21. Konversi dari pernyataan "Jika saya mengantuk maka saya akan tidur" adalah ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q21" value="a" data-score="0"> A) jika saya tidak mengantuk maka
+                            saya tidak akan tidur</li>
+                        <li><input type="radio" name="q21" value="b" data-score="0"> B) jika tidak tidur maka saya tidak
+                            mengantuk</li>
+                        <li><input type="radio" name="q21" value="c" data-score="0"> C) jika saya mengantuk maka saya
+                            kurang tidur</li>
+                        <li><input type="radio" name="q21" value="d" data-score="5"> D) jika saya akan tidur maka saya
+                            mengantuk</li>
+                        <li><input type="radio" name="q21" value="e" data-score="0"> E) jika tidak tidur maka saya akan
+                            mengantuk</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>22. Indonesia dikenal sebagai salah satu negara pembudidaya jahe di dunia bersama Srilanka,
+                        China, Mesir, Yunani, India, Jamaika, Jepang, dan Meksiko. Dari negara-negara tersebut, India
+                        memproduksi lebih dari 50 persen dari total produksi jahe dunia. Sementara Jamaika dikenal
+                        sebagai produsen jahe dengan kualitas tinggi. Dari informasi di atas, maka negara yang memiliki
+                        produksi jahe terbanyak di dunia adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q22" value="a" data-score="0"> A) Indonesia</li>
+                        <li><input type="radio" name="q22" value="b" data-score="0"> B) Jamaika</li>
+                        <li><input type="radio" name="q22" value="c" data-score="0"> C) Yunani</li>
+                        <li><input type="radio" name="q22" value="d" data-score="5"> D) India</li>
+                        <li><input type="radio" name="q22" value="e" data-score="0"> E) Mesir</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>23. Berbagai solusi penanganan limbah sebenarnya telah dilakukan oleh Rumah Potong Hewan di
+                        beberapa kota di Indonesia seperti Bogor, Bandung, Solo, dan Yogyakarta, baik berupa solusi
+                        pengelolaan dan penanganan limbah secara mandiri maupun melibatkan pihak luar.
+
+                        Pengelolaan limbah secara mandiri antara lain dengan fermentasi isi rumen sebagai bahan pakan
+                        ikan serta penggunaan kotoran ternak sebagai bahan biogas. Sementara itu, pengelolaan limbah
+                        dengan melibatkan pihak luar dilakukan dengan menggandeng pabrik pupuk kompos.
+
+                        Dari informasi di atas, maka kota di bawah ini yang telah melaksanakan penanganan limbah Rumah
+                        Potong Hewan, kecuali...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q23" value="a" data-score="0"> A) Yogyakarta</li>
+                        <li><input type="radio" name="q23" value="b" data-score="0"> B) Bandung</li>
+                        <li><input type="radio" name="q23" value="c" data-score="5"> C) Cilacap</li>
+                        <li><input type="radio" name="q23" value="d" data-score="0"> D) Bogor</li>
+                        <li><input type="radio" name="q23" value="e" data-score="0"> E) Solo</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>24. Sebuah perusahaan memiliki 12 karyawan purnawaktu dan 8 karyawan paruh waktu. Jika perusahaan
+                        tersebut memberikan bonus THR kepada semua karyawan purnawaktu sebesar $200 per karyawan dan
+                        kepada karyawan paruh waktu sebesar $100 per karyawan, berapa total bonus Natal yang diberikan
+                        oleh perusahaan?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q24" value="a" data-score="0"> A) $2,000</li>
+                        <li><input type="radio" name="q24" value="b" data-score="5"> B) $2,400</li>
+                        <li><input type="radio" name="q24" value="c" data-score="0"> C) $2,800</li>
+                        <li><input type="radio" name="q24" value="d" data-score="0"> D) $3,200</li>
+                        <li><input type="radio" name="q24" value="e" data-score="0"> E) $3,600</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>25. Dalam sehari, sebuah pabrik dapat memproduksi 480 unit produk. Jika pabrik tersebut
+                        beroperasi selama 7 hari dalam seminggu, berapa total unit produk yang dapat diproduksi oleh
+                        pabrik tersebut dalam satu bulan?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q25" value="a" data-score="0"> A) 2,800</li>
+                        <li><input type="radio" name="q25" value="b" data-score="0"> B) 3,000</li>
+                        <li><input type="radio" name="q25" value="c" data-score="0"> C) 3,360</li>
+                        <li><input type="radio" name="q25" value="d" data-score="0"> D) 3,500</li>
+                        <li><input type="radio" name="q25" value="e" data-score="5"> E) 3,840</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>26. Sebuah kantor pemerintah memiliki 60 pegawai. Dalam satu tahun terakhir, tercatat 15 pegawai
+                        telah mengikuti pelatihan profesional. Berapa persen dari total pegawai yang telah mengikuti
+                        pelatihan profesional dalam satu tahun terakhir?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q26" value="a" data-score="0"> A) 10%</li>
+                        <li><input type="radio" name="q26" value="b" data-score="0"> B) 15%</li>
+                        <li><input type="radio" name="q26" value="c" data-score="5"> C) 20%</li>
+                        <li><input type="radio" name="q26" value="d" data-score="0"> D) 25%</li>
+                        <li><input type="radio" name="q26" value="e" data-score="0"> E) 30%</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>27. Sebuah toko komputer memiliki 250 laptop dalam stok. Dalam sebulan terakhir, mereka berhasil
+                        menjual 80 laptop. Berapa laptop yang masih tersedia dalam stok toko tersebut?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q27" value="a" data-score="0"> A) 150</li>
+                        <li><input type="radio" name="q27" value="b" data-score="0"> B) 170</li>
+                        <li><input type="radio" name="q27" value="c" data-score="0"> C) 180</li>
+                        <li><input type="radio" name="q27" value="d" data-score="5"> D) 190</li>
+                        <li><input type="radio" name="q27" value="e" data-score="0"> E) 200</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>28. Seekor monyet mula - mula berada di ketinggian tertentu pada sebuah tiang, kemudian ia turun
+                        4 meter, naik 3 meter, turun 6 meter, naik 2 meter, naik 9 meter, dan turun 2 meter. Pada
+                        ketinggian berapakah monyet itu berada?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q28" value="a" data-score="0"> A) Sama seperti posisi semula</li>
+                        <li><input type="radio" name="q28" value="b" data-score="5"> B) 2 meter di atas posisi semula
+                        </li>
+                        <li><input type="radio" name="q28" value="c" data-score="0"> C) 1 meter di bawah posisi semula
+                        </li>
+                        <li><input type="radio" name="q28" value="d" data-score="0"> D) 1 meter di atas posisi semula
+                        </li>
+                        <li><input type="radio" name="q28" value="e" data-score="0"> E) 2 meter di bawah posisi semula
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>29. Semua penyelam adalah perenang.
+                        Sementara penyelam adalah pelaut.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q29" value="a" data-score="0"> A) Sementara pelaut adalah perenang
+                        </li>
+                        <li><input type="radio" name="q29" value="b" data-score="0"> B) Sementara perenang bukan
+                            penyelam</li>
+                        <li><input type="radio" name="q29" value="c" data-score="0"> C) Semua pelaut adalah perenang
+                        </li>
+                        <li><input type="radio" name="q29" value="d" data-score="5"> D) Sementara penyelam bukan pelaut
+                        </li>
+                        <li><input type="radio" name="q29" value="e" data-score="0"> E) Sementara penyelam bukan
+                            perenang</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>30. Teman : Rekan = Mudah: ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q30" value="a" data-score="0"> A) Ringan</li>
+                        <li><input type="radio" name="q30" value="b" data-score="5"> B) Gampang</li>
+                        <li><input type="radio" name="q30" value="c" data-score="0"> C) Sukar</li>
+                        <li><input type="radio" name="q30" value="d" data-score="0"> D) Soal</li>
+                        <li><input type="radio" name="q30" value="e" data-score="0"> E) Pelajaran</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>31. Prestasi Intan lebih tinggi dari Dini dan lebih rendah dari Tina. Prestasi Cantik lebih lebih
+                        rendah dari Intan, tetapi lebih tinggi dari Dini.
+
+                        Prestasi Dani lebih tinggi dari Dini dan Cantik. Tiga orang berprestasi terbaik adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q31" value="a" data-score="5"> A) Dani, Intan, Tina</li>
+                        <li><input type="radio" name="q31" value="b" data-score="0"> B) Dani, Dini, Tina</li>
+                        <li><input type="radio" name="q31" value="c" data-score="0"> C) Intan, Tina, Cantik</li>
+                        <li><input type="radio" name="q31" value="d" data-score="0"> D) Intan, Dani, Cantik</li>
+                        <li><input type="radio" name="q31" value="e" data-score="0"> E) Tina, Cantik, Dini</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>32. FIKTIF : FAKTA</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q32" value="a" data-score="0"> A) Dugaan : Rekaan</li>
+                        <li><input type="radio" name="q32" value="b" data-score="0"> B) Dagelan : Sandiwara</li>
+                        <li><input type="radio" name="q32" value="c" data-score="0"> C) Data : Estimasi</li>
+                        <li><input type="radio" name="q32" value="d" data-score="5"> D) Dongeng : Peristiwa</li>
+                        <li><input type="radio" name="q32" value="e" data-score="0"> E) Dagelan : Dugaan </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>33. Deret Angka, dengan tujuan mengukur kemampuan individu dalam melihat pola hubungan angka 3,
+                        6, 8, 9, 12, 14, ..., ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q33" value="a" data-score="0"> A) 10, 15</li>
+                        <li><input type="radio" name="q33" value="b" data-score="5"> B) 15, 18</li>
+                        <li><input type="radio" name="q33" value="c" data-score="0"> C) 16, 20</li>
+                        <li><input type="radio" name="q33" value="d" data-score="0"> D) 12, 20</li>
+                        <li><input type="radio" name="q33" value="e" data-score="0"> E) 10, 20</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>34. Adi berangkat ke Surabaya kota pukul 07.15. jarak rumah Adi ke Surabaya adalah 40 km.
+                        kecepatan mobil yang dikendarai oleh Adi ke Surabaya adalah 80 km/jam. Jam berapa Adi sampai
+                        Surabaya kota?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q34" value="a" data-score="5"> A) 07. 45</li>
+                        <li><input type="radio" name="q34" value="b" data-score="0"> B) 07. 30</li>
+                        <li><input type="radio" name="q34" value="c" data-score="0"> C) 08. 00</li>
+                        <li><input type="radio" name="q34" value="d" data-score="0"> D) 08. 15</li>
+                        <li><input type="radio" name="q34" value="e" data-score="0"> E) 07. 50</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>35. Semua siswa kelas 6 melaksanakan foto tahunan. Semua yang melaksanakan foto tahunan membayar
+                        iuran. Ayang mengikuti kegiatan foto tahunan. Kesimpulannya...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q35" value="a" data-score="0"> A) Ayang bukan siswa kelas 6</li>
+                        <li><input type="radio" name="q35" value="b" data-score="0"> B) Sebagian siswa kelas 6 tidak
+                            membayar iuran</li>
+                        <li><input type="radio" name="q35" value="c" data-score="5"> C) Ayang membayar iuran</li>
+                        <li><input type="radio" name="q35" value="d" data-score="0"> D) Semua siswa kelas 6 tidak
+                            membayar iuran</li>
+                        <li><input type="radio" name="q35" value="e" data-score="0"> E) Ayang tidak membayar iuran</li>
+                    </ul>
+                </div>
+
+                h2>Test Karakteristik Pribadi</h2>
+
+                <div class="question">
+                    <p>1. Apa yang Anda lakukan bila terjadi kebakaran di kantor Anda ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="a" data-score="4"> A) Segera memanggil pemadam
+                            kebakaran</li>
+                        <li><input type="radio" name="q1" value="b" data-score="3"> B) Melaporkan pada petugas Gedung
+                            untuk menyelamatkan semua orang</li>
+                        <li><input type="radio" name="q1" value="c" data-score="1"> C) Meminta semua tenang</li>
+                        <li><input type="radio" name="q1" value="d" data-score="5"> D) Menjalankan prosedur penyelamatan
+                            diri, sehingga mengajak yang lain untuk keluar melalui jalur evakuasi</li>
+                        <li><input type="radio" name="q1" value="e" data-score="2"> E) Mematikan aliran listrik dan
+                            tidak menggunakan lift untuk meninggalkan gedung</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>2. Aturan angka kredit dirubah tahun ini ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="a" data-score="3"> A) Menolak perubahan itu karena
+                            merepotkan</li>
+                        <li><input type="radio" name="q2" value="b" data-score="2"> B) Mempelajari jika mau mengusulkan
+                            angka kredit</li>
+                        <li><input type="radio" name="q2" value="c" data-score="1"> C) Perubahan itu memberatkan pegawai
+                        </li>
+                        <li><input type="radio" name="q2" value="d" data-score="4"> D) Saya akan patuh pada aturan</li>
+                        <li><input type="radio" name="q2" value="e" data-score="5"> E) Mempelajari perubahan itu dengan
+                            teliti</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>3. Sepanjang karir kerja Anda, Anda terlambat masuk kantor ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q3" value="a" data-score="1"> A) Sering sekali</li>
+                        <li><input type="radio" name="q3" value="b" data-score="3"> B) Jarang</li>
+                        <li><input type="radio" name="q3" value="c" data-score="5"> C) Tidak pernah</li>
+                        <li><input type="radio" name="q3" value="d" data-score="4"> D) Satu dua kali</li>
+                        <li><input type="radio" name="q3" value="e" data-score="2"> E) Beberapa kali di masa lalu</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>4. Agar suatu kegiatan berhasil dilaksanakan, sikap Anda adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q4" value="a" data-score="4"> A) Minta bimbingan guru dalam
+                            melaksanakan kegiatan tersebut</li>
+                        <li><input type="radio" name="q4" value="b" data-score="5"> B) Mempelajari jenis kegiatan
+                            tersebut sebelum memulai kegiatan</li>
+                        <li><input type="radio" name="q4" value="c" data-score="1"> C) Mencontoh orang lain yang sukses
+                            mengerjakan pekerjaan serupa</li>
+                        <li><input type="radio" name="q4" value="d" data-score="2"> D) Menyesuaikan dengan kondisi yang
+                            sedang berjalan.</li>
+                        <li><input type="radio" name="q4" value="e" data-score="3"> E) Menggunakan cara yang biasa saya
+                            pakai</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>5. Menurut Anda, terlambat ke kantor adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q5" value="a" data-score="1"> A) Hal biasa yang dilakukan oleh
+                            para PNS</li>
+                        <li><input type="radio" name="q5" value="b" data-score="4"> B) Hal yang mengganggu pekerjaan
+                        </li>
+                        <li><input type="radio" name="q5" value="c" data-score="3"> C) Hal yang menyalahi aturan</li>
+                        <li><input type="radio" name="q5" value="d" data-score="2"> D) Hal yang dapat dimaklumi</li>
+                        <li><input type="radio" name="q5" value="e" data-score="5"> E) Hal yang tidak boleh dilakukan
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>6. Layout ruang kerja akan dirubah oleh atasan baru ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q6" value="a" data-score="3"> A) Memprotes agar tidak perlu
+                            dilakukan perubahan</li>
+                        <li><input type="radio" name="q6" value="b" data-score="1"> B) Tidak peduli, saya tetap bekerja
+                        </li>
+                        <li><input type="radio" name="q6" value="c" data-score="5"> C) Menerima dengan senang hati
+                            suasana baru</li>
+                        <li><input type="radio" name="q6" value="d" data-score="4"> D) Segera menata ruang baru dengan
+                            lebih baik</li>
+                        <li><input type="radio" name="q6" value="e" data-score="2"> E) Salah satu bentuk pemborosan yang
+                            tidak perlu</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>7. Internet di kantor yang biasanya lancar, hari ini mati. Yang saya lakukan ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q7" value="a" data-score="2"> A) Tiduran karena tidak bisa
+                            browsing</li>
+                        <li><input type="radio" name="q7" value="b" data-score="3"> B) Izin keluar atau rileks di kantin
+                        </li>
+                        <li><input type="radio" name="q7" value="c" data-score="5"> C) Bekerja seperti biasa, tidak
+                            selalu memakai internet</li>
+                        <li><input type="radio" name="q7" value="d" data-score="4"> D) Bekerja dengan lebih santai</li>
+                        <li><input type="radio" name="q7" value="e" data-score="1"> E) Pulang kerja</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>8. Salah seorang rekan kerja saya mendapat promosi, sedangkan menurut penilaian saya,
+                        kemampuannya tidak lebih baik dari saya. Respon saya adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q8" value="a" data-score="3"> A) Menggunakan berbagai cara agar
+                            dapat menggeser posisi rekan tersebut</li>
+                        <li><input type="radio" name="q8" value="b" data-score="5"> B) Bekerja lebih giat dan
+                            menunjukkan kinerja terbaik saya</li>
+                        <li><input type="radio" name="q8" value="c" data-score="1"> C) Menghadap pimpinan dan memprotes
+                            promosi tersebut</li>
+                        <li><input type="radio" name="q8" value="d" data-score="4"> D) Tetap bekerja seperti biasa</li>
+                        <li><input type="radio" name="q8" value="e" data-score="2"> E) Menerima keadaan tersebut tetapi
+                            tidak akan mengikuti perintah rekan tersebut</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>9. Apabila tiba-tiba saya ditempatkan di lingkungan kerja baru, maka saya akan...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q9" value="a" data-score="3"> A) Perlu waktu untuk mengenal
+                            rekan-rekan kerja yang baru</li>
+                        <li><input type="radio" name="q9" value="b" data-score="2"> B) Menunggu rekan kerja yang ingin
+                            berkenalan</li>
+                        <li><input type="radio" name="q9" value="c" data-score="1"> C) Berkenalan dengan rekan kerja
+                            hanya jika sudah membutuhkan bantuan mereka</li>
+                        <li><input type="radio" name="q9" value="d" data-score="5"> D) Langsung mampu akrab dengan rekan
+                            kerja baru saya</li>
+                        <li><input type="radio" name="q9" value="e" data-score="4"> E) Senang sekali jika ada rekan
+                            kerja yang ingin berkenalan dengan saya</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>10. Bila ada rekan kerja yang salah menuliskan gelar saya di dalam surat, maka saya...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q10" value="a" data-score="3"> A) Tersinggung karena gelar
+                            tersebut saya peroleh dengan susah payah dan merupakan kehormatan saya</li>
+                        <li><input type="radio" name="q10" value="b" data-score="1"> B) Biasa saja, tidak tersinggung
+                            sama sekali</li>
+                        <li><input type="radio" name="q10" value="c" data-score="5"> C) Saya mengingatkan kekeliruannya
+                            dengan baik-baik</li>
+                        <li><input type="radio" name="q10" value="d" data-score="4"> D) Saya mengingatkannya dengan
+                            tegas agar dia jera</li>
+                        <li><input type="radio" name="q10" value="e" data-score="2"> E) Keliru menulis gelar bukanlah
+                            masalah yang besar bagi saya</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>11. Dari sekian pegawai di kantor, saya merasa beban tugas terberat ada pada saya dan saya merasa
+                        stres karena dikejar-kejar deadline. Respon saya adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q11" value="a" data-score="5"> A) Mengerjakan semua tugas dengan
+                            senang hati dan berusaha memenuhi target deadline</li>
+                        <li><input type="radio" name="q11" value="b" data-score="1"> B) Hanya mengerjakan tugas yang
+                            saya senangi</li>
+                        <li><input type="radio" name="q11" value="c" data-score="4"> C) Mengonsumsi obat suplemen agar
+                            mendongkrak tenaga saya untuk menyelesaikan semua tugas</li>
+                        <li><input type="radio" name="q11" value="d" data-score="3"> D) Mengerjakan semua tugas sambil
+                            menggerutu dan marah-marah</li>
+                        <li><input type="radio" name="q11" value="e" data-score="2"> E) Mengerjakan semau tugas
+                            setengah-tengah saja, yang penting sudah dianggap bertanggung jawab</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>12. Manakah dari berikut ini yang paling mendeskripsikan diri Anda?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q12" value="a" data-score="4"> A) Saya lebih suka bekerja secara
+                            individu.</li>
+                        <li><input type="radio" name="q12" value="b" data-score="5"> B) Saya lebih suka bekerja dalam
+                            tim.</li>
+                        <li><input type="radio" name="q12" value="c" data-score="2"> C) Saya biasanya tidak bekerja.
+                        </li>
+                        <li><input type="radio" name="q12" value="d" data-score="3"> D) Saya tidak memiliki preferensi.
+                        </li>
+                        <li><input type="radio" name="q12" value="e" data-score="1"> E) Saya lebih suka bekerja sesuai
+                            kemauan saya./li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>13. Dalam suatu proyek kerja lapangan, saya diberi kepercayaan untuk memimpin sebuah tim. Pada
+                        akhir laporan kerja yang diberikan ternyata hasil mengecewakan. Setelah ditelusuri, salah satu
+                        anggota tim telah melakukan kesalahan, maka...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q13" value="a" data-score="2"> A) Saya tidak dapat dipersalahkan
+                            dengan alasan apa pun</li>
+                        <li><input type="radio" name="q13" value="b" data-score="5"> B) Saya turut bertanggung jawab
+                            karena bagaimana pun saya adalah pimpinan proyek tersebut</li>
+                        <li><input type="radio" name="q13" value="c" data-score="1"> C) Seharusnya hal tersebut tidak
+                            termasuk dalam tanggung jawab saya</li>
+                        <li><input type="radio" name="q13" value="d" data-score="4"> D) Saya akan menelusuri lebih
+                            lanjut dan memaksa orang tersebut bertanggung jawab atas semuanya</li>
+                        <li><input type="radio" name="q13" value="e" data-score="3"> E) Hal itu mutlak menjadi
+                            kekeliruan anak buah yang terbukti bersalah</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>14. Menyediakan cemilan di meja kerja menurut saya ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q14" value="a" data-score="2"> A) Boleh saja asal tidak terlalu
+                            banyak</li>
+                        <li><input type="radio" name="q14" value="b" data-score="3"> B) Boleh saja asal bagi-bagi dengan
+                            teman</li>
+                        <li><input type="radio" name="q14" value="c" data-score="1"> C) Tidak boleh</li>
+                        <li><input type="radio" name="q14" value="d" data-score="5"> D) Meminta ijin atasan dulu</li>
+                        <li><input type="radio" name="q14" value="e" data-score="4"> E) Boleh asal senior juga melakukan
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>15. Setelah hujan deras, beberapa titik lampu sekitar rumah saya padam karena tersambar petir.
+                        Hal ini cukup mengganggu aktivitas warga sekitar di malam hari. Sebagai seorang yang tidak
+                        terlalu memahami tentang kelistrikan, yang saya lakukan adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q15" value="a" data-score="4"> A) Berusaha memperbaiki sendiri
+                            semaksimal yang saya bisa</li>
+                        <li><input type="radio" name="q15" value="b" data-score="5"> B) Memanggil tukang listrik untuk
+                            memperbaiki kerusakan</li>
+                        <li><input type="radio" name="q15" value="c" data-score="2"> C) Melapor kepada ketua RT dan
+                            meminta pertimbangan solusi</li>
+                        <li><input type="radio" name="q15" value="d" data-score="1"> D) Membiarkan saja sampai masalah
+                            tersebut teratasi dengan sendirinya</li>
+                        <li><input type="radio" name="q15" value="e" data-score="3"> E) Mengajak warga sekitar rumah
+                            untuk bersama-sama memperbaikinya</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>16. Mengangkat telepon pada saat rapat menurut saya ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q16" value="a" data-score="1"> A) Boleh saja</li>
+                        <li><input type="radio" name="q16" value="b" data-score="5"> B) Tidak boleh</li>
+                        <li><input type="radio" name="q16" value="c" data-score="4"> C) Boleh asal pimpinan menyetujui
+                        </li>
+                        <li><input type="radio" name="q16" value="d" data-score="3"> D) Boleh asal sudah memberi usulan
+                            atau kontribusi ide dalam rapat</li>
+                        <li><input type="radio" name="q16" value="e" data-score="2"> E) Boleh asal tidak ketahuan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>17. Jika Anda mendapatkan suatu pekerjaan yang bayarannya sangat besar, maka Anda akan ...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q17" value="a" data-score="5"> A) Bertanggung jawab dalam
+                            melakukan pekerjaan Anda</li>
+                        <li><input type="radio" name="q17" value="b" data-score="4"> B) Lebih bersemangat</li>
+                        <li><input type="radio" name="q17" value="c" data-score="1"> C) Takut</li>
+                        <li><input type="radio" name="q17" value="d" data-score="3"> D) Merasa terharu</li>
+                        <li><input type="radio" name="q17" value="e" data-score="2"> E) Biasa Saja</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>18. Bagaimana Anda mengelola masukan dan kritik dari rekan kerja atau atasan?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q18" value="a" data-score="5"> A) Saya menerima masukan dan kritik
+                            dengan baik.</li>
+                        <li><input type="radio" name="q18" value="b" data-score="4"> B) Tergantung isi masukannya.</li>
+                        <li><input type="radio" name="q18" value="c" data-score="3"> C) Saya sering tidak suka dengan
+                            kritik.</li>
+                        <li><input type="radio" name="q18" value="d" data-score="2"> D) Saya tidak peduli dengan masukan
+                            atau kritik.</li>
+                        <li><input type="radio" name="q18" value="e" data-score="1"> E) Menyimak tapi tidak dipahami.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>19. Saya mengetahui bahwa atasan saya di kantor melakukan rekayasa laporan keuangan untuk
+                        kepentingan pribadi. Sikap saya sebaiknya...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q19" value="a" data-score="2"> A) Hanya dalam hati saja, saya
+                            tidak menyetujui hal tersebut</li>
+                        <li><input type="radio" name="q19" value="b" data-score="1"> B) Wajar karena hal tersebut sering
+                            terjadi di kantor mana pun</li>
+                        <li><input type="radio" name="q19" value="c" data-score="5"> C) Tidak ingin terlibat dalam
+                            proses rekayasa tersebut dan sebisa mungkin mengingatkan bahwa hal itu tidak baik</li>
+                        <li><input type="radio" name="q19" value="d" data-score="4"> D) Melaporkan atas tersebut kepada
+                            pihak yang berwenang</li>
+                        <li><input type="radio" name="q19" value="e" data-score="3"> E) Hal semacam itu memang sudah
+                            menjadi tradisi yang tidak baik di lingkungan kerja mana pun</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>20. Organisasi sedang mengalami permasalahan internal seputar manajemen keuangan (kerugian atau
+                        defisit yang cukup besar). Pendapat saya terhadap kondisi ini adalah ....</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q20" value="a" data-score="2"> A) Saya akan menjaga kerahasiaan
+                            permasalahan yang terjadi dan tidak ingin ikut campur masalah keuangan.</li>
+                        <li><input type="radio" name="q20" value="b" data-score="1"> B) Seharusnya pimpinan puncak dapat
+                            menindak tegas yang terlibat dalam masalah ini</li>
+                        <li><input type="radio" name="q20" value="c" data-score="3"> C) Tidak mempersoalkan masalah
+                            tersebut karena bukan bagian tugas saya</li>
+                        <li><input type="radio" name="q20" value="d" data-score="4"> D) Pastikan bahwa kepala keuangan
+                            bertanggungjawab penuh terhadap masalah ini</li>
+                        <li><input type="radio" name="q20" value="e" data-score="5"> E) Perlu menjelaskan permasalahan
+                            kondisi keuangan perusahaan kepada seluruh jajaran organisasi agar dapat mengevaluasi
+                            kembali rencana pembelanjaan.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>21. Bagi saya, bekerja adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q21" value="a" data-score="5"> A) Beribadah</li>
+                        <li><input type="radio" name="q21" value="b" data-score="1"> B) Tugas</li>
+                        <li><input type="radio" name="q21" value="c" data-score="4"> C) Kewajiban</li>
+                        <li><input type="radio" name="q21" value="d" data-score="2"> D) Kebutuhan</li>
+                        <li><input type="radio" name="q21" value="e" data-score="3"> E) Mencari uang untuk nafkah</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>22. Sebagian rekan kerja pulang 20 menit lebih awal dari jadwal yang seharusnya, bagaimana dengan
+                        Anda ?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q22" value="a" data-score="3"> A) Karena banyak yang melakukannya,
+                            mungkin hal itu tidaklah mengapa</li>
+                        <li><input type="radio" name="q22" value="b" data-score="4"> B) Banyak yang melakukannya
+                            sehingga saya pun juga melakukannya</li>
+                        <li><input type="radio" name="q22" value="c" data-score="1"> C) Demi toleransi, saya ikut
+                            melakukannya</li>
+                        <li><input type="radio" name="q22" value="d" data-score="2"> D) Saya tidak melakukannya agar
+                            dinilai sebagai staf yang rajin oleh atasan</li>
+                        <li><input type="radio" name="q22" value="e" data-score="5"> E) Saya tetap mengikuti aturan yang
+                            berlaku sehingga tetap pulang sesuai jadwal</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>23. Sikap saya terhadap perubahan, ide-ide dan cara-cara baru dalam bekerja</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q23" value="a" data-score="1"> A) Perubahan bukan jaminan
+                            keberhasilan pekerjaan.</li>
+                        <li><input type="radio" name="q23" value="b" data-score="2"> B) Perubahan adalah suatu yang
+                            pasti.</li>
+                        <li><input type="radio" name="q23" value="c" data-score="3"> C) Keberhasilan pekerjaan
+                            bergantung pada jenis perubahan, ide dan cara-cara baru tersebut</li>
+                        <li><input type="radio" name="q23" value="d" data-score="4"> D) Stabilitas dalam bekerja lebih
+                            penting.</li>
+                        <li><input type="radio" name="q23" value="e" data-score="5"> E) Dengan adanya perubahan, kondisi
+                            kerja pasti lebih baik.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>24. Berpindah-pindah pekerjaan adalah hal yang wajar</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q24" value="a" data-score="2"> A) Saya tidak berpendapat bahwa
+                            karyawan harus setia terhadap perusahaannya</li>
+                        <li><input type="radio" name="q24" value="b" data-score="3"> B) Saya meyakini nilai-nilai yang
+                            mengatakan bahwa loyalitas terhadap pekerjaan adalah sikap yang terpuji.</li>
+                        <li><input type="radio" name="q24" value="c" data-score="1"> C) Pekerjaan saya saat ini tidak
+                            dapat menjamin masa depan saya.</li>
+                        <li><input type="radio" name="q24" value="d" data-score="4"> D) Saya meyakini bahwa loyalitas
+                            itu penting, sehingga saya merasakan pentingnya tanggung jawab moral karyawan.</li>
+                        <li><input type="radio" name="q24" value="e" data-score="5"> E) Saya menyukai pekerjaan saya,
+                            tetapi jika ada pekerjaan yang lebih baik saya tidak ragu untuk pindah</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>25. Saya sering mengingatkan bawahan saya untuk tidak melakukan kekeliruan pekerjaan kantor,...
+                    </p>
+                    <ul class="options">
+                        <li><input type="radio" name="q25" value="a" data-score="5"> A) Saya pun tidak boleh melakukan
+                            kekeliruan tersebut</li>
+                        <li><input type="radio" name="q25" value="b" data-score="3"> B) Karena saya atasannya, peraturan
+                            tersebut tidak berlaku bagi saya sendiri</li>
+                        <li><input type="radio" name="q25" value="c" data-score="2"> C) Saya sesekali melakukan
+                            kekeliruan tersebut</li>
+                        <li><input type="radio" name="q25" value="d" data-score="5"> D) Peraturan tersebut khusus untuk
+                            pegawai setingkat dia</li>
+                        <li><input type="radio" name="q25" value="e" data-score="1"> E) Lebih baik saya tidak melakukan
+                            kekeliruan tersebut</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>26. Suatu hari Anda ditugasi oleh pimpinan untuk menjadi ketua dalam sebuah acara yang melibatkan
+                        semua peserta dari berbagai usia. Tindakan yang tepat dilakukan agar acara berjalan dengan
+                        lancar adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q26" value="a" data-score="5"> A) Mengajak semua rekan kerja Anda
+                            untuk berdiskusi tentang acara apa yang akan dilakukan pada hari H agar berjalan dengan
+                            lancar</li>
+                        <li><input type="radio" name="q26" value="b" data-score="2"> B) Memberikan ide Anda sendiri
+                            mengenai acara milenial yang kekinian dan semua peserta harus ikut serta</li>
+                        <li><input type="radio" name="q26" value="c" data-score="3"> C) Menanyakan satu per satu ide
+                            kepada seluruh pegawai acara apa yang cocok untuk semua generasi</li>
+                        <li><input type="radio" name="q26" value="d" data-score="4"> D) Menanyakan kepada atasan
+                            langsung tentang ide acara yang cocok untuk berbagai usia</li>
+                        <li><input type="radio" name="q26" value="e" data-score="1"> E) Menggunakan ide Anda sendiri
+                            mengenai konsep acara yang dapat merangkul semua peserta dari berbagai usia</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>27. Anda sedang mengerjakan tugas mata kuliah di perpustakaan dan meminjam komputer di sana. Saat
+                        sedang mengetik, tiba-tiba komputer tersebut mati. Yang akan anda lakukan adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q27" value="a" data-score="4"> A) Browsing di internet tentang
+                            cara memperbaiki komputer yang tiba-tiba mati lalu mencobanya</li>
+                        <li><input type="radio" name="q27" value="b" data-score="3"> B) Segera melapor kepada petugas
+                            perpustakaan tentang kerusakan dan meminta bantuan untuk mendapatkan kembali Ike tugas yang
+                            sedang diketik</li>
+                        <li><input type="radio" name="q27" value="c" data-score="2"> C) Menelpon teman anak IT dan
+                            meminta bantuannya untuk memperbaiki komputer perpustakaan</li>
+                        <li><input type="radio" name="q27" value="d" data-score="1"> D) Segera pindah ke komputer
+                            sebelah yang kosong lalu mengetik semua tugas dari awal</li>
+                        <li><input type="radio" name="q27" value="e" data-score="5"> E) Mengecek apakah ada kabel yang
+                            tercabut lalu mencoba me-restart komputer untuk menyelamatkan Ike tugas</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>28. Saya merupakan salah satu junior di sebuah perusahaan terkemuka. Pada era sekarang ini,
+                        perusahaan mengharuskan merubah sistem kerja menggunakan IT mulai dari pengiriman surat,
+                        komunikasi dengan pihak lain untuk bekerjasama dan aktivitas lainnya yang dapat dijalankan
+                        dengan IT. Saya mendapati bahwa senior di tempat saya masih tetap menggunakan non IT, padahal
+                        perusahaan telah memberikan instruksi untuk penggunaan IT dalam aktivitas perusahaan, Apa yang
+                        akan anda lakukan...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q28" value="a" data-score="3"> A) Memberikan penjelasan kepada
+                            senior tersebut bahwa perusahaan mengharuskan penggunaan IT dalam aktivitas perusahaan.</li>
+                        <li><input type="radio" name="q28" value="b" data-score="4"> B) Memberikan penjelasan kepada
+                            senior tersebut dan mengajarkannya tentang IT.</li>
+                        <li><input type="radio" name="q28" value="c" data-score="5"> C) Membantu senior dalam bekerja
+                            yang mengharuskan penggunaan IT jika tidak sibuk.</li>
+                        <li><input type="radio" name="q28" value="d" data-score="2"> D) Biarkan saja sampai senior
+                            tersebut merasa bahwa IT diperlukan.</li>
+                        <li><input type="radio" name="q28" value="e" data-score="1"> E) Karena IT diperlukan, seharusnya
+                            senior mawas diri.</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>29. Anda menemukan data evaluasi pelanggan yang menyarankan agar kantor Anda memiliki akun media
+                        sosial sehingga mudah berkomunikasi dengan pelanggan. Pada sisi lain, beberapa staf menolak
+                        saran tersebut karena akan menambah pekerjaan mereka. Bagaimana tindakan Anda?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q29" value="a" data-score="1"> A) Saya merasa tidak semua saran
+                            pelanggan perlu diwujudkan; apabila kantor akan membuat akun media sosial, pengelolanya
+                            dapat diserahkan kepada staf yang ahli</li>
+                        <li><input type="radio" name="q29" value="b" data-score="2"> B) Saya menilai penting untuk
+                            mempelajari pembuatan dan pengelolaan akun media sosial sehingga dapat mengoptimalkan
+                            pekerjaan tim marketing dan layanan pelanggan</li>
+                        <li><input type="radio" name="q29" value="c" data-score="3"> C) Saya merasa sistem layanan
+                            pelanggan sebelumnya sudah cukup memfasilitasi kebutuhan pelanggan; pengelolaan media sosial
+                            dapat membebani pekerjaan yang sudah ada</li>
+                        <li><input type="radio" name="q29" value="d" data-score="4"> D) Saya memandang bahwa evaluasi
+                            efektivitas sistem layanan pelanggan itu penting agar dapat memberikan solusi terbaik dalam
+                            melayani pelanggan</li>
+                        <li><input type="radio" name="q29" value="e" data-score="5"> E) Saya merasa terdorong untuk
+                            mempelajari cara pembuatan dan pengelolaan akun media sosial sehingga dapat memberikan hasil
+                            optimal dalam melayani pelanggan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>30. Deni adalah kepala unit termuda di tempat kerjanya. Sejumlah karyawan di unit kerja Deni
+                        berusia jauh lebih tua darinya dengan pengalaman kerja puluhan tahun. Namun, cara kerja mereka
+                        cenderung tradisional dan kurang inovatif. Apa tindakan Deni?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q30" value="a" data-score="4"> A) Menggunakan cara komunikasi yang
+                            sesuai dengan karyawan</li>
+                        <li><input type="radio" name="q30" value="b" data-score="1"> B) Melanjutkan pola kerja yang
+                            sudah biasa dilakukan di unit kerja yang ia pimpin</li>
+                        <li><input type="radio" name="q30" value="c" data-score="2"> C) Menunjukkan ketidaksetujuan pada
+                            cara kerja tradisional yang kurang efektif</li>
+                        <li><input type="radio" name="q30" value="d" data-score="3"> D) Menghargai kemampuan dan
+                            pengalaman setiap karyawan di unit kerjanya</li>
+                        <li><input type="radio" name="q30" value="e" data-score="5"> E) Mendorong keterlibatan dan kerja
+                            sama semua karyawan untuk mencapai target</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>31. Sekolah Anda merekrut peserta lomba olimpiade sains tingkat provinsi dan Anda terpilih
+                        menjadi salah satu peserta yang akan ikut serta dalam olimpiade tersebut. Pada saat hari
+                        pelaksanaan lomba, terjadi beberapa kendala yang menyebabkan kurang maksimalnya kinerja Anda
+                        dalam mengerjakan soal karena hal itu Anda terpaksa mundur, padahal sedikit lagi mencapai babak
+                        final.
+
+                        Di saat yang sama Anda juga diberikan tawaran untuk ikut lomba lagi yang rencananya akan
+                        dilaksanakan minggu depan. Yang akan Anda lakukan adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q31" value="a" data-score="4"> A) Mempertahankan terjaganya fokus
+                            belajar hingga pelaksanaan lomba tiba saatnya</li>
+                        <li><input type="radio" name="q31" value="b" data-score="5"> B) Mencari sistem belajar yang
+                            lebih efektif untuk mencapai target yang maksimal</li>
+                        <li><input type="radio" name="q31" value="c" data-score="1"> C) Menambah waktu belajar dari
+                            biasanya dengan tujuan mencapai target skor yang tinggi pada lomba berikutnya</li>
+                        <li><input type="radio" name="q31" value="d" data-score="2"> D) Mengoreksi kendala pengerjaan
+                            soal dan memperbaikinya agar tidak terulang hal sedemikian</li>
+                        <li><input type="radio" name="q31" value="e" data-score="3"> E) Mempertimbangkan baik-baik
+                            tawaran tersebut karena memikirkan jika terjadi kendala yang sama</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>32. Anda merupakan pemilik usaha restoran cepat saji yang baru saja launching beberapa hari yang
+                        lalu. Tanggapan dari konsumen pun cukup baik, bahkan banyak yang mengatakan makanannya enak dan
+                        tempatnya nyaman. Namun suatu ketika ada seorang pelanggan mendatangi ruangan Anda lalu
+                        mengatakan bahwa pelayanan dari salah satu karyawan Anda kurang memuaskan. Sikap Anda sebagai
+                        pemilik restoran tersebut adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q32" value="a" data-score="2"> A) Memanggil karyawan terkait ke
+                            ruangan Anda lalu menanyakan tentang kendala tersebut</li>
+                        <li><input type="radio" name="q32" value="b" data-score="4"> B) Meminta maaf kepada pelanggan
+                            dan mengatakan akan meningkatkan pelayanan restoran dengan baik</li>
+                        <li><input type="radio" name="q32" value="c" data-score="5"> C) Meminta maaf lalu melakukan
+                            dialog kepada karyawan agar diketahui permasalahannya lebih lanjut</li>
+                        <li><input type="radio" name="q32" value="d" data-score="3"> D) Mengatakan bahwa akan membentuk
+                            layanan costumer service agar kendala dari pelanggan bisa disalurkan kedepannya</li>
+                        <li><input type="radio" name="q32" value="e" data-score="1"> E) Menjelaskan jika restoran Anda
+                            baru saja launching lalu memikirkan penyebab terjadinya masalah tersebut agar kebutuhan
+                            pelanggan dapat terpenuhi</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>33. Di salah satu daerah, Fira merupakan warga yang baru saja pindah beberapa hari yang lalu.
+                        Suatu hari Fira mengadakan acara syukuran di rumahnya dan mengundang warga sekitar untuk datang.
+                        Saat sedang menyiapkan acara tersebut, seorang warga menghampiri Fira selaku pemilik acara dan
+                        mengatakan sebaiknya menyisipkan beberapa tradisi khas yang biasa dilakukan disana. Jika Anda
+                        selaku Fira, tindakan yang sebaiknya Anda ambil pada saat itu adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q33" value="a" data-score="3"> A) Melakukan diskusi pada keluarga
+                            yang lain agar ditemukan kesepakatan mengenai hal tersebut</li>
+                        <li><input type="radio" name="q33" value="b" data-score="2"> B) Berhati-hati terhadap tradisi
+                            khas jika bertentangan dengan ajaran agama nantinya karena Anda merupakan warga baru</li>
+                        <li><input type="radio" name="q33" value="c" data-score="4"> C) Meminta warga tersebut untuk
+                            menjelaskan tradisi khas yang dimaksid dan mempertimbangkan nantinya</li>
+                        <li><input type="radio" name="q33" value="d" data-score="1"> D) Membentengi diri karena sangat
+                            khawatir jika terpapar radikalisme dengan adanya tradisi tersebut</li>
+                        <li><input type="radio" name="q33" value="e" data-score="5"> E) Menyetujui untuk memasukkan
+                            tradisi tersebut di acara selama tidak bertentangan dengan ajaran Anda</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>34. Anda seorang mahasiswa yang mendapatkan tugas materi dalam kelompok dan dijadwalkan untuk
+                        presentasi besok dan anda ditunjuk sebagai ketua kelompok. Dalam kelompok anda terdiri dari 4
+                        (empat) orang termasuk anda. Ketika dalam proses penyusunan materi, anda sudah mengetahui
+                        kemampuan akademis rekan-rekan satu tim anda sehingga anda tahu mana orang yang mampu membantu
+                        menyusun materi dengan baik dan yang tidak, bahkan anda mengetahui mana yang pasif (hanya
+                        mengandalkan rekannya yang lain) dan mana yang tidak.Bagaimana sikap anda?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q34" value="a" data-score="5"> A) Membagi tugas penyusunan materi
+                            sesuai dengan kemampuan akademis masing-masing anggota.</li>
+                        <li><input type="radio" name="q34" value="b" data-score="3"> B) Membagi tugas penyusunan materi
+                            sama rata kepada seluruh anggota tanpa memandang kemampuan mereka sama sekali.</li>
+                        <li><input type="radio" name="q34" value="c" data-score="2"> C) Membagi tugas penyusunan materi
+                            hanya kepada anggota yang pandai saja dan mengabaikan anggota yang lainnya.</li>
+                        <li><input type="radio" name="q34" value="d" data-score="1"> D) Membagi tugas penyusunan materi
+                            hanya kepada anggota yang pandai saja dan yang tidak pandai diberi tugas yang lain (mencetak
+                            materi/print, menjilid makalah).</li>
+                        <li><input type="radio" name="q34" value="e" data-score="4"> E) Membagi tugas penyusunan materi
+                            sama rata kepada seluruh anggota tanpa memandang kemampuan mereka sama sekali dan memberikan
+                            hukuman kepada anggota yang tidak mau menjalankan pembagian tugas tersebut dengan
+                            mengeluarkan dari keanggotaan. (namanya tidak dicantumkan dalam daftar anggota).</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>35. Menurut informasi terdapat 228 penangkapan terorisme sepanjang tahun 2020 yang berencana
+                        untuk meledakkan lembaga resmi pemerintah maupun tempat-tempat ibadah. Hal ini tentu saja
+                        menjadi gambaran yang cukup berbahaya. Bagaimana pendapat anda?</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q35" value="a" data-score="3"> A) Hal tersebut wajar terjadi
+                            karena munculnya ketidakpercayaan masyarakat terhadap pemerintah</li>
+                        <li><input type="radio" name="q35" value="b" data-score="4"> B) Adanya gambaran kasus ini
+                            menjadi polemik karena radikalisme telah masuk di tengah masyarakat Indonesia</li>
+                        <li><input type="radio" name="q35" value="c" data-score="5"> C) Kita harus mengantisipasi adanya
+                            paham radikalisme dan juga ujaran kebencian mengingat adanya kasus ini menjadi bukti bahwa
+                            di tengah masyarakat telah terjadi penyebaran radikalisme</li>
+                        <li><input type="radio" name="q35" value="d" data-score="1"> D) Biasa saja karena kasus tersebut
+                            tidak terlalu menimbulkan efek yang</li>
+                        <li><input type="radio" name="q35" value="e" data-score="2"> E) radikalisme tidak bisa diangkat
+                            dari beberapa oknum yang terbukti melakukan terorisme</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>36. Saat Anda menemukan ada kejanggalan di kantor yang bisa mengakibatkan bocornya data
+                        perusahaan. Sikap Anda adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q36" value="a" data-score="4"> A) Menyuruh semua karyawan berhenti
+                            menggunakan sistem</li>
+                        <li><input type="radio" name="q36" value="b" data-score="5"> B) Anda langsung menghentikan
+                            sistem</li>
+                        <li><input type="radio" name="q36" value="c" data-score="3"> C) Melaporkan kepada atasan terkait
+                            hal tersebut</li>
+                        <li><input type="radio" name="q36" value="d" data-score="2"> D) Menyelesaikan tugas penting
+                            terlebih dahulu, kemudian menghentikan sistem</li>
+                        <li><input type="radio" name="q36" value="e" data-score="1"> E) Menyelesaikan tugas terlebih
+                            dahulu, kemudian melaporkannya ke atasan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>37. Upaya Anda untuk mencegah pemahaman radikal yang masuk ke kantor adalah dengan cara...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q37" value="a" data-score="2"> A) Bergaul dengan rekan kerja yang
+                            itu-itu saja</li>
+                        <li><input type="radio" name="q37" value="b" data-score="5"> B) Memahami bahaya paham
+                            radikalisme</li>
+                        <li><input type="radio" name="q37" value="c" data-score="1"> C) Waspada saat ada orang baru
+                            mengajak berkegiatan</li>
+                        <li><input type="radio" name="q37" value="d" data-score="3"> D) Menghindari rekan kerja yang
+                            terindikasi radikalisme</li>
+                        <li><input type="radio" name="q37" value="e" data-score="1"> E) Menolak diajak menghadiri
+                            kegiatan radikal</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>38. `Jika ada informasi yang belum jelas kebenarannya, Anda...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q38" value="a" data-score="5"> A) Mengkonfirmasi fakta dari
+                            informasi tersebut</li>
+                        <li><input type="radio" name="q38" value="b" data-score="2"> B) Saya tetap mempercayainya</li>
+                        <li><input type="radio" name="q38" value="c" data-score="1"> C) Saya tidak peduli</li>
+                        <li><input type="radio" name="q38" value="d" data-score="3"> D) Saya ragu mempercayainya</li>
+                        <li><input type="radio" name="q38" value="e" data-score="4"> E) Saya tidak peduli dengan orang
+                            lain</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>39. Menurut saya orang lain kedisiplinan dan rasa tanggung jawab saya..</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q39" value="a" data-score="5"> A) Sangat Baik</li>
+                        <li><input type="radio" name="q39" value="b" data-score="4"> B) Baik</li>
+                        <li><input type="radio" name="q39" value="c" data-score="3"> C) Cukup</li>
+                        <li><input type="radio" name="q39" value="d" data-score="2"> D) Kurang</li>
+                        <li><input type="radio" name="q39" value="e" data-score="1"> E) Rendah</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>40. Dalam kepanitian terdapat rapat untuk membahas macam-macam seksi. Yang Anda lakukan saat
+                        rapat adalah...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q40" value="a" data-score="3"> A) Menjalani rapat dengan terpaksa
+                        </li>
+                        <li><input type="radio" name="q40" value="b" data-score="5"> B) Mengambil tugas yang sesuai
+                            dengan kemampuan saya</li>
+                        <li><input type="radio" name="q40" value="c" data-score="2"> C) Mendengarkan rapat</li>
+                        <li><input type="radio" name="q40" value="d" data-score="4"> D) Mengambil tugas di setiap seksi
+                        </li>
+                        <li><input type="radio" name="q40" value="e" data-score="1"> E) Menerima hasil rapatnya saja
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>41. Tetangga saya meninggal, namun orang tua saya tidak ada di rumah.</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q41" value="a" data-score="1"> A) Saya tidak peduli dengan kondisi
+                            di sekitar</li>
+                        <li><input type="radio" name="q41" value="b" data-score="5"> B) Saya pergi melayat tetangga
+                            tersebut</li>
+                        <li><input type="radio" name="q41" value="c" data-score="4"> C) Saya mendoakan tetangga saya
+                            dari rumah</li>
+                        <li><input type="radio" name="q41" value="d" data-score="2"> D) Saya menjenguknya dari rumah
+                        </li>
+                        <li><input type="radio" name="q41" value="e" data-score="3"> E) Jika saya ada teman, saya akan
+                            pergi melayat</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>42. Saya akan melakukan hal yang benar apabila...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q42" value="a" data-score="2"> A) Pemimpin saya memberi tahu mana
+                            yang benar dan salah</li>
+                        <li><input type="radio" name="q42" value="b" data-score="3"> B) Teman kerja saya memberi masukan
+                            kepada saya</li>
+                        <li><input type="radio" name="q42" value="c" data-score="5"> C) Sesuai dengan norma yang berlaku
+                        </li>
+                        <li><input type="radio" name="q42" value="d" data-score="4"> D) Sesuai dengan nasehat dari orang
+                            tua saya</li>
+                        <li><input type="radio" name="q42" value="e" data-score="1"> E) Saya ingin terlihat benar
+                            sehingga banyak teman yang menyukai saya</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>43. Kemajuan sebuah perusahaan ditentukan oleh...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q43" value="a" data-score="3"> A) Pemimpinnya</li>
+                        <li><input type="radio" name="q43" value="b" data-score="2"> B) Karyawannya</li>
+                        <li><input type="radio" name="q43" value="c" data-score="1"> C) Modal dan investasi perusahaan
+                        </li>
+                        <li><input type="radio" name="q43" value="d" data-score="5"> D) Kerja sama antara pemimpin dan
+                            karyawan</li>
+                        <li><input type="radio" name="q43" value="e" data-score="4"> E) Kreativitas perusahaan</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>44. Demi meraih cita-cita saya akan..</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q44" value="a" data-score="2"> A) Berusaha dan bekerja keras</li>
+                        <li><input type="radio" name="q44" value="b" data-score="4"> B) Saya masih ragu-ragu</li>
+                        <li><input type="radio" name="q44" value="c" data-score="3"> C) Saya percaya diri dan optimis
+                        </li>
+                        <li><input type="radio" name="q44" value="d" data-score="1"> D) Saya butuh motivasi dari orang
+                            lain</li>
+                        <li><input type="radio" name="q44" value="e" data-score="5"> E) Saya akan mewujudkannya dengan
+                            cara apapun</li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <p>45. Jika saya meraih kekalahan, maka saya...</p>
+                    <ul class="options">
+                        <li><input type="radio" name="q45" value="a" data-score="2"> A) Senang membalas dendam</li>
+                        <li><input type="radio" name="q45" value="b" data-score="5"> B) Terus mencoba</li>
+                        <li><input type="radio" name="q45" value="c" data-score="4"> C) Mengucapkan selamat kepada
+                            pemenang</li>
+                        <li><input type="radio" name="q45" value="d" data-score="1"> D) Menyerah</li>
+                        <li><input type="radio" name="q45" value="e" data-score="3"> E) Berpikir kurang beruntung</li>
+                    </ul>
+                </div>
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script>
+        var timer;
+        var timeLeft;
+        var totalScore = 0;
+
+        function activateTest() {
+            var activationCode = document.getElementById('activationCode').value;
+
+            // Contoh: jika kode aktifasi adalah "12345"
+            if (activationCode === "12345") {
+                document.getElementById('quiz').style.display = 'block';
+                document.getElementById('activationForm').style.display = 'none';
+                startTimer(6000); // Waktu pengerjaan setiap soal: 2 menit (120 detik)
+            } else {
+                alert('Kode Aktifasi Salah!');
+            }
+        }
+
+        function startTimer(seconds) {
+            timeLeft = seconds;
+            updateTimer();
+            timer = setInterval(function () {
+                timeLeft--;
+                updateTimer();
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    alert('Waktu Habis! Otomatis Submit Jawaban.');
+                    submitQuiz();
+                }
+            }, 1000);
+        }
+
+        function updateTimer() {
+            document.getElementById('time').innerHTML = formatTime(timeLeft);
+        }
+
+        function formatTime(seconds) {
+            var minutes = Math.floor(seconds / 60);
+            var remainingSeconds = seconds % 60;
+            return minutes + ':' + (remainingSeconds < 100 ? '0' : '') + remainingSeconds;
+        }
+
+        function submitQuiz() {
+            clearInterval(timer);
+
+            var answers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value
+                // Tambahkan soal lainnya jika perlu
+            };
+
+            var score = 0;
+            for (var question in answers) {
+                score += parseInt(document.querySelector('input[name="' + question + '"]:checked').getAttribute('data-score'));
+            }
+
+            totalScore += score;
+
+            var resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '<h2>Hasil Skor</h2>' +
+                '<p>Skor pada tes ini: ' + totalScore + '</p>';
+        }
+    </script>
+    <div class="Back">
+        <a href="Menu paket soal.html">Back</a>
+    </div>
+</body>
+
+</html>

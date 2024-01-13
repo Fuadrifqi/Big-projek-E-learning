@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi CPNS</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+        }
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+        header {
+            background-color: blueviolet;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            padding: 40px;
+            flex-grow: 1;
+            overflow-y: auto;
+            justify-content: space-around;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 65px;
+        }
+
+        h2{
+            color: black;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        h3 {
+            color: black;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .Masuk_materi a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-left: 65%;
+        }
+
+        p {
+            line-height: 1.5;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            display: none;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar-container">
+            <ul class="ul">
+                <img src="LOGO.png" class="logo">
+                <li>
+                    <a href="beranda.html">Beranda</a>
+                </li>
+                <li>
+                    <a href="tentang.html">Tentang</a>
+                </li>
+                <li>
+                    <a href="keunggulan.html">Keunggulan</a>
+                </li>
+                <li>
+                    <a href="materi3.html">Materi</a>
+                </li>
+                <li>
+                    <a href="Menu paket soal.html">Paket Soal</a>
+                </li>
+            </ul>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img">
+                    </div>
+                </div>
+    
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'Login.html';
+                    }
+                </script>
+            </div>
+        </div>
+        <header>
+            <h1>Materi CPNS</h1>
+        </header>
+        <main>
+            <h2>Pendahuluan Pembahasan TWK,TIU,TKP</h2>
+            <h3 onclick="toggleContent('twk')">Pembahasan utama materi (TWK)</h3>
+            <div class="Masuk_materi">
+                <a href="materi3,2TWK.html">Masuk materi TWK</a>
+                </div>
+            <p id="twk">TWK bertujuan untuk menilai penguasaan pengetahuan dan kemampuan mengimplementasikan:
+
+                <br> a. Nasionalisme, dengan tujuan mampu mewujudkan kepentingan nasional melalui cita-cita dan tujuan
+                yang sama dengan tetap mempertahankan identitas nasional;
+                </br>
+                <br> b. Integritas, dengan tujuan mampu menjunjung tinggi kejujuran, ketangguhan, komitmen dan
+                konsistensi sebagai satu kesatuan sikap untuk mencapai tujuan nasional;
+                </br>
+                <br> c. Bela negara, dengan tujuan mampu berperan aktif dalam mempertahankan eksistensi bangsa dan
+                negara;
+                </br>
+                <br> d. Pilar negara, dengan tujuan mampu membentuk karakter positif melalui pemahaman dan pengamalan
+                nilai-nilai dalam Pancasila, Undang-Undang Dasar negara Republik Indonesia Tahun 1945, Negara Kesatuan
+                Republik Indonesia dan Bhinneka Tunggal Ika.
+                </br>
+                <br> e. Bahasa negara, dengan tujuan mampu menggunakan bahasa Indonesia sebagai bahasa persatuan yang
+                sangat penting kedudukannya dalam kehidupan bermasyarakat, berbangsa dan bernegara.
+                </br>
+            </p>
+            <h3 onclick="toggleContent('tiu')">Pembahasan utama materi (TIU)</h3>
+            <div class="Masuk_materi">
+                <a href="materi3,3TIU.html">Masuk materi TIU</a>
+                </div>
+            <p id="tiu">Materi TIU CPNS 2023 merupakan soal tes yang berfokus pada penelitian di tiga aspek, di
+                antaranya kemampuan numerik (logika berhitung), kemampuan verbal (logika bahasa), dan kemampuan figural
+                (penalaran dengan gambar). Tahun ini, materi TIU terdiri dari 35 soal yang terdiri dari beberapa
+                komponen soal seperti berikut:
+                <br>
+                1. Kemampuan verbal Analogi, silogisme, dan analitis.
+                </br>
+                <br>
+                2. Kemampuan numerik Berhitung, deret angka, perbandungan kuantitatif, dan soal cerita.
+                </br>
+                <br>
+                3. Kemampuan figural Analogi, ketidaksamaan, dan serial.
+                </br>
+            </p>
+
+            <h3 onclick="toggleContent('tkp')">Pembahasan utama materi (TKP)</h3>
+            <div class="Masuk_materi">
+                <a href="materi3,4TKP.html">Masuk materi TKP</a>
+                </div>
+            <p id="tkp">TKP bertujuan untuk menilai penguasaan pengetahuan dan kemampuan mengimplementasikan:
+                <br>
+                a. Pelayanan publik, dengan tujuan mampu menampilkan perilaku keramahtamahan dalam bekerja yang efektif
+                agar bisa memenuhi kebutuhan dan kepuasan orang lain sesuai dengan tugas dan wewenang yang dimiliki.
+                </br>
+                <br>
+                b. Jejaring kerja, dengan tujuan mampu membangun dan membina hubungan, bekerja sama, berbagi informasi
+                dan berkolaborasi dengan orang lain secara efektif.
+                </br>
+                <br>
+                c. Sosial budaya, dengan tujuan mampu beradaptasi dan bekerja secara efektif dalam masyarakat majemuk,
+                terdiri atas beragam agama, suku, budaya, dan sebagainya.
+                </br>
+                <br>
+                d. Teknologi informasi dan komunikasi, dengan tujuan mampu memanfaatkan teknologi informasi secara
+                efektif untuk meningkatkan kinerja.
+                </br>
+                <br>
+                e. Profesionalisme, dengan tujuan mampu melaksanakan tugas dan fungsi sesuai dengan tuntutan Jabatan;
+                </br>
+                <br>
+                f. Anti radikalisme, dengan tujuan menjaring informasi dari individu tentang pengetahuan terhadap anti
+                radikalisme, kecenderungan bersikap, dan bertindak saat menanggapi stimulus dengan beberapa alternatif
+                situasi.
+                </br>
+            </p>
+        </main>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ikuti Kami</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="soal_skd.html">Soal CPNS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <ul>
+                    <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                    <li><a href="#">Tips dan trik</a></li>
+                    <li><a href="#">Teknis SKD</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

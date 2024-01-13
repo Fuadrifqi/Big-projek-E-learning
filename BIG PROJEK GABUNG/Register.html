@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="register.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registerForm">
+            <h1>Daftar</h1>
+            <div class="p">
+                <input type="text" id="emailInput" placeholder="Email">
+            </div>
+            <div class="p">
+                <input type="password" id="passwordInput" placeholder="Password">
+            </div>
+            <div class="p">
+                <input type="password" id="confirmPasswordInput" placeholder=" Konfirmasi Password">
+            </div>
+            <div class="remember-forgot">
+                <button class="btn" type="button" onclick="validateForm()"><a href="Login.html">Daftar</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var emailInput = document.getElementById('emailInput').value;
+            var passwordInput = document.getElementById('passwordInput').value;
+            var confirmPasswordInput = document.getElementById('confirmPasswordInput').value;
+
+
+            if (!emailInput.endsWith('@gmail.com')) {
+
+                alert('Maaf Email Yang Anda Masukan Salah');
+                return;
+            }
+
+           
+            if (passwordInput === '') {
+
+                alert('Password harus diisi');
+                return;
+            }
+
+            if (passwordInput !== confirmPasswordInput) {
+                
+                alert('Password dan konfirmai Password harus sama');
+                return;
+            }
+
+            document.getElementById('registerForm').submit();
+        }
+    </script>
+</body>
+</html>

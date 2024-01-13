@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi CPNS</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0;
+        }
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+    /*content*/
+        header {
+            background-color: blueviolet;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            padding: 40px;
+            flex-grow: 1;
+            overflow-y: auto;
+            justify-content: space-around;
+        }
+
+        h1 {
+            color: rgb(255, 254, 254);
+            text-align: center;
+        }
+
+        .navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 65px;
+        }
+
+        h3 {
+            color: black;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .Back a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-right: 50%;
+        }
+
+        .Back_Bottom a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-right: 50%;
+        }
+
+        p {
+            line-height: 1.5;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            display: none;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar-container">
+            <ul class="ul">
+                <img src="LOGO.png" class="logo">
+                <li>
+                    <a href="beranda.html">Beranda</a>
+                </li>
+                <li>
+                    <a href="tentang.html">Tentang</a>
+                </li>
+                <li>
+                    <a href="keunggulan.html">Keunggulan</a>
+                </li>
+                <li>
+                    <a href="materi3.html">Materi</a>
+                </li>
+                <li>
+                    <a href="Menu paket soal.html">Paket Soal</a>
+                </li>
+            </ul>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img">
+                    </div>
+                </div>
+    
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'Login.html';
+                    }
+                </script>
+            </div>
+        </div>
+        <header>
+            <h1>Materi TKP</h1>
+        </header>
+        <main>
+            <div class="Back">
+                <a href="materi3,1.html">Back</a>
+            </div>
+            <h3 onclick="toggleContent('tkp')">Materi Tes Karakteristik Pribadi (TKP)</h3>
+            <p id="tkp">Ringkasan Materi Tes Karakteristik Pribadi (TKP)
+                <br>
+                Tes Karakteristik Pribadi (TKP) digunakan untuk mengukur karakter keseharian peserta Tes Calon Pegawai
+                Negeri Sipil (CPNS) yang berkaitan dengan kultur lingkungan kerja kepegawaian PNS dalam pelayanan publik
+                di berbagai lini pemerintahan seperti kementerian, lembaga nasional, maupun pemerintah daerah tingkat I
+                dan II.
+                </br>
+                <br>
+                Ada beberapa aspek karakteristik pribadi yang diuji di TKP, seperti integritas diri, kejujuran, tanggung
+                jawab, kemampuan untuk beradaptasi, pengendalian diri, semangat untuk terus berprestasi, tingkat
+                inisiatif, daya kreativitas dan inovasi, ketekunan, penghargaan terhadap orang lain atau berorientasi
+                pada pelayanan, ketegasan, kepercayaan diri, mampu bertoleransi, memiliki kepedulian terhadap ling-
+                kungan, dan senantiasa efisien dalam bekerja.
+                </br>
+                <br>
+                A. Aspek Integritas Diri
+                </br>
+                <br>
+                Tes Karakteristik Pribadi (TKP) pada aspek integritas diri bertujuan untuk mengukur tingkat kebaikan
+                atau ketulusan hati seseorang dalam kehidupan sehari-hari. Tes bagian ini dapat dijadikan acuan
+                kesesuaian antara tingkah laku peserta terhadap perkataan dan perbuatan yang dilakukan. Biasanya
+                kualitas kepribadian seseorang sebanding dengan integritas dirinya.
+                </br>
+                <br>
+                Indikasinya adalah:
+                </br>
+                <br>
+                -seseorang yang baik atau tulus maka memiliki keberanian dalam mengatakan kebenaran.
+                </br>
+                <br>
+                -dapat membedakan dengan pasti hal yang benar dan salah.
+                </br>
+                <br>
+                -berani memperjuangkan kebaikan dan kebenaran.
+                </br>
+                <br>
+                -tidak takut terhadap risiko apa pun yang menimpa atas tindakan membela atau mempertahankan kebenaran,
+                meskipun risiko yang di- tanggung bisa saja dapat mengan- cam kelangsungan kariernya.
+                </br>
+                <br>
+                Pada era yang kompleks seperti saat ini, sangat jarang didapati orang yang memiliki integritas tinggi.
+                Jadi, tidak mengherankan apabila orang tersebut layak menjadi pemimpin dengan tanggung jawab besar
+                seperti mengatur urusan-urusan penting yang menyangkut kepentingan rakyat banyak.
+                </br>
+                <br>
+                TIPS:
+                </br>
+                <br>
+                -Jadilah pribadi yang berin- tegritas (jujur, tegas, dan disiplin).
+                </br>
+                <br>
+                -Pahamilah bahwa semakin tinggi integritas yang Anda miliki maka semua pihak akan segan dan hormat
+                kepada
+                Anda. Begitu pun sebaliknya.
+                </br>
+                <br>
+                Contoh:
+                </br>
+                <br>
+                1. Saya mengetahui bahwa atasan Saya di kantor melakukan reka- yasa laporan keuangan untuk kepentingan
+                pribadi. Sikap Saya sebaiknya....
+                </br>
+                <br>
+                A. Hanya dalam hati saja Saya tidak menyetujui hal tersebut.
+                </br>
+                <br>
+                B. Wajar karena hal tersebut sering terjadi di kantor mana pun.
+                </br>
+                <br>
+                C. Tidak ingin terlibat dalam proses rekayasa tersebut dan sebisa mungkin mengingatkan bahwa hal itu
+                tidak baik.
+                </br>
+                <br>
+                D. Melaporkan atasan tersebut kepada pihak yang berwenang.
+                </br>
+                <br>
+                E Hal semacam itu memang sudah menjadi tradisi yang tidak baik di lingkungan kerja mana pun.
+                </br>
+                <br>
+                Jawaban: C
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Saya mengetahui bahwa atasan Saya di kantor melakukan reka- yasa laporan keuangan untuk kepentingan
+                pribadi. Sikap Saya sebaiknya...
+                </br>
+                <br>
+                A. Hanya dalam hati saja Saya tidak menyetujui hal tersebut.
+                </br>
+                <br>
+                Skor 3:
+                Diam adalah tindakan dalam tingkatan paling rendah.
+                </br>
+                <br>
+                B. Wajar karlena hal tersebut sering terjadi di kantor mana pun.
+                </br>
+                <br>
+                Skor 1:
+                Menganggap hal yang tidak baik menjadi suatu hal yang sudah wajar, semakin lama akan membuat Anda juga
+                akan terdorong melakukannya.
+                </br>
+                <br>
+                C. Tidak ingin terlibat dalam proses rekayasa tersebut dan sebisa mungkin mengingatkan bahwa hal itu
+                tidak baik.
+                </br>
+                <br>
+                Skor 5:
+                Menunjukkan pribadi yang me- miliki prinsip.
+                </br>
+                <br>
+                D. Melaporkan atasan tersebut kepada pihak yang berwenang.
+                </br>
+                <br>
+                Skor 4:
+                Masih ada hal yang perlu dilengkapi sebelum melapor- kan, yaitu adanya bukti, karena jika tidak memiliki
+                bukti maka termasuk fitnah. Risiko yang ditanggung adalah terkena pasal pencemaran nama baik.
+                </br>
+                <br>
+                E. Hal semacam itu memang sudah menjadi tradisi yang tidak baik di lingkungan kerja mana pun.
+                </br>
+                <br>
+                Skor 2:
+                Mengetahui hal yang tidak baik apalagi terjadi di banyak tempat merupakan tindakan permisif.
+                </br>
+                <br>
+                2. Dalam suatu pengurusan adminis- trasi atau surat izin di kantor tempat Saya bekerja, ternyata banyak
+                pegawai yang merupakan rekan kerja Saya meminta uang tanda terima kasih atas pengurusan tersebut. Hal
+                ini bertolak belakang dengan peraturan kantor bahwa setiap pegawai dilarang memungut upah atas
+                kepengurusan surat. Tindakan Saya adalah...
+                </br>
+                <br>
+                A. Ikut melakukannya karena ternyata banyak rekan kerja yang melakukannya.
+                </br>
+                <br>
+                B. Tidak terlintas di benak sedikit pun, sehingga tidak ingin melakukannya sama sekali.
+                </br>
+                <br>
+                C. Melakukannya hanya jika ter- paksa membutuhkan uang tambahan untuk keperluan keluarga, sebab gaji
+                kantor memang kecil.
+                </br>
+                <br>
+                D. Terkadang saja melakukan hal tersebut, sebagai rasa solidaritas antarrekan kerja..
+                </br>
+                <br>
+                E. Berusaha semampunya untuk tidak melakukannya, namun jika ada kesempatan tidak apa- apa.
+                </br>
+                <br>
+                Jawaban: B
+                </br>
+                <br>
+                Pembahasan:
+                Dalam suatu pengurusan adminis- trasi atau surat izin di kantor tempat Saya bekerja, ternyata banyak
+                pegawai yang merupakan rekan kerja Saya meminta uang tanda terima kasih atas pengurusan tersebut. Hal
+                ini bertolak belakang dengan peraturan kantor bahwa setiap pegawai dilarang memungut upah atas
+                kepengurusan surat.
+                </br>
+                <br>
+                Tindakan Saya adalah....
+                </br>
+                <br>
+                A. Ikut melakukannya karena ternyata banyak rekan kerja yang melakukannya.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Ikut melakukan tindakan ter- sebut menandakan Anda bukan pribadi yang baik.
+                </br>
+                <br>
+                B. Tidak terlintas di benak sedikit pun, sehingga tidak ingin melakukannya sama sekali.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Menunjukkan pribadi yang memiliki prinsip.
+                </br>
+                <br>
+                C. Melakukannya hanya jika ter- paksa membutuhkan uang tambahan untuk keperluan keluarga, sebab gaji
+                kantor memang kecil.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Alasan gaji kecil tidak dapat dibenarkan. Uang tambahan yang Anda dapatkan berasal. dari sumber yang
+                tidak baik.
+                </br>
+                <br>
+                D. Terkadang saja melakukan hal tersebut, sebagai rasa solida ritas antarrekan kerja.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Terkadang berawal dari solidaritas, Anda bisa menyelami atas dasar apa rekan-rekan kerja melakukan
+                halitu. Barulah ambil cara agar bisa menyadarkan rekan-rekan agar meninggalkan hal yang tidak baik itu.
+                Namun bukan berarti tindakan ini tanpa risiko jika Anda tidak mampu mengendalikan diri, karena Anda bisa
+                terjerumus.
+                </br>
+                <br>
+                E. Berusaha semampunya untuk tidak melakukannya, namun jika ada kesempatan tidak apa- apa. Usaha agar
+                tidak melakukan hal tersebut sudah baik, namun kuatkan hati agar tidak tergoda.
+                </br>
+                <br>
+                B. Aspek Kejujuran
+                </br>
+                <br>
+                Pada tes TKP CPNS, aspek kejujuran digunakan untuk mengukur tingkat kejujuran sesuai norma agama yang
+                dianut. Hal ini terindikasi dari:
+                </br>
+                <br>
+                -ketulusan hati Anda dalam perbuatan.
+                </br>
+                <br>
+                -selalu berkata yang benar.
+                </br>
+                <br>
+                -tidak melakukan kecurangan, baik itu yang besar maupun yang kecil. Contoh kecurangan-kecurangan kecil
+                seperti mencurangi waktu kerja dan mencurangi penggunaan fasilitas kantor. Sementara contoh
+                kecurangan-kecurangan besar seperti korupsi, suap-menyuap, rekayasa kasus, menjual aset negara,
+                mark-up nilai proyek, pemufakatan jahatan, dan lain-lain.
+                </br>
+                <br>
+                Tips:
+                </br>
+                <br>
+                -Ikuti gerakan pemerintah: Berani jujur itu hebat!
+                </br>
+                <br>
+                -Biasakan berbuat jujur, karena hidup Anda akan lebih tenang.
+                </br>
+                <br>
+                -Pahamilah jika Anda mulai tergoda melakukan kecurangan-kecurangan kecil, sering kali karena terbiasa
+                maka muncul dorongan melakukan kecurangan-kecurangan besar.
+                </br>
+                <br>
+                -Kejujuran sangatlah penting, karena setiap tindakan pasti akan diminta pertanggung jawabannya baik
+                selagi masih di dunia atau nanti jika sudah di akhirat.
+                </br>
+                <br>
+                Contoh:
+                </br>
+                <br>
+                1. Hampir setiap hari, sebagian besar rekan kerja di kantor pulang lebih awal dari jam kerja yang
+                seharusnya. Melihat hal tersebut, tindakan Saya adalah...
+                </br>
+                <br>
+                A. Saya melakukannya demi masih dianggap pertemanannya.
+                </br>
+                <br>
+                B. Sudah menjadi hal yang biasa karena terjadi hampir setiap hari dan banyak yang melakukannya, sehingga
+                mestinya bisa dimaklumi.
+                </br>
+                <br>
+                C. Banyak yang melakukannya sehingga tidak apa-apa jika Saya juga melakukannya.
+                </br>
+                <br>
+                D. Saya akan tetap mengikuti aturan yang berlaku sehingga pulang sesuai jam kerja.
+                </br>
+                <br>
+                E. Saya tidak akan melakukannya agar dinilai sebagai pegawai yang paling rajin oleh atasan.
+                </br>
+                <br>
+                Jawaban: D
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Hampir setiap hari, sebagian besar rekan kerja di kantor pulang lebih awal dari jam kerja yang
+                seharusnya. Melihat hal tersebut, tindakan Saya adalah...
+                </br>
+                <br>
+                A. Saya melakukannyademimasih dianggap pertemanannya.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Terkadang berawal dari soli- daritas pertemanan, Anda bisa menyelami atas dasar apa rekan-rekan kerja
+                melakukan hal itu. Barulah ambil cara agar bisa menyadarkan rekan-rekan agar meninggalkan hal yang tidak
+                baik itu. Namun, bukan berarti tindakan ini tanpa risiko jika Anda tidak mampu mengendalikan diri,
+                karena Anda bisa terjerumus.
+                </br>
+                <br>
+                B. Sudah menjadi hal yang biasa karena terjadi hampir setiap hari dan banyak yang melakukannya sehingga
+                mestinya bisa dimaklumi.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Menganggap hal yang tidak baik menjadi suatu hal yang sudah wajar, semakin lama akan membuat Anda juga
+                akan terdorong melakukannya.
+                </br>
+                <br>
+                C. Banyak yang melakukannya sehingga tidak apa-apa jika Saya juga melakukannya.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Banyak yang melakukan terka- dang bukan menjadi alasan yang baik kita mengikuti tindakan mayoritas
+                tersebut. Mestinya setiap tindakan tetap dipertimbangkan baik dan buruknya, bukan dari banyak atau
+                sedikit pelakunya.
+                </br>
+                <br>
+                D. Saya akan tetap mengikuti aturan yang berlaku sehingga pulang sesuai jam kerja.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Pegawai yang baik akan selalu menjalankan aturan yang berlaku di tempatnya bekerja.
+                </br>
+                <br>
+                E. Saya tidak akan melakukannya agar dinilai sebagai pegawai yang paling rajin oleh atasan.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Menjadi pegawai yang baik me- mang suatu keharusan, namun hindari mengharapkan pamrih.
+                </br>
+                <br>
+                2. Suatu hari pada saat penerimaan CPNS, Saya dihubungi oleh seorang oknum yang mengaku salah satu
+                panitia seleksi penerimaan CPNS. Dalam pembicaraan, tampaknya orang tersebut menawarkan bantuan agar
+                bisa diterima menjadi PNS dengan cara memberikan sejumlah dana yang ditetapkan. Sikap Saya adalah...
+                </br>
+                <br>
+                A. Tanpa ragu, Saya menolaknya karena ingin diterima sebagai PNS dengan cara yang sah, dan resmi.
+                </br>
+                <br>
+                B. Dihubungi oleh panitia seleksi penerimaan CPNS adalah momentum yang langka, maka Saya akan menerima
+                tawaran tersebut. Apalagi persaingan tes CPNS terkenal sangat ketat.
+                </br>
+                <br>
+                C. Mempertimbangkan terlebih dahulu, jika ada waktu akan Saya komunikasikan dengan keluarga siapa tahu
+                ada keluarga yang mau membantu mengenai dana tersebut.
+                </br>
+                <br>
+                D. Pada tes CPNS yang Saya ikuti ini sebisa mungkin Saya lakukan dengan cara resmi terlebih dahulu.
+                </br>
+                <br>
+                E. Segera meminta pertimbangan keluarga atau orang yang berpengalaman dalam hal tes CPNS.
+                </br>
+                <br>
+                Jawaban: A
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Suatu hari pada saat penerimaan CPNS, Saya dihubungi oleh seorang oknum yang mengaku salah satu panitia
+                seleksi penerimaan CPNS. Dalam pembicaraan, tampaknya orang tersebut menawarkan bantuan agar bisa
+                diterima menjadi PNS dengan cara memberikan sejumlah dana yang ditetapkan. Sikap Saya adalah....
+                </br>
+                <br>
+                A. Tanpa ragu, Saya menolaknya karena ingin diterima sebagai PNS dengan cara yang sah, dan resmi.
+                </br>
+                <br>
+                Skor 5:
+                <br>
+                Menunjukkan Anda adalah pribadi yang memiliki prinsip.
+                </br>
+                <br>
+                B. Dihubungi oleh panitia seleksi penerimaan CPNS adalah momentum yang langka, maka Saya akan menerima
+                tawaran tersebut. Apalagi persaingan tes CPNS terkenal sangat ketat.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Panitia seleksi yang baik tentu- nya harus mengikuti aturan yang ada, yaitu tidak ada hubungan dengan
+                peserta tes Hubungan yang terjadi selama proses seleksi apalagi mengarah pada tindakan yang tidak baik
+                maka bisa dipastikan itu hanya penipuan. Anda semestinya bisa berpikir karena pola ini sudah banyak
+                terjadi, dan mengantisipasi hal-hal yang demikian meskipun tidak harus mengalami sendiri.
+                </br>
+                <br>
+                C. Mempertimbangkan terlebih dahulu, jika ada waktu akan Saya komunikasikan dengan keluarga siapa tahu
+                ada keluarga yang mau membantu mengenai dana tersebut.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Berpikir sebelum bertindak sangat dianjurkan dalam hal ini. Pikirkan juga risiko dari tindakan yang
+                akan Anda ambil, misalnya ada unsur penipuan dari orang yang menghubungi Anda, lilitan hutang karena
+                bantuan dana, atau hidup menjadi tidak tenang.
+                </br>
+                <br>
+                D. Pada tes CPNS yang Saya ikuti ini sebisa mungkin Saya lakukan dengan cara resmi terlebih dahulu.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Jika hal ini adalah tindakan yang baru bisa Anda lakukan saat ini, tidak masalah. Ke depannya pikirkan
+                lagi, jangan sampai niat yang tidak baik mengotori usaha Anda.
+                </br>
+                <br>
+                E. Segera meminta pertimbangan keluarga atau orang yang berpengalaman dalam hal tes CPNS.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Apabila tidak bisa memikirkan penyelesaian suatu masalah secara sendiri maka ada baiknya meminta
+                pertimbangan dari orang lain yang dipercaya, tentunya memiliki keahlian di bidang yang Anda tanyakan.
+                </br>
+                <br>
+                C. Aspek Kemampuan Bekerja Mandiri dan Tuntas/ Tanggung Jawab
+                </br>
+                <br>
+                Kemampuan bekerja mandiri sampai tuntas merupakan bentuk tanggung jawab. Oleh karena itu, di tes TKP
+                CPNS juga diuji aspek tanggung jawabnya dengan tujuan mengukur tingkat kedewasaan seseorang dalam
+                mempertanggungjawabkan dari apa yang telah dilakukannya. Indikasi hal tersebut adalah mampu menanggung
+                risiko dari tindakan yang telah diperbuat, baik selaku tindakan pribadi atau tindakan yang dilakukan
+                oleh anggota tim yang berada di bawah wewenangnya.
+                </br>
+                <br>
+                Tanggung jawab ini merupakan karakter yang harus dimiliki oleh setiap pegawai, terutama pegawai yang
+                bekerja di lingkungan publik, karena setiap tindakannya memiliki dampak bagi orang banyak, misalnya bagi
+                karyawan lainnya, bagi perusahaan/instansi tempat bekerja, atau bagi orang yang membutuhkan
+                jasa/pelayanan Anda.
+                </br>
+                <br>
+                TIPS:
+                </br>
+                <br>
+                -Berusaha sebaik-baiknya, teliti dan hati-hati dalam setiap tindakan.
+                </br>
+                <br>
+                -Selalu berpikir positif.
+                </br>
+                <br>
+                -Tidak pernah takut gagal.
+                </br>
+                <br>
+                -Mempertimbangkan dengan matang tindakan yang akan diambil.
+                </br>
+                <br>
+                -Usaha keras, kerja cerdas dan yakin akan hasil yang baik meski Tuhan yang menentukan.
+                </br>
+                <br>
+                -Pahamilah bahwa setiap tindakan pasti dimintai pertanggung jawabannya.
+                </br>
+                <br>
+                Contoh:
+                </br>
+                <br>
+                1. Dalam suatu proyek kerja lapangan, saya diberi kepercayaan untuk memimpin sebuah tim. Pada akhir
+                laporan kerja yang diberikan ternyata hasilnya mengecewakan. Setelah ditelusuri, salah satu anggota tim
+                telah melakukan kesalahan maka....
+                </br>
+                <br>
+                A. Saya tidak dapat dipersalahkan dengan alasan apa pun.
+                </br>
+                <br>
+                B. Saya turut bertanggung jawab karena bagaimanapun juga saya adalah pimpinan proyek tersebut.
+                </br>
+                <br>
+                C. Seharusnya hal tersebut tidak termasuk dalam tanggung Jawab Saya.
+                </br>
+                <br>
+                D. Saya akan menelusuri lebih lanjut, dan memaksa orang tersebut bertanggung jawab atas semuanya.
+                </br>
+                <br>
+                E. Hal itu mutlak menjadi keke- liruan anak buah yang terbukti bersalah.
+                </br>
+                <br>
+                Jawaban: B
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Dalam suatu proyek kerja lapangan, saya diberi kepercayaan untuk memimpin sebuah tim. Pada akhir
+                laporan kerja yang diberikan ternyata hasilnya mengecewakan. Setelah ditelusuri, salah satu anggota tim
+                telah melakukan kesalahan maka..
+                </br>
+                <br>
+                A. Saya tidak dapat dipersalahkan dengan alasan apa pun.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Sifat otoriter dalam kepemimpinan tidak akan bisa membuat kepemimpinan Anda berlangsung lama.
+                </br>
+                <br>
+                B. Saya turut bertanggung jawab karena bagaimanapun juga. saya adalah pimpinan proyek tersebut.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Sebagai pimpinan proyek, sebaiknya selalu memantau dan mengamati perkembangan pekerjaan sehingga
+                hal-hal yang sekiranya bisa mengganggu hasil pekerjaan maka sudah dapat tertangani sebelum telanjur
+                terjadi.
+                </br>
+                <br>
+                C. Seharusnya hal tersebut tidak termasuk dalam tanggung jawab Saya.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Mengabaikan hal yang semes tinya menjadi tugas seorang pemimpin adalah tindakan permisif.
+                </br>
+                <br>
+                D. Saya akan menelusuri lebih lanjut, dan memaksa orang tersebut bertanggung jawab atas semuanya.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Introspeksi ke dalam memang harus dilakukan, namun Anda selaku pimpinan tetap yang paling bertanggung
+                jawab dan harus mampu memberikan pertanggungjawaban ke publik.
+                </br>
+                <br>
+                E. Hal itu mutlak menjadi kekeliruan anak buah yang terbukti bersalah.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Setelah melakukan penelusuran dan menemukan anak buah yang melakukan kesalahan, bukan berarti
+                melimpahkan seluruh pertanggungjawaban ke orang tersebut. Bagaimanapun semua juga turut andil atas
+                kesalahan yang terjadi.
+                </br>
+                <br>
+                2. Biasanya, ketika muncul suatu masalah dalam pekerjaan yang ada kaitannya dengan kewajiban Saya,
+                tindakan yang sering Saya lakukan adalah...
+                </br>
+                <br>
+                A. Langsung mencari kambing hitam penyebab masalah, agar beban Saya lebih ringan.
+                </br>
+                <br>
+                B. Mencari tahu apakah ada orang/pihak lain yang juga ikut bersalah dalam masalah tersebut, agar beban
+                Saya lebih ringan.
+                </br>
+                <br>
+                C. Membiarkan masalah terus berlangsung, nanti juga akan selesai dengan sendirinya.
+                </br>
+                <br>
+                D. Seharusnya ada orang lain yang membantu menyelesaikan hal ini sebagai sikap empati.
+                </br>
+                <br>
+                E. Tetap bertanggung jawab dengan hasil apa pun, dan mencari solusi dari masalah tersebut.
+                </br>
+                <br>
+                Jawaban: E
+                </br>
+                <br>
+                Pembahasan:
+                Biasanya, ketika muncul suatu masalah dalam pekerjaan yang ada kaitannya dengan kewajiban Saya, tindakan
+                yang sering Saya lakukan adalah...
+                </br>
+                <br>
+                A. Langsung mencari kambing hitam penyebab masalah, agar beban Saya lebih ringan.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Mengalihkan masalah ke orang lain bukanlah hal yang baik karena bisa menjadi fitnah.
+                </br>
+                <br>
+                B. Mencari tahu apakah ada orang/pihak lain yang juga ikut bersalah dalam masalah tersebut, agar beban
+                Saya lebih ringan.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Introspeksi diri perlu dilakukan, namun perlu diingat bahwa yang paling harus bertanggung jawab adalah
+                diri Anda karena menjadi yang utama dalam hal tersebut.
+                </br>
+                <br>
+                C. Membiarkan masalah terus berlangsung, nanti juga akan selesai dengan sendirinya.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Merupakan tindakan yang mengabaikan. Apabila hal ini terus Anda lakukan maka tidak akan terjadi
+                perubahan dalam diri Anda maupun lingkungan.
+                </br>
+                <br>
+                D. Seharusnya ada orang lain yang membantu menyelesaikan hal ini sebagai sikap empati.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Anda tidak bisa mengharapkan orang lain selalu berempati dengan Anda. Masing-masing orang pastinya
+                memiliki kesi- bukan sendiri sehingga mesti melihat situasi dan kondisi sebelumnya, karena apabila tidak
+                mengetahui situasi dan kondisi bisa saja menjadi fitnah.
+                </br>
+                <br>
+                E. Tetap bertanggung jawab dengan hasil apapun, dan mencari solusi dari masalah tersebut.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Menunjukkan bahwa Anda paham betul aturan mainnya.
+                </br>
+                <br>
+                D. Aspek Kemampuan Beradaptasi
+                </br>
+                <br>
+                Aspek kemampuan beradaptasi juga diuji dalam tes TKP CPNS karena memiliki tujuan untuk mengukur
+                tingkat kedewasaan Anda dalam menyesuaikan diri. Indikasinya adalah...
+                </br>
+                <br>
+                -mampu beradaptasi dengan segala bentuk penyesuaian diri, seperti beradaptasi dengan lingkungan yang
+                baru, suasana baru, rekan kerja baru, atasan baru, peraturan baru, dan hal lainnya yang berbeda dari
+                yang biasa dialami.
+                </br>
+                <br>
+                -menyukai perubahan sehingga tidak takut lagi dengan perubahan.
+                </br>
+                <br>
+                -menjadi pribadi yang selalu ber pikiran maju.
+                </br>
+                <br>
+                -mau belajar hal-hal yang baru. Kemampuan beradaptasi seseorang sangatlah beragam. Oleh karena itu,
+                beberapa tips berikut bisa dicoba dalam rangka melatih kemampuan beradaptasi Anda.
+                </br>
+                <br>
+                Tips:
+                </br>
+                <br>
+                -Pahamilah bahwa segala sesuatu cepat atau lambat pasti akan mengalami perubahan.
+                </br>
+                <br>
+                -Berkompromilah dengan perubahan yang ada dalam hal kebaikan.
+                </br>
+                <br>
+                -Biasakanlah untuk selalu dapat menyesuaikan diri dengan lingkungan yang baru.
+                </br>
+                <br>
+                -Berlatihlah untuk senantiasa memperbaiki diri agar selalu lebih baik.
+                </br>
+                <br>
+                -Amatilah perubahan-perubahan di sekitar lingkungan Anda untuk mengoptimalkan prestasi.
+                </br>
+                <br>
+                Contoh:
+                </br>
+                <br>
+                1. Apabila tiba-tiba saya ditempatkan di lingkungan kerja baru, maka Saya akan...
+                </br>
+                <br>
+                A. Perlu waktu untuk mengenal rekan-rekan kerja yang baru.
+                </br>
+                <br>
+                B. Menunggu rekan kerja yang Ingin berkenalan.
+                </br>
+                <br>
+                C. Berkenalan dengan rekan kerja hanya jika sudah membutuhkan bantuan mereka.
+                </br>
+                <br>
+                D. Langsung mampu akrab de- ngan rekan kerja baru saya.
+                </br>
+                <br>
+                E. Senang sekali jika ada rekan kerja yang ingin berkenalan dengan saya.
+                </br>
+                <br>
+                Jawaban: D
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Apabila tiba-tiba saya ditempatkan
+                di lingkungan kerja baru, maka Saya akan.....
+                </br>
+                <br>
+                A. Perlu waktu untuk mengenal rekan-rekan kerja yang baru.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Perlu waktu boleh saja, tapi jika terlalu lama maka. menunjukkan kemampuan adaptasi Anda lambat.
+                </br>
+                <br>
+                B. Menunggu rekan kerja yang Ingin berkenalan.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Menunjukkan Anda pasif.
+                </br>
+                <br>
+                C. Berkenalan dengan rekan kerja hanya jika sudah membutuhkan bantuan mereka.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Menunjukkan sikap dan tindakan Anda sebenarnya egois, dan tidak peduli dengan lingkungan.
+                </br>
+                <br>
+                D. Langsung mampu akrab dengan rekan kerja baru saya.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Menunjukkan bahwa Anda me miliki kemampuan adaptasi yang baik.
+                </br>
+                <br>
+                E. Senang sekali jika ada rekan kerja yang ingin berkenalan dengan saya.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Menunjukkan Anda tidak skeptis.
+                </br>
+                <br>
+                2. Berita di stasiun-stasiun televisi nasional sedang hangat membi- carakan kondisi perekonomian
+                Indonesia saat ini. Sampai-sampai di setiap tayangan talk show selalu menghadirkan pengamat ekonomi
+                dengan prediksi-prediksinya bah- wa bulan depan akan terjadi inflasi besar di Indonesia. Hal ini membuat
+                saya menjadi...
+                </br>
+                <br>
+                A. Tidak mempercayai prediksi tersebut karena prediksi yang buruk seperti itu tidak perlu dipercayai.
+                </br>
+                <br>
+                B. Susah tidur setiap malam memikirkan keadaan ke depan yang berat.
+                </br>
+                <br>
+                C. Depresi karena inflasi erat kaitannya dengan kenaikan
+                harga barang.
+                </br>
+                <br>
+                D. Berhati-hati dan berhemat dalam membelanjakan uang.
+                <br>
+                <br>
+                E. Pasrah dengan keadaan karena yang akan terjadi biarlah terjadi.
+                </br>
+                <br>
+                Jawaban: D
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Berita di stasiun-stasiun televisi nasional sedang hangat membicarakan kondisi perekonomian Indonesia
+                saat ini. Sampai-sampai di setiap tayangan talk show selalu menghadirkan pengamat ekonomi dengan
+                prediksi-prediksinya bahwa bulan depan akan terjadi inflasi besar di Indonesia. Hal ini membuat saya
+                menjadi...
+                </br>
+                <br>
+                A. Tidak mempercayai prediksi tersebut karena prediksi yang buruk seperti itu tidak perlu dipercayai.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Tidak mempercayai prediksi boleh saja, namun perlu dipertimbangkan atau buatlah perencanaan seandainya
+                hal itu terjadi.
+                </br>
+                <br>
+                B. Susah tidur setiap malam memikirkan keadaan ke depan yang berat.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Masa depan memang perlu direncanakan, namun harus sesuai dengan porsinya dan tidak berlebihan.
+                </br>
+                C. Depresi karena inflasi erat kaitannya dengan kenaikan harga barang.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Menunjukkan hidup tanpa perencanaan, tidak dapat beradaptasi dengan baik.
+                </br>
+                <br>
+                D. Berhati-hati dan berhemat dalam membelanjakan uang.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Merupakan hal yang bijak.
+                </br>
+                <br>
+                E. Pasrah dengan keadaan karena yang akan terjadi biarlah terjadi.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Menunjukkan hidup tanpa perencanaan, cara beradaptasi paling bawah.
+                <br>
+                E. Aspek Kemampuan Pengendalian Diri
+                </br>
+                <br>
+                Ketika seseorang menghadapi situasi tertentu, apalagi situasi yang tidak disukai maka cenderung emosinya
+                akan muncul. Pada kondisi itu, orang tersebut sedang diuji aspek pengendalian diri. Oleh karena itu pada
+                tes TKP CPNS, aspek pengendalian diri juga diujikan dengan tujuan untuk mengukur tingkat kedewasaan
+                seseorang daam mengontrol emosinya ketika menghadapi situasi tertentu yang tidak disukainya. Sikap
+                seseorang yang memiliki kemampuan pengendalian diri terindikasi dari:
+                </br>
+                <br>
+                -berpikiran terbuka.
+                </br>
+                <br>
+                -kedewasaan dalam bersikap.
+                </br>
+                <br>
+                -senang berinteraksi, dan memiliki Interaksi sosial yang baik.
+                </br>
+                <br>
+                -mampu berkomunikasi dengan baik.
+                </br>
+                <br>
+                -memiliki second opinion atau pilihan cadangan agar terhindar dari sikap emosi yang merusak.
+                </br>
+                <br>
+                Setiap orang pastinya akan bertambah tua, namun tidak setiap orang mampu bertambah dewasa. Tidak bisa
+                dimungkiri, aspek pengendalian diri merupakan salah satu inti kedewasaan seseorang.
+                </br>
+                <br>
+                Tips:
+                </br>
+                <br>
+                -Apabila Anda ingin meluapkan emosi, maka pilihlah kegiatan positif yang mampu menyalurkan emosi Anda
+                contohnya olahraga.
+                </br>
+                <br>
+                -Beberapa metode pengenda- lian diri yang dapat dilakukan adalah puasa, yoga, atau meditasi.
+                </br>
+                <br>
+                -Anjuran berpuasa dapat diikuti oleh semua agama, karena dapat diambil manfaatnya dari segi kesehatan
+                seperti menstabilkan gula darah.
+                </br>
+                <br>
+                -Dari sigi psikis, puasa dikenal mampu mendidik agar jadi lebih sabar, lebih tahan banting terhadap
+                masalah, dan lebih kuat mengendalikan amarah serta hawa nafsu yang merusak
+                Yoga atau meditasi dikenal mampu melatih ketenangan batin, dan berpikir jernih.
+                Pahamilah bahwa saat Anda menghadapi cobaan, maka kesabaran adalah kunci suksesnya.
+                </br>
+                <br>
+                Contoh:
+                </br>
+                <br>
+                1. Bila ada rekan kerja yang salah menuliskan gelar Saya di dalam surat, maka Saya....
+                </br>
+                <br>
+                A. Tersinggung karena gelar tersebut Saya peroleh dengan susah payah dan merupakan kehormatan Saya.
+                </br>
+                <br>
+                B. Biasa saja, tidak tersinggung sama sekali.
+                </br>
+                <br>
+                C. Saya mengingatkan kekeliruannya dengan baik-baik.
+                </br>
+                <br>
+                D. Saya mengingatkannya dengan tegas agar dia jera.
+                </br>
+                <br>
+                E. Keliru menulis gelar bukanlah masalah yang besar bagi saya.
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Jawaban: C
+                </br>
+                <br>
+                Bila ada rekan kerja yang salah menuliskan gelar Saya di dalam surat, maka Saya....
+                </br>
+                <br>
+                A. Tersinggung karena gelar tersebut Saya peroleh dengan susah payah dan merupakan kehormatan Saya.
+                </br>
+                <br>
+                Skor 2:
+                </br>
+                <br>
+                Gelar memang diperoleh dengan cara yang tidak mudah, kehormatan juga perlu dijaga, dan tersinggung
+                adalah hal yang wajar.
+                </br>
+                <br>
+                B. Biasa saja, tidak tersinggung sama sekali.
+                </br>
+                <br>
+                Skor 3:
+                </br>
+                <br>
+                Namun perlu diwaspadai karena bisa mengarah ke sifat permisil.
+                </br>
+                <br>
+                C. Saya mengingatkan kekeliruannya dengan baik-baik.
+                </br>
+                <br>
+                Skor 5:
+                </br>
+                <br>
+                Menunjukkan sikap yang bijaksana dan mampu mengendalikan diri dengan baik.
+                </br>
+                <br>
+                D. Saya mengingatkannya dengan tegas agar dia jera.
+                </br>
+                <br>
+                Skor 1:
+                </br>
+                <br>
+                Mengingatkan kekeliruan orang lain memang diperlukan. Namun, pribadi yang mempunyai pengendalian diri
+                yang baik tidak akan menunjukkan secara terang-terangan di depan umum. Dirinya akan memilih cara
+                mengungkapkan yang lebih halus.
+                </br>
+                <br>
+                E. Keliru menulis gelar bukanlah masalah yang besar bagi saya.
+                </br>
+                <br>
+                Skor 4:
+                </br>
+                <br>
+                Kekeliruan tersebut masih bisa diperbaiki dengan cara-cara yang baik sehingga tidak perlu dianggap
+                sebagai masalah besar karena masih tergolong mudah ditangani.
+                </br>
+                <br>
+                2. Rumah Impian yang Saya idam-idamkan telah selesai pembangunannya. Rencananya minggu depan Saya
+                ingin mengadakan acara syukuran atas selesainya pembangunan tersebut dengan acara makan-makan. Namun,
+                ada hal kecil yang merusak rencana tersebut, maka Saya akan.....
+                </br>
+                <br>
+                A. Sangat sedih dan marah sekali, karena hal kecil mampu merusak rencana besar yang telah Saya atur.
+                </br>
+                <br>
+                B. Melakukan evaluasi menyeluruh.
+                </br>
+                <br>
+                C. Tidak bisa dimungkiri, tentu saja saya marah.
+                </br>
+                <br>
+                D. Menarik diri dari rencana karena butuh waktu menenangkan diri.
+                </br>
+                <br>
+                E. Memarahi semua pihak yang juga ikut bertanggung jawab akan hal ini sampai rasa panas di hati reda.
+                </br>
+                <br>
+                Jawaban: B
+                </br>
+            </p>
+            <div class="Back_Bottom">
+                <a href="materi3,1.html">Back</a>
+            </div>
+        </main>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ikuti Kami</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="soal_skd.html">Soal CPNS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <ul>
+                    <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                    <li><a href="#">Tips dan trik</a></li>
+                    <li><a href="#">Teknis SKD</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

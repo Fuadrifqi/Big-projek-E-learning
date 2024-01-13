@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi CPNS</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+
+        header {
+            background-color: blueviolet;
+            justify-content: space-around;
+            text-align: center;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        p {
+            width: 50%;
+            margin-right: auto;
+            margin-left: 145px;
+        }
+
+        h2 {
+            margin-left: 60px;
+        }
+
+        .text-container {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .image-container {
+            width: 20%;
+
+
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .image-container img {
+            width: 50%;
+            max-width: 100%;
+        }
+
+        #centered-image {
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+
+        #centered-image img {
+            width: 100%;
+            /* Ubah ukuran sesuai kebutuhan */
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text-container {
+            flex: 1;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .Next a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-left: 110%;
+        }
+
+        .Next_Bottom a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-left: 110%;
+        }
+
+        .navbar a {
+            float: left;
+            display: white;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 65px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <ul class="ul">
+            <img src="LOGO.png" class="logo">
+            <li>
+                <a href="beranda.html">Beranda</a>
+            </li>
+            <li>
+                <a href="tentang.html">Tentang</a>
+            </li>
+            <li>
+                <a href="keunggulan.html">Keunggulan</a>
+            </li>
+            <li>
+                <a href="materi3.html">Materi</a>
+            </li>
+            <li>
+                <a href="Menu paket soal.html">Paket Soal</a>
+            </li>
+        </ul>
+        <div>
+            <div class="login">
+                <div id="icon" onclick="pindahHalaman1()">
+                    <img src="profil.png" alt="Icon" class="login-img">
+                </div>
+            </div>
+
+            <script>
+                function pindahHalaman1() {
+                    window.location.href = 'Login.html';
+                }
+            </script>
+        </div>
+    </div>
+    <header>
+        <h1>Materi CPNS</h1>
+    </header>
+    <main class="main">
+        <div class="text-container">
+            <h2>Ada 14 alasan profesi PNS tetap menjadi incaran samapai saat ini</h2>
+            <div class="Next">
+                <a href="materi3,1.html">NEXT</a>
+            </div>
+            <p>
+                <br>
+                Menjadi Pegawai Negeri Sipil (PNS) memang bukan jalan untuk membangun kekayaan. Namun, mengapa setiap
+                kali ada penerimaan Calon Pegawai Negeri Sipil (CPNS), peminatnya membludak? Ada beberapa alasan yang
+                mendasari mengapa banyak orang ingin menjadi PNS. Setiap orang mungkin memiliki alasan atau motivasi
+                yang berbeda. Nah, berikut ini 14 Alasan mengapa banyak orang ingin menjadi PNS:
+                <br />
+                <br>
+                1. Kepastian Gaji Setiap Bulan
+                Dengan menjadi seorang ASN atau PNS maka ada kepastian menerima gaji setiap bulannya dari pemerintah,
+                sehingga perencanaan keuangan tentunya akan lebih mudah. Kepastian mendapatkan gaji setiap bulan tentu
+                menjadi salah satu faktor dominan dalam menentukan pekerjaan. Sebagai seorang pencari kerja menjadi
+                Pegawai Negeri tentu bukan perkara mudah tetapi tentu sebanding dengan hasilnya.
+                <br />
+                <br>
+                2. Kenaikan Gaji Setiap Tahun
+                Ketertarikan lainnya untuk dapat menjadi seoran apartaur sipil negara tentu peluang kanaikan gaji setiap
+                tahunnya. Setiap Presiden membacakan pidato RAPBN, pasti disinggung tentang belanja pegawai. Termasuk di
+                dalamnya kenaikan gaji. Setiap tahun terjadi inflasi, namun jangan khawatir dengan menjadi PNS, gaji
+                Anda juga naik setiap tahunnya.
+                <br />
+                <br>
+                3. Gaji ke-13
+                Mendapatkan Gaji ke-13 adalah sebuah reward bagi setiap PNS yang diberikan sekali setiap tahunnya.
+                Besarnya sama dengan gaji setiap bulan. Gaji ke 13 ini Ini tentu dapat menjadi magnet tersendiri bagi
+                para pencari kerja.
+                <br />
+                <br>
+                4. Tunjangan Anak, Istri, Beras, dll
+                Selain gaji, PNS juga mendapatkan tunjangan istri, tunjangan anak, tunjangan beras dsb. Sebagian
+                kementerian dan lembaga juga telah menerapkan tunjangan remunerasi yang justru lebih besar daripada gaji
+                bulanan.
+                <br />
+                <br>
+                5. Uang Makan
+                Bukan hanya karyawan swasta yang mendapatkan uang makan. PNS juga mendapatkan berkah yang satu ini. Uang
+                makan dibayarkan apabila Anda masuk kerja. Besarnya bervariasi tiap golongan/pangkat PNS.
+                <br />
+                <br>
+                6. Pensiun/Hari Tua
+                Bagi sebagian orang memastikan bisa survive ketika masa pensiun datang itu penting. Dengan menjad PNS,
+                maka tidak ada kekhawatiran tidak mendapatkan asupan finansial setiap bulannya ketika masa pensiun.
+                Bahkan, selain gaji pensiun juga akan mendapatkan tabungan pensiun (taspen).
+                <br />
+                <br>
+                7. Asuransi Kesehatan
+                Kita tidak tahu kapan akan sakit. Oleh sebab itu, asuransi kesehatan (askes) ada. Dengan askes berobat
+                menjadi ringan bahkan gratis. Nah, setiap PNS akan dibekali askes termasuk untuk istri dan anak-anaknya.
+                <br />
+                <br>
+                8. Perjalanan Dinas
+                Perjalanan dinas adalah tugas ke luar kota yang diberikan kepada PNS. Selain mendapatkan manfaat
+                kedinasan tentu saja bisa mendapatkan kesempatan jalan-jalan. Semuanya dibiayai dengan uang perjalanan
+                dinas, termasuk uang makan, uang transpor, uang hotel bahkan masih ditambah uang saku.
+                <br />
+                <br>
+                9. Tugas Belajar (Beasiswa), Pendidikan dan Pelatihan
+                Mau melanjutkan kuliah gratis? Carilah beasiswa! Ingin mudah mendapatkan beasiswa, jadilah PNS! Selain
+                beasiswa kuliah, PNS juga akan mendapatkan pendidikan dan pelatihan berbagai macam materi yang terkait
+                dengan bidang kerja.
+                <br />
+                <br>
+                10. Jenjang Karir
+                Jenjang karir PNS itu jelas. Ada golongan dan kepangkatan. Setiap golongan dan pangkat memiliki
+                tingkatan gaji dan tunjangan yang berbeda.
+                <br />
+                <br>
+                11. Kemudahan Kredit di Bank
+                Mau kredit rumah, mobil, uang tunai atau apa saja? Katakan saja ke bank, bahwa Anda seorang PNS. Saya
+                yakin pihak bank akan welcome dan melayani dengan baik. Bahkan Anda akan sering ditawari untuk berhutang
+                <br />
+                <br>
+                12. Kemapanan
+                Mapan berarti tidak pindah-pindah kerja atau gonta-ganti profesi. Mapan juga bisa berarti mendapatkan
+                penghasilan setiap bulan. Menjadi PNS berarti menjadi orang mapan. Dan tidak dipungkiri kebanyakan orang
+                tua, ingin anaknya menikah dengan orang mapan.
+                <br />
+                <br>
+                13. Meyakinkan Calon Istri dan Calon Mertua
+                Benar sekali. Menjadi PNS mampu meyakinkan calon istri untuk bersedia menikah dengan Anda. Selain istri,
+                calon mertua lebih yakin menyerahkan anaknya ke seorang PNS daripada profesi lain bahkan pengusaha yang
+                tampaknya lebih sukses secara finansial. Tidak percaya? buktikan saja!
+                <br />
+                <br>
+                14. Status Sosial/Prestise
+                Sebagian orang menjadi PNS untuk mendapatkan status sosial yang lebih baik atau mendapatkan pengakuan
+                (prestise) dari lingkungannya.
+                <br />
+                <br>
+                Itulah 14 alasan yang menyebabkan profesi PNS tetap menjadi incaran samapai saat ini.
+                <br />
+            </p>
+            <div class="Next_Bottom">
+                <a href="materi3.html">NEXT</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <div id="centered-image">
+                <img src="Animasi-3d-bergerak-untuk-powerpoint-tanda-tanya6903f99ef5eab201.gif" alt="">
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ikuti Kami</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="soal_skd.html">Soal CPNS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <ul>
+                    <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                    <li><a href="#">Tips dan trik</a></li>
+                    <li><a href="#">Teknis SKD</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

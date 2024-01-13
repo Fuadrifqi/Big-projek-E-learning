@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #container {
+            width: 100%;
+        }
+
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+
+        /* main conten */
+        .head-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+
+        }
+
+        .head-title h2 {
+            background-color: rgb(75, 74, 190);
+            color: white;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .layout-skd {
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 20px;
+            border-radius: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: rgb(136, 136, 250);
+        }
+
+        .layout-skd h4 {
+            color: black;
+            margin: 10px;
+        }
+        .layout-skd p {
+            margin: 10px;
+        }
+
+        /*footer*/
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="navbar-container">
+            <ul class="ul">
+                <img src="LOGO.png" class="logo">
+                <li>
+                    <a href="beranda.html">Beranda</a>
+                </li>
+                <li>
+                    <a href="tentang.html">Tentang</a>
+                </li>
+                <li>
+                    <a href="keunggulan.html">Keunggulan</a>
+                </li>
+                <li>
+                    <a href="materi3.html">Materi</a>
+                </li>
+                <li>
+                    <a href="Menu paket soal.html">Paket Soal</a>
+                </li>
+            </ul>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img">
+                    </div>
+                </div>
+
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'Login.html';
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="head-title">
+            <h2>SOAL SKD</h2>
+        </div>
+        <div class="layout-skd">
+            <h4>Tes Wawasan Kebangsaan (TWK)</h4>
+            <p>1. Nasionalisme yang menekankan keunikan setiap bangsa dan mempertahankan tradisi dan sejarah disebut...
+            </p>
+            <p>
+                A. Humaniter<br>
+                B. Kultural<br>
+                C. Sosial<br>
+                D. Tradisional<br>
+                E. Historikal<br>
+            </p>
+            <p>Jawaban: D</p>
+            <p>2. Hal yang harus dihindari bangsa agar tidak terpecah belah adalah sebagai berikut, kecuali...</p>
+            <p>
+                A. Vandalisme<br>
+                B. Sukuisme<br>
+                C. Chauvinisme<br>
+                D. Ekstremisme<br>
+                E. Provinsialisme<br>
+            </p>
+            <p>Jawaban: A</p>
+            <p>3. Berikut adalah landasan bela negara, kecuali..</p>
+            <p>
+                A. Yuridis<br>
+                B. Filosofis<br>
+                C. Histroris<br>
+                D. Epistomiologis<br>
+                E. Religius<br>
+            </p>
+            <p> Jawaban: D</p>
+            <p>4. Presiden berhak menyatakan kondisi bahaya jika ada ancaman. Hal tersebut terkandung dalam UUD 1945
+                pasal...</p>
+            <p>
+                A. 9<br>
+                B. 10<br>
+                C. 11<br>
+                D. 12<br>
+                E. 13<br>
+            </p>
+            <p>Jawaban: D</p>
+            <p>5. Fungsi Pancasila untuk menyatukan bangsa disebut dengan fungsi..</p>
+            <p>
+                A. Pandangan hidup<br>
+                B. Pedoman hidup<br>
+                C. Karakter dasar<br>
+                D. Norma dasar<br>
+                E. Falsafah hidup berbangsa<br>
+            </p>
+            <p>Jawaban: B</p>
+            <p>Istilah way of life dalam menyebut Pancasila berarti...</p>
+            <p>
+                A. Norma dasar<br>
+                B. Pandangan hidup<br>
+                C. Dasar negara<br>
+                D. Falsafah hidup<br>
+                E. Ideologi<br>
+            </p>
+            <p>Jawaban: B</p>
+            <p>7. Alinea pertama Pancasila berisi sila ke...</p>
+            <p>
+                A. Pertama<br>
+                B. Kedua<br>
+                C. Ketiga<br>
+                D. Keempat<br>
+                E. Kelima<br>
+            </p>
+            <p>Jawaban: C</p>
+            <p>8. Penyebab korupsi paling dominan diakibatkan karena..</p>
+            <p>
+                A. Agama<br>
+                B. Ekonomi<br>
+                C. Sosial<br>
+                D. Budaya<br>
+                E. Hukum<br>
+            </p>
+            <p>Jawaban: C</p>
+            <p>9. Dibuatnya perda oleh pemerintah daerah dan DPRD merupakan implementasi wawasan nusantara bidang..</p>
+            <p>
+                A. Ekonomi<br>
+                B. Sosial<br>
+                C. Budaya<br>
+                D. Pertahanan<br>
+                E. Politik<br>
+            </p>
+            <p>Jawaban: E</p>
+            <p>10. Pengeluaran negara untuk membiayai sekolah gratis merupakan contoh penerapan kebijakan...</p>
+            <p>
+                A. Regulatif<br>
+                B. Redistributif<br>
+                C. Distributif<br>
+                D. Konstituen<br>
+                E. Regional<br>
+            </p>
+            <p>Jawaban: C</p>
+
+            <h4>Tes Intelegensi Umum (TIU)</h4>
+            <p>1. MEI : JULI= ... : ....</p>
+            <p>
+                A. Januari : Desember<br>
+                B. Januari : November<br>
+                C. Januari : Februari<br>
+                D. Maret : Mei<br>
+                E. Agustus : September<br>
+            </p>
+            <p>Jawaban: D</p>
+            <p>2. BURUNG : UDARA = .... : ....</p>
+            <p>
+                A. Ibu : Halaman<br>
+                B. Unta : Kebun Binatang<br>
+                C. Makanan : Meja<br>
+                D. Ikan : Air<br>
+                E. Penyair : Pujangga<br>
+            </p>
+            <p>Jawaban: D</p>
+            <p>3. ES : DINGIN = GULA : ....</p>
+            <p>
+                A. Bubuk<br>
+                B. Kristal<br>
+                C. Tebu<br>
+                D. Manis<br>
+                E. Aren<br>
+            </p>
+            <p>Jawaban: D</p>
+            <p>4. Jika Hari Minggu maka Sony lari pagi. Sony tidak lari pagi. Kesimpulan...</p>
+            <p>
+                A. Sony lari pagi<br>
+                B. Sony tidak lari pagi<br>
+                C. Hari Minggu Sony lari pagi<br>
+                D. Hari Minggu<br>
+                E. Bukan hari Minggu<br>
+            </p>
+            <p>Jawaban: E</p>
+            <p>5. Semua seniman kreatif, sementara ilmuwan tidak kreatif. Kesimpulan...</p>
+            <p>
+                A. Sementara ilmuwan bukan seniman<br>
+                B. Tidak ada ilmuwan yang seniman<br>
+                C. Sementara individu yang kreatif bukan seniman<br>
+                D. Sementara ilmuwan kreatif<br>
+                E. Semua ilmuwan kreatif<br>
+            </p>
+            <p> Jawaban: A</p>
+            <p>6. Susan adiknya Jim, Peter kakaknya Susan dan lebih muda dari Jim. Siapa yang paling muda?</p>
+            <p>
+                A. Jim<br>
+                B. Susan<br>
+                C. Peter<br>
+                D. Tidak dapat disimpulkan<br>
+                E. Semua jawaban benar<br>
+            </p>
+            <p>Jawaban: B</p>
+            <p>7. 2,6,12,20,...</p>
+            <p>
+                A. 28<br>
+                B. 30<br>
+                C. 36<br>
+                D. 42<br>
+                E. 48<br>
+            </p>
+            <p>Jawaban: B</p>
+            <p>8. 9.999% dari 0,87468746 =</p>
+            <p>
+                A. 87,46<br>
+                B. 88,5<br>
+                C. 87,5<br>
+                D. 8,46<br>
+                E. 0,8746<br>
+            </p>
+            <p>Jawaban: A</p>
+            <p>9. Jika x=luas persegi dengan panjang sisi 10 dan y= luas lingkaran dengan jari-jari 10, maka...</p>
+            <p>
+                A. x>y<br>
+                B. xC. x=y<br>
+                D. x dan y tidak bisa ditentukan<br>
+                E. 2x>2y<br>
+            </p>
+            <p>Jawaban: B</p>
+            <p>10. Uang Anto ditambah setengah uang Bona adalah 50. Jika uang Anto semula 40, berapa jumlah uang
+                keduanya?</p>
+            <p>
+                A. 100<br>
+                B. 90<br>
+                C. 80<br>
+                D. 70<br>
+                E. 60<br>
+            </p>
+            <p>Jawaban: E</p>
+            <h4>Tes Karakteristik Pribadi (TKP)</h4>
+            <p>1. Menurut orang lain kedisiplinan dan rasa tanggung jawab saya...</p>
+            <p>
+                A. Sangat baik<br>
+                B. Baik<br>
+                C. Cukup<br>
+                D Kurang<br>
+                E. Rendah<br>
+            </p>
+            <p>Skor: A=5, B=4, C=3, D=2, E=1</p>
+            <p>2. Rekan-rekan kerja saya sering datang terlambat 20 menit setelah aturan jam kerja.</p>
+            <p>
+                A. Saya mengikuti teman-teman saya.<br>
+                B Saya mengetahui aturan jam kerja kantor.<br>
+                C. Saya datang sesuai jam kerja kantor karena saya takut dimarahi pimpinan.<br>
+                D. Saya datang bekerja sesuai dengan jam<br>
+                E. Saya ingin saya mendapat-kan predikat karyawan yang rajin bekerja jika saya berangkat sesuai jam
+                kantor.<br>
+            </p>
+            <p>Skor: A=1, B=4, C=3, D=1, E=2</p>
+
+            <p>3. Jika ada gosip atau informasi yang belum ada kejelasannya, saya</p>
+            <p>
+                A. Saya mengkonfirmasi informasi tersebut berdasarkan fakta.<br>
+                B. Saya tetap mempercayainya.<br>
+                C. Saya tidak peduli.<br>
+                D. Saya ragu-ragu untuk mempercayainya.<br>
+                E. Saya percaya jika banyak orang yang mempercayai informasi tersebut<br>
+            </p>
+            <p>Skor: A=5, B=2, C=1, D=3, E=2</p>
+            <p>4. Jika saya mendapatkan hadiah maka ....</p>
+            <p>
+                A. Saya akan merasa senang.<br>
+                B. Saya akan membagi kebahagiaan saya dengan bersedekah.<br>
+                C. Saya akan menolaknya karena saya berkecukupan.<br>
+                D. Saya menerima dan saya gunakan sendiri.<br>
+                E. Saya tidak peduli dengan orang lain.<br>
+            </p>
+            <p>Skor: A=4, B=5, C=3, D=3, E=1</p>
+            <p>5. Dalam melaksanakan pekerjaan sehari-hari saya adalah tipe pekerja yang</p>
+            <p>
+                A. Senang menyelesaikan semua tanggung jawab sebelum waktunya.<br>
+                B. Menyelesaikan pekerjaan mendekati masa akhir deadline.<br>
+                C. Bekerja dengan hati-hati dan tepat waktu.<br>
+                D. Melakukan pekerjaan sedikit demi sedikit sampai tuntas.<br>
+                E. Menyelesaikan pekerjaan dengan sangat cepat.<br>
+            </p>
+            <p>Skor: A=4, B=1, C=5, D=3, E=2</p>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="soal_skd.html">Soal CPNS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Jelajahi</h4>
+                    <ul>
+                        <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                        <li><a href="#">Tips dan trik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

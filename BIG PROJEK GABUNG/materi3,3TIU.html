@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi CPNS</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0;
+        }
+
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+
+        header {
+            background-color: blueviolet;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            padding: 40px;
+            flex-grow: 1;
+            overflow-y: auto;
+            justify-content: space-around;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 65px;
+        }
+
+        h3 {
+            color: black;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .Back a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-right: 50%;
+        }
+
+        .Back_Bottom a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-right: 50%;
+        }
+
+        p {
+            line-height: 1.5;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            display: none;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar-container">
+            <ul class="ul">
+                <img src="LOGO.png" class="logo">
+                <li>
+                    <a href="beranda.html">Beranda</a>
+                </li>
+                <li>
+                    <a href="tentang.html">Tentang</a>
+                </li>
+                <li>
+                    <a href="keunggulan.html">Keunggulan</a>
+                </li>
+                <li>
+                    <a href="materi3.html">Materi</a>
+                </li>
+                <li>
+                    <a href="Menu paket soal.html">Paket Soal</a>
+                </li>
+            </ul>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img">
+                    </div>
+                </div>
+    
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'Login.html';
+                    }
+                </script>
+            </div>
+        </div>
+        <header>
+            <h1>Materi TIU</h1>
+        </header>
+        <main>
+            <div class="Back">
+                <a href="materi3,1.html">Back</a>
+            </div>
+            <h3 onclick="toggleContent('tiu')">Materi Tes Inteligensia Umum(TIU)</h3>
+            <p id="tiu">Ringkasan Materi Tes Inteligensia Umum (TIU)
+                <br>
+                Tes Inteligensia Umum digunakan untuk mengukur kemampuan peserta tes CPNS dalam hal yang berkaitan
+                dengan penalaran verbal, kuantitatif, logika, dan analisis. Kemampuan ini berguna dalam. menghadapi
+                dunia pelayanan publik di berbagai instansi pemerintahan seperti kementerian, lembaga nasional, maupun
+                pemerintah daerah tingkat I dan II, dalam hal memecahkan masalah dan pengambilan suatu keputusan atau
+                kebijakan yang merupakan hasil dari pertimbangan menggunakan akal dan penalaran. Diharapkan keputusan
+                atau kebijakan yang diambil berdasarkan suatu pertimbangan/penalaran yang logis atau masuk akal.
+                <br>
+                Oleh karena itu, kemampuan ini dapat Anda latih dengan mengerjakan latihan soal Tes Inteligensia Umum
+                yang
+                terdiri dari:
+                </br>
+                <br>
+                1. Penalaran verbal/kebahasaan.
+                </br>
+                <br>
+                2. Penalaran nonverbal/angka/numerik/ kuantitatif.
+                </br>
+                <br>
+                A. Penalaran Verbal/ Kebahasaan
+                </br>
+                <br>
+                Penalaran verbal terdiri atas sinonim (persamaan kata), antonim (lawan kata), dan analogi (korelasi
+                makna/ padanan kata). TIU pada bagian ini bertujuan mengukur pemahaman seseorang terhadap kata. Oleh
+                karena itu, Anda dituntut untuk menguasai pembendaharaan kata (kosakata) sebaik mungkin, karena pada
+                bagian ini terkadang Anda diminta untuk menentukan kata yang mempunyai arti yang paling dekat atau
+                paling berlawanan dengan yang diberikan. Dengan kata lain, melalui tes ini, perbendaharaan kata
+                seseorang dapat diketahui.
+                </br>
+                <br>
+                TIPS:
+                </br>
+                <br>
+                1. Biasakan dan gunakanlah Kamus Besar Bahasa Indonesia (KBBI) Saat ini telah tersedia Kamus Besar
+                Bahasa Indonesia (KBBI) online maupun offline, Anda bisa mendapatkannya dengan cara mengakses
+                http://kbbi.web.id/.
+                </br>
+                <br>
+                2. Tambah perbendaharaan kata Anda setiap harinya dengan membaca berita dari media cetak atau
+                mendengarkannya melalui media elektronik, kemudian cari tahu makna atau definisi katanya melalui Kamus
+                Besar Bahasa Indonesia (KBBI).
+                </br>
+                <br>
+                TRIK:
+                </br>
+                <br>
+                Perhatikanlah pola soal dan pola jawaban. Dengan demikian, Anda akan semakin terlatih dan mahir menjawab
+                dengan tepat.
+                </br>
+                <br>
+                Ringkas 1:
+                </br>
+                <br>
+                Sinonim/Persamaan Kata
+                </br>
+                <br>
+                Tes Sinonim digunakan untuk menguji Anda dalam menentukan persamaan dari suatu kata dengan cara mencari
+                satu kata yang setara/sama/serupa maknanya dengan makna kata tertentu yang diminta di soal. Dengan
+                demikian, Anda harus jeli dalam menentukan persamaan kata tersebut karena terkadang beberapa kata yang
+                disajikan merupakan kata yang tidak umum digunakan dalam kehidupan sehari-hari. Oleh karena itu,
+                dibutuhkan penguasaan perbendaharaan kata (kosakata) sebaik mungkin sehingga kemampuan dalam menentukan
+                kata yang mempunyai arti yang paling dekat dengan kata yang diberikan di soal menjadi kuncinya.
+                </br>
+                <br>
+                TIPS:
+                </br>
+                <br>
+                1. Perbanyak membaca Perkaya kosakata Anda dengan banyak membaca, bisa dari kamus yang tersedia secara
+                offline atau online, artikel berita di internet atau media cetak.
+                </br>
+                <br>
+                2. Perbanyak mendengarkan berita Biasanya berita yang sedang hangat dibicarakan akan memperkaya
+                kosakata. Selain itu, berdasarkan pengamatan dalam tes sinonim, paling banyak adalah kata serapan dari
+                bahasa asing, bahasa daerah, istilah-istilah pada dunia teknik, kedokteran, sains, pertanian, dan
+                lain-lain sehingga dengan mendengar atau membaca berita, dapat membantu kita menjadi tidak asing dengan
+                kata yang ditanyakan di soal tes sinonim karena istilah-istilah tersebut. sering terdengar dalam
+                kehidupan sehari-hari.
+                </br>
+                <br>
+                3. Gunakan kamus
+                Segera cari tahu arti dari kata yang tidak Anda mengerti dengan cara membuka kamus bahasa, mesin
+                pencari (seperti google, wikipedia), atau Anda bisa mengunjungi juga situs Kamus Besar Bahasa Indonesia
+                (KBBI): http://pusatbahasa. kemdiknas.go.id/kbbi/ Terkadang kamus bahasa Inggris-Indonesia juga
+                diperlukan
+                jika ada kata serapan yang tidak Anda mengerti sehingga Anda bisa mengembalikan kata serapan tersebut
+                ke bahasa aslinya (yaitu bahasa Inggris) dan cari tahu artinya di kamus.
+                </br>
+                <br>
+                TRIK:
+                </br>
+                <br>
+                1. Jangan memilih kata yang mempunyai kata bunyi mirip dengan soal. Sebagian besar jawaban yang demikian
+                tidak tepat meski tidak selalu salah.
+                </br>
+                <br>
+                2. Pergunakan kalimat umum Jika Anda tidak mengenal kata yang tersedia di soal atau terdapat lebih dari
+                satu jawaban yang dirasa benar, maka coba gunakan kata tersebut dalam kalimat yang paling umum, kemudian
+                ganti kata tersebut dengan pilihan yang ada pada soal.
+                </br>
+                <br>
+                3. Kembalikan ke bahasa aslinya Untuk kata serapan yang tidak Anda mengerti, maka. mengembalikan kata
+                serapan tersebut ke bahasa aslinya (yaitu bahasa Inggris) dan cari tahu artinya di kamus.
+                </br>
+                <br>
+                4. Gunakan waktu yang tersedia dengan sebaik mungkin, cepat, tepat, dan teliti Hal ini penting karena
+                untuk membiasakan diri Anda bekerja cepat dalam menyelesaikan soal-soal tersebut. Jika Anda tidak
+                mematuhi batasan waktu yang diberikan, maka Anda akan terbiasa mengerjakannya dengan santai dan dalam
+                waktu yang lama. Selain itu, hindari menghabiskan waktu untuk menjawab hanya satu soal karena penasaran.
+                Jika ini terjadi, maka ketika Anda mengerjakan soal tes sinonim yang sebenarnya, Anda akan mengalami
+                kesulitan dalam. hal pengaturan waktu.
+                </br>
+                <br>
+                Contoh:
+                </br>
+                <br>
+                1. Dispensasi:
+                </br>
+                <br>
+                A. Pelarangan
+                </br>
+                <br>
+                B. Kelonggaran
+                </br>
+                <br>
+                C. Perizinan
+                </br>
+                <br>
+                D. Pencegahan
+                </br>
+                <br>
+                E. Hadiah
+                </br>
+                <br>
+                Jawaban: B
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Dengan menggunakan trik pergunakan kalimat umum, kata dispensasi di atas dapat dibuat kalimat umumnya
+                menjadi Seorang karyawan wanita diberi dispensasi dari pekerjaan berat karena sedang hamil. Sehingga
+                arti kata dispensasi adalah kelonggaran.
+                </br>
+                <br>
+                2. Mortalitas:_
+                </br>
+                <br>
+                A. Angka Kematian
+                </br>
+                <br>
+                B. Angka Kelahiran
+                </br>
+                <br>
+                C. Sebangsa Hewan
+                </br>
+                <br>
+                D. Gerak
+                </br>
+                <br>
+                E. Pukulan
+                </br>
+                <br>
+                Jawaban: A
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Kata mortalitas merupakan kata serapan, yaitu kata asing yang diserap ke dalam Bahasa Indonesia. Untuk
+                mencari tahu arti kata ini maka kita gunakan trik kembalikan ke
+                bahasa aslinya, yaitu Bahasa Inggris, Bahasa Inggris dari mortalitas adalah mortality, yang artinya
+                angka kematian.
+                </br>
+                <br>
+                3. Kampiun:...
+                </br>
+                <br>
+                A. Penggagas
+                </br>
+                <br>
+                B. Ahli
+                </br>
+                <br>
+                C. Sejarah
+                </br>
+                <br>
+                D. Penerima
+                </br>
+                <br>
+                E Juara
+                </br>
+                <br>
+                Jawaban: E
+                </br>
+                <br>
+                Pembahasan:
+                </br>
+                <br>
+                Kampiun adalah pemenang dalam suatu perlombaan atau pertandingan. Dengan demikian, kampiun bersinonim
+                dengan juara.
+                </br>
+                <br>
+                Anda dapat mempelajari daftar kata berikut sebagai salah satu acuan latihan.
+                </br>
+                <br>
+                A
+                </br>
+                <br>
+                peribahasa
+                </br>
+                <br>
+                Abolisi
+                : Penghapusan
+                </br>
+                <br>
+                Adaptasi
+                : Penyesuaian
+                </br>
+                <br>
+                Abonemen
+                : Berlangganan
+                </br>
+                <br>
+                Abrasi
+                : Kikis, pengikisan
+                </br>
+                <br>
+                Absah
+                : Sah
+                </br>
+                <br>
+                Absen
+                : Bolos
+                </br>
+                <br>
+                Absolut
+                : Mutlak
+                </br>
+                <br>
+                Absorpsi
+                : Penyerapan
+                </br>
+                <br>
+                Acuan
+                : Rujukan
+                </br>
+                <br>
+                Adagium
+                : Pepatah,peribahasa
+                </br>
+                <br>
+                Adaptasi
+                : Penyesuaian
+                </br>
+                <br>
+                Adiktif
+                : Bersifat candu
+                </br>
+                <br>
+                Ad interim
+                : Sementara
+                </br>
+                <br>
+                Afeksi
+                : Kasih sayang
+                </br>
+                <br>
+                Afinitas
+                : Empati
+                </br>
+                <br>
+                Afirmasi
+                : Penegasan, peneguhan
+                </br>
+                <br>
+                Anulir
+                : Abolisi, penghapusan, pembatalan
+                </br>
+                <br>
+                Algoritma
+                : Prosedur pemecahan
+                </br>
+                <br>
+                Alternatif
+                : Cara lain
+                </br>
+                <br>
+                Ambiguitas
+                : Makna ganda, ketidakjelasan
+                </br>
+                <br>
+                Aliansi
+                : Afiliasi, asosiasi
+                </br>
+                <br>
+                Amatir
+                : Pemula
+                </br>
+                <br>
+                Ambigu
+                : Enigmatis, enigma
+                </br>
+                <br>
+                Alegori
+                : Kias
+                </br>
+                <br>
+                Agraria
+                : Pertahanan
+                </br>
+                <br>
+                Akreditasi
+                : Pengakuan
+                </br>
+                <br>
+                Akselerasi
+                : Percepatan
+                </br>
+                <br>
+                Agitasi
+                : Persuasi, ajakan
+                </br>
+                <br>
+                Agresi
+                : Serangan, penyerangan
+                </br>
+                <br>
+                Agunan
+                : Jaminan
+                </br>
+                <br>
+                Ajun
+                : Ajudan, asisten
+                </br>
+                <br>
+                Apatis
+                : Dingin, acuh tak
+                acuh, masa bodoh
+                </br>
+                <br>
+                Api
+                : Bara
+                </br>
+                <br>
+                Aporisma
+                : Maksimal
+                </br>
+                <br>
+                Arbitrer
+                : Acak
+                </br>
+                <br>
+                Aristokrasi
+                : Feodal
+                </br>
+                <br>
+                Akseptor
+                : Penerima
+                </br>
+                <br>
+                Aristokrat
+                : Bangsawan, ningrat
+                </br>
+                <br>
+                Aktual
+                : Nyata, anyar
+                </br>
+                <br>
+                Arketipe
+                : Model
+                </br>
+                <br>
+                Akurasi
+                : Ketelitian
+                </br>
+                <br>
+                Arogan
+                : Congkak
+                </br>
+                <br>
+                Akurat
+                :Benar, jitu, saksama
+                </br>
+                <br>
+                Artifisial
+                : Buatan
+                </br>
+                <br>
+                Asa
+                : Harapan
+                </br>
+                <br>
+                Autentik
+                : Asli, sah, tulen, orisinil
+                </br>
+                <br>
+                Ambisi
+                : Keinginan
+                </br>
+                <br>
+                Analogi
+                : Perbandingan
+                </br>
+                <br>
+                Andal
+                : Kredibel
+                </br>
+                <br>
+                Anemia
+                : Kurang darah
+                </br>
+                <br>
+                Anggaran
+                : Catatan
+                </br>
+                <br>
+                Angkara
+                : Kejahatan
+                </br>
+                <br>
+                Anjung
+                : Panggung
+                </br>
+                <br>
+                Anomali
+                :Tidak normal, menyimpang
+                </br>
+                <br>
+                Anonim
+                : Tanpa nama
+                </br>
+                <br>
+                B
+                </br>
+                <br>
+                Bala
+                : Bencana
+                </br>
+                <br>
+                Bab
+                : Perkara
+                </br>
+                <br>
+                Bagak
+                : Pemberani, berani, bangga
+                </br>
+                <br>
+                Bahana
+                : Gema, dengung
+                </br>
+                <br>
+                Baku
+                : Standar, pokok, utama
+                </br>
+                <br>
+                Bara
+                : Api
+                </br>
+                <br>
+                Benchmark
+                : Patokan, tolok ukur
+                </br>
+                <br>
+                Bergeming
+                : Diam
+                </br>
+                <br>
+                Bibliografi
+                : Daftar pustaka
+                </br>
+                <br>
+                Biduk
+                : Bahtera
+                </br>
+                <br>
+                Blangko
+                : Abstain
+                </br>
+                <br>
+                Boga
+                : Makanan nikmat
+                </br>
+                <br>
+                Bonafide
+                : Dapat dipercaya
+                </br>
+                <br>
+                Bonanza
+                : Sumber kesenangan/ kebahagiaan/ kemakmuran
+                </br>
+                <br>
+                Bonus
+                : Hadiah
+                </br>
+                <br>
+                Botani
+                : Nabati
+                </br>
+                <br>
+                Bramacorah
+                : Residivis
+                </br>
+                <br>
+                Bubut
+                : Cabut
+                </br>
+                <br>
+                Bulat
+                : Bola
+                </br>
+                <br>
+                C
+                </br>
+                <br>
+                Cagar
+                : Panjar
+                </br>
+                <br>
+                Candu
+                : Adiktif
+                </br>
+                <br>
+                Canggih
+                : Kompleks
+                </br>
+                <br>
+                Celepuk
+                : Burung hantu
+                </br>
+                <br>
+                Centeng
+                : Penjaga, bodyguard
+                </br>
+                <br>
+                Ciri
+                : Karakteristik
+                </br>
+                <br>
+                Citra
+                : Gambaran
+                </br>
+                <br>
+                Class
+                : Tingkatan
+                </br>
+                <br>
+                Collapse
+                : Bangkrut
+                </br>
+                <br>
+                Congkak
+                : Sombong, arogan
+                </br>
+                <br>
+                D
+                </br>
+                <br>
+                Daur
+                : Siklus
+                </br>
+                <br>
+                Dedikasi
+                : Pengabdian
+                </br>
+                <br>
+                Dehidrasi
+                : Kehilangan cairan tubuh, penyusutan air
+                </br>
+                <br>
+                Dependen
+                : Tergantung
+                </br>
+                <br>
+                Deduksi
+                : Konklusi
+                </br>
+                <br>
+                Defacto
+                : secara nyata, menurut kenyataan
+                </br>
+                <br>
+                Delusif
+                : Fiktif, palsu
+                </br>
+                <br>
+                Depedensi
+                : Ketergantungan
+                </br>
+                <br>
+                Deportasi
+                : Pengusiran
+                </br>
+                <br>
+                Delik
+                : Tindak pidana, pelanggaran hukum
+                </br>
+                <br>
+                Depresi
+                : Stagnasi
+                </br>
+                <br>
+                Deputi
+                : Wakil
+                </br>
+                <br>
+                Densitas
+                : Kepadatan penduduk
+                </br>
+                <br>
+                Dekade
+                : Dasawarsa, sepuluh tahun
+                </br>
+                <br>
+                Dekadensi
+                : Kemerosotan (moral, akhlak)
+                </br>
+                <br>
+                Derivasi
+                : Afiksasi
+                </br>
+                <br>
+                Desalinasi
+                : Penyulingan
+                </br>
+                <br>
+                Deskripsi
+                : Pemaparan
+                </br>
+                <br>
+                Deskriptif
+                : Gambaran
+                </br>
+                <br>
+                Delusi
+                : Khayal, khayalan, ilusi
+                </br>
+                <br>
+                Destruktif
+                : Subversif
+                </br>
+                <br>
+                Detensi
+                : Penahanan
+                </br>
+                <br>
+                Detente
+                : Rekonsiliasi
+                </br>
+                <br>
+                Dikotomi
+                : Dua kekuatan, dibagi dua
+                </br>
+                <br>
+                Dekrit
+                : Keputusan
+                </br>
+                <br>
+                Defleksi
+                : Penyimpangan
+                </br>
+                <br>
+                Definit
+                : Terbatas
+                </br>
+                <br>
+                Dinamis
+                : Bergerak (terus)
+                </br>
+                <br>
+                Defisit
+                : Kekurangan
+                </br>
+                <br>
+                Dispensasi
+                : Pengecualian
+                </br>
+                <br>
+                Degradasi
+                : Kemerosotan, reduksi
+                </br>
+                <br>
+                Distorsi
+                : Penyimpangan
+                </br>
+                <br>
+                Divestasi
+                : Pelepasan
+                </br>
+                <br>
+                Doktrin
+                : Ajaran, dogma
+                </br>
+                <br>
+                Donasi
+                : Bantuan
+                </br>
+                <br>
+                Duplikat
+                : Replika
+                </br>
+                <br>
+                Elusif
+                : Canggih, kompleks, misterius
+                </br>
+                <br>
+                Durjana
+                : Jahat
+                </br>
+                <br>
+                E
+                </br>
+                <br>
+                Elaborasi
+                : Penjelasan terperinci
+                </br>
+                <br>
+                Embargo
+                : Inhibisi, larangan
+                </br>
+                <br>
+                Efisien
+                : Efektif
+                </br>
+                <br>
+                Embarkasi
+                : Keberangkatan
+                </br>
+                <br>
+                Egaliter
+                : Sama, sederajat
+                </br>
+                <br>
+                Endemi
+                : Wabah, pagebluk
+                </br>
+                <br>
+                Egois
+                : Individualis
+                </br>
+                <br>
+                Enigmatis
+                : Ambigu
+                </br>
+                <br>
+                Ekamatra
+                : Fisika
+                </br>
+                <br>
+                Entitas
+                : Materi, zat
+                </br>
+                <br>
+                Eklips
+                : Gerhana
+                </br>
+                <br>
+                Enumerasi
+                : Pencacahan, penghitungan
+                </br>
+                <br>
+                Eksekusi
+                : Pelaksanaan hukuman
+                </br>
+                <br>
+                Epilog
+                : Penutup
+                </br>
+                <br>
+                Eksemplar
+                : Lembar
+                </br>
+                <br>
+                Epidemi
+                : Wabah
+                </br>
+                <br>
+                Eksentrik
+                : Aneh
+                </br>
+                <br>
+                Era
+                : Zaman, masa
+                </br>
+                <br>
+                Eksepsi
+                : Pengecualian
+                </br>
+                <br>
+                Esensi
+                : Hakikat
+                </br>
+                <br>
+                Ekskavasi
+                : Penggalian
+                </br>
+                <br>
+                Eskalasi
+                : Peningkatan
+                </br>
+                <br>
+                Eksodus
+                : Hijrah, mengungsi, pindah
+                </br>
+                <br>
+                Estetis
+                : Elok, indah
+                </br>
+                <br>
+                Estimasi
+                : Prediksi, anggapan
+                </br>
+                <br>
+                Ekspansi
+                : Perluasan
+                </br>
+                <br>
+                Estuari
+                : Muara, hilir
+                </br>
+                <br>
+                Ekspedisi
+                : Pengiriman
+                </br>
+                <br>
+                Etika
+                : Akhlak
+                </br>
+                <br>
+                Eksploitasi
+                : Pemanfaatan
+                </br>
+                <br>
+                Etnis
+                : Kesukuan, rasial
+                </br>
+                <br>
+                Eksplorasi
+                : Pendalaman, penggalian, pengkajian
+                </br>
+                <br>
+                Eufemisme
+                : Penghalusan (bahasa)
+                </br>
+                <br>
+                Evakuasi
+                : Pemindahan
+                </br>
+                <br>
+                Ekspresi
+                : Ungkapan, roman muka
+                </br>
+                <br>
+                Evaluasi
+                : Penilaian
+                </br>
+                <br>
+                Evaporasi
+                : Penguapan
+                </br>
+                <br>
+                Ekstensi
+                : Perluasan
+                </br>
+                <br>
+                Evokasi
+                : Provokasi, sugesti, penggugah rasa
+                </br>
+                <br>
+                Ekstra
+                : Bonus, tambahan
+                </br>
+                <br>
+                Ekuator
+                : Khatulistiwa
+                </br>
+                <br>
+                Evolusi
+                : Perubahan
+                </br>
+                <br>
+                Ekuilibrium
+                : Keseimbangan, setimbang, sepadan
+                </br>
+                <br>
+                Ekuivalen
+                : Sama, sederajat, sebanding
+                </br>
+                <br>
+                F
+                </br>
+                <br>
+                Faksi
+                : Golongan, kelompok
+                </br>
+                <br>
+
+                </br>
+            </p>
+            <div class="Back_Bottom">
+                <a href="materi3,1.html">Back</a>
+            </div>
+        </main>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ikuti Kami</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="soal_skd.html">Soal CPNS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <ul>
+                    <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                    <li><a href="#">Tips dan trik</a></li>
+                    <li><a href="#">Teknis SKD</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

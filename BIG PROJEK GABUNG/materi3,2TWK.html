@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi CPNS</title>
+    <script src="https://kit.fontawesome.com/60bfabd217.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+
+        .container {
+            width: 100%;
+            margin: 0;
+        }
+
+        .navbar-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            margin-top: 2px;
+            background: rgb(246, 229, 255);
+            background: linear-gradient(90deg, rgba(246, 229, 255, 1) 0%, rgba(249, 249, 249, 1) 39%, rgba(232, 233, 252, 1) 100%);
+        }
+
+        .logo {
+            margin-left: -24px;
+            width: 250px;
+            height: 200px;
+
+        }
+
+        .ul {
+            display: flex;
+            margin: 1px;
+            justify-content: center;
+            /*untuk merubah kotak navbar secara horisontal*/
+            align-items: center;
+
+        }
+
+        .navbar-container ul li {
+            padding: 8px;
+            font-family: sans-serif;
+            font-size: 15px;
+            /*untuk mengatur jarak teks didalamnya*/
+            color: black;
+            list-style-type: none;
+        }
+
+        .navbar-container ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar-container ul li:hover {
+            border-bottom: 2px solid rgb(127, 39, 179);
+            color: rgb(168, 157, 157);
+            transition: .1s ease-in-out;
+            padding: auto;
+        }
+
+
+        .login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 80vh;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        .login-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            border: 3px solid #9e96ee;
+        }
+
+        header {
+            background-color: blueviolet;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            padding: 40px;
+            flex-grow: 1;
+            overflow-y: auto;
+            justify-content: space-around;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 65px;
+        }
+
+        .Back a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-right: 50%;
+        }
+
+        .Back_Bottom a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            margin-right: 50%;
+        }
+
+        h3 {
+            color: black;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        p {
+            line-height: 1.3;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            display: none;
+        }
+/*footer*/
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-image: linear-gradient(#cd94e4, #9e96ee);
+            padding: 70px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-col {
+            width: 20%;
+            padding: 0 15px;
+
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-top: 12px;
+
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 12px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: black;
+            padding-left: 2px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar-container">
+            <ul class="ul">
+                <img src="LOGO.png" class="logo">
+                <li>
+                    <a href="beranda.html">Beranda</a>
+                </li>
+                <li>
+                    <a href="tentang.html">Tentang</a>
+                </li>
+                <li>
+                    <a href="keunggulan.html">Keunggulan</a>
+                </li>
+                <li>
+                    <a href="materi3.html">Materi</a>
+                </li>
+                <li>
+                    <a href="Menu paket soal.html">Paket Soal</a>
+                </li>
+            </ul>
+            <div>
+                <div class="login">
+                    <div id="icon" onclick="pindahHalaman1()">
+                        <img src="profil.png" alt="Icon" class="login-img">
+                    </div>
+                </div>
+
+                <script>
+                    function pindahHalaman1() {
+                        window.location.href = 'Login.html';
+                    }
+                </script>
+            </div>
+        </div>
+        <header>
+            <h1>Materi TWK</h1>
+        </header>
+        <main>
+            <div class="Back">
+                <a href="materi3,1.html">Back</a>
+            </div>
+            <div class="content">
+                <h3 onclick="toggleContent('twk')">Materi Tes Wawasan Kebangsaan (TWK)</h3>
+
+            <p id="twk">
+                <br>
+                Ringkas 1: Pancasila
+                </br>
+                <br>
+                A. Arti dan Pengertian Ideologi
+                </br>
+                <br>
+                1. Arti kata ideologi
+                Ideologi berasal dari kata idea dan logos.
+                Idea artinya pemikiran, konsep atau gagasan.
+                Logos artinya pengetahuan.
+                </br>
+                <br>
+                2. Pengertian ideologi
+                <br>
+                . Secara sederhana
+                Ideologi berarti pengetahuan tentang ide, keyakinan, atau gagasan Secara luas
+                </br>
+                <br>
+                .Ideologi adalah seperangkat prinsip-prinsip yang dijadikan dasar untuk memberikan arah dan tujuan yang
+                ingin dicapai dalam melangsungkan dan mengembangkan kehidupan nasional suatu bangsa dan negara.
+                </br>
+                <br>
+                B. Dasar dan Ideologi Negara Republik Indonesia
+                </br>
+                <br>
+                1. Pancasila sebagai dasar negara Pancasila sebagai dasar negara tercantum dalam Pembukaan UUD 1945
+                alinea ke-4.
+                </br>
+                <br>
+                2. Pancasila sebagai ideologi bangsa Indonesia
+                Pancasila sebagai ideologi negara Indonesia dapat diartikan sebagai suatu konsep tentang sistem nilai
+                yang secara individu maupun kebersamaan dipandang sebagai prinsip hidup ideal yang dicita-citakan dan
+                diinginkan untuk diwujudkan dalam kehidupan masyarakat dan negara.
+                </br>
+                <br>
+                3. Pancasila sebagai pandangan hidup bangsa Indonesia
+                Pancasila sebagai pandangan hidup bangsa Indonesia dipergunakan sebagai petunjuk atau pedoman kehidupan
+                berbangsa dan bernegara yang meliputi berbagai bidang kehidupan. Selain itu, Pancasila juga memiliki
+                nilai-nilai dan memberikan arah serta tujuan menuju masyarakat yang adil dan makmur.
+                </br>
+                <br>
+                C. Sejarah Perumusan Pancasila
+                </br>
+                <br>
+                Berikut adalah tokoh-tokoh yang mengusulkan konsep dasar negara dalam sidang pertama BPUPKI.
+                <br>
+                1. Muh. Yamin
+                </br>
+                <br>
+                Muh. Yamin dalam pidatonya pada tanggal 29 Mei 1945, mengemukakan:
+                </br>
+                <br>
+                (i) Peri kebangsaan.
+                </br>
+                <br>
+                (ii) Peri keadilan.
+                </br>
+                <br>
+                (iii) Peri ketuhanan.
+                </br>
+                <br>
+                (iv) Peri kerakyatan.
+                </br>
+                <br>
+                (v) Kesejahteraan rakyat.
+                </br>
+                <br>
+                2. Soepomo dalam pidatonya pada tanggal 31 Mei 1945, mencetuskan:
+                </br>
+                <br>
+                (i) Persatuan.
+                </br>
+                <br>
+                (ii) Kekeluargaan.
+                </br>
+                <br>
+                (iii) Keseimbangan lahir batin.
+                </br>
+                <br>
+                (iv) Musyawarah.
+                </br>
+                <br>
+                (v) Keadilan rakyat.
+                </br>
+                <br>
+                3. Ir. Soekarno
+                </br>
+                <br>
+                Ir. Soekarno dalam pidatonya pada tanggal 1 Juni 1945, mengusulkan:
+                </br>
+                <br>
+                (i) Kebangsaan Indonesia.
+                </br>
+                <br>
+                (ii) Internasionalisme atau perikemanusiaan.
+                </br>
+                <br>
+                (iii) Mufakat atau demokrasi.
+                </br>
+                <br>
+                (iv) Kesejahteraan sosial.
+                </br>
+                <br>
+                (v) Ketuhanan Yang Maha Esa.
+                </br>
+                <br>
+                Usulan rumusan Pancasila dari ketiga tokoh tersebut dibahas lebih lanjut oleh para anggota panitia
+                kecil BPUPKI yang disebut Panitia Sembilan. Panitia Sembilan berhasil menyusun sebuah piagam yang
+                dikenal dengan Piagam Jakarta (Jakarta Charter) yang di dalamnya terdapat rumusan Pancasila sebagai
+                berikut:
+                </br>
+                <br>
+                (i) Ketuhanan, dengan kewajiban menjalankan syariat Islam bagi pemeluk-pemeluknya.
+                </br>
+                <br>
+                (ii) Kemanusiaan yang adil dan beradab.
+                </br>
+                <br>
+                (iii) Persatuaan Indonesia.
+                </br>
+                <br>
+                (iv) Kerakyatan yang dipimpin oleh hikmah kebijaksanaan dalam permusyawaratan perwakilan.
+                </br>
+                <br>
+                (v) Keadilan sosial bagi seluruh rakyat Indonesia.
+                </br>
+                <br>
+                Namun sebelum pengesahan UUD 1945, kalimat sila pertama rumusan Pancasila telah diganti menjadi
+                "Ketuhanan Yang Maha Esa".
+                </br>
+                <br>
+                D. Nilai-Nilai Pancasila
+                </br>
+                <br>
+                Pancasila sebagai dasar dan ideologi negara memiliki nilai-nilai sebagai
+                berikut:
+                </br>
+                <br>
+                1. Nilai-nilai ketuhanan yang Maha Esa
+                </br>
+                <br>
+                a. Indonesia merupakan negara yang mengakui adanya Tuhan Yang Maha Esa.
+                </br>
+                <br>
+                b. Negara melindungi warga negaranya untuk beribadah sesuai dengan agama dan kepercayaannya.
+                </br>
+                <br>
+                2. Nilai-nilai kemanusiaan yang adil dan beradab
+                </br>
+                <br>
+                a. Setiap warga negara mengakui persamaan derajat, hak, dan kewajiban antara sesama manu- sia sebagai
+                asas kebersamaan bangsa Indonesia.
+                </br>
+                <br>
+                b. Mengembangkan sikap saling mencintai sesama manusia.
+                </br>
+                <br>
+                3. Nilai-nilai persatuan Indonesia
+                </br>
+                <br>
+                a. Setiap warga negara mengutamakan persatuan, kesatuan, kepentingan dan keselamatan bangsa dan
+                negara di atas kepentingan pribadi dan golongan.
+                </br>
+                <br>
+                b. Sanggup dan rela berkorban untuk kepentingan bangsa dan negara.
+                </br>
+                <br>
+                4. Nilai-nilai kerakyatan yang dipimpin oleh hikmah kebijaksanaan dalam permusyawaratan/perwakilan
+                </br>
+                <br>
+                a. Selalu mengutamakan musyawarah mufakat dalam menyelesaikan suatu persoalan.
+                </br>
+                <br>
+                b. Menghormati dan menjunjung tinggi setiap keputusan yang dicapai sebagai hasil musyawarah.
+                </br>
+                <br>
+                5. Nilai-nilai keadilan sosial bagi seluruh rakyat Indonesia
+                </br>
+                <br>
+                a. Seluruh warga negara bersamasama menciptakan keadilan sosial dalam kehidupan bermasyarakat.
+                </br>
+                <br>
+                b. Memupuk sikap saling menghormati dan bersikap adil antar sesama manusia.
+                </br>
+                <br>
+                E. Perbandingan Ideologi
+                </br>
+                <br>
+                Berikut adalah tabel perbandingan antara ideologi komunisme, liberalisme, dan Pancasila.
+                </br>
+                <br>
+                No:
+                </br>
+                <br>
+                I. Komunisme:
+                </br>
+                <br>
+                1.HAM diabaikan
+                </br>
+                <br>
+                2.Nasionalisme ditolak
+                </br>
+                <br>
+                3.Keputusan di tangan pimpinan partai
+                </br>
+                <br>
+                4.Dominasi partai
+                </br>
+                <br>
+                5.Tidak ada oposisi
+                </br>
+                <br>
+                6.Tidak ada perbedaan pendapat
+                </br>
+                <br>
+                7.Kepentingan negara
+                </br>
+                <br>
+                II. Liberalisme:
+                </br>
+                <br>
+                1.HAM dijunjung secara mutlak
+                </br>
+                <br>
+                2.Nasionalisme diabaikan
+                </br>
+                <br>
+                3.Keputusan melalui suara terbanyak (voting)
+                </br>
+                <br>
+                4.Dominasi mayoritas
+                </br>
+                <br>
+                5.Ada oposisi
+                </br>
+                <br>
+                6.Ada perbedaan pendapat
+                </br>
+                <br>
+                7.Kepentingan mayoritas
+                </br>
+                <br>
+                III. Pancasila:
+                </br>
+                <br>
+                1.HAM dilindungi tanpa melupakan kewajiban asasi
+                </br>
+                <br>
+                2.Nasionalisme dijunjung tinggi
+                </br>
+                <br>
+                3.Keputusan melalui musyawarah mufakat. Apabila tidak tercapai mufakat maka diadakan pemungutan suara.
+                </br>
+                <br>
+                4.Tidak ada dominasi
+                </br>
+                <br>
+                5.Ada oposisi dengan alasan (sebagai penyeimbang)
+                </br>
+                <br>
+                6.Ada perbedaan pendapat, dan dihargai
+                </br>
+                <br>
+                7.Kepentingan seluruh rakyat
+                </br>
+                <br>
+                F. Sikap Positif terhadap Pancasila
+                </br>
+                <br>
+                Berikut adalah sikap positif terhadap Pancasila dalam berbagai aspek kehidupan.
+                </br>
+                <br>
+                1. Sikap positif terhadap Pancasila dalam kehidupan politik:
+                </br>
+                <br>
+                a. Mengemukakan pendapat secara bebas dan bertanggung jawab.
+                </br>
+                <br>
+                b. Menjalankan pemerintahan secara jujur dan konsekuen.
+                </br>
+                <br>
+                2. Sikap positif terhadap Pancasila dalam kehidupan ekonomi:
+                </br>
+                <br>
+                a. Memanfaatkan sumber daya alam secara baik.
+                </br>
+                <br>
+                b. Menjalankan kegiatan perekonomian secara jujur.
+                </br>
+                <br>
+                3. Sikap positif terhadap Pancasila dalam kehidupan lokal:
+                </br>
+                <br>
+                a. Menghormati dan menghargai sesama manusia tanpa melihat asal usul, agama, ras, dan latar belakang
+                kehidupannya.
+                </br>
+                <br>
+                b. Bersikap adil dan tidak mengambil hak orang lain.
+                </br>
+                <br>
+                Ringkas 2: Undang-Undang Dasar 1945
+                </br>
+                <br>
+                A. Hakikat Konstitusi Pengertian Konstitusi
+                </br>
+                <br>
+                Dalam arti sempit Konstitusi adalah hukum dasar yang memuat aturan pokok atau aturan- aturan dasar
+                negara.
+                Dalam arti luas Konstitusi adalah keseluruhan sis- tem aturan yang menetapkan dan mengatur kehidupan
+                kenegaraan melalui sistem pemerintahan negara dan tata hubungan secara timbal balik antarlembaga negara
+                dan antara negara dengan warga negara.
+                </br>
+                <br>
+                B. Macam-Macam Konstitusi
+                Macam-macam konstitusi sebagai berikut:
+                </br>
+                <br>
+                1. Konstitusi tertulis disebut Undang- Undang Dasar.
+                </br>
+                <br>
+                2. Konstitusi tidak tertulis disebut konvensi.
+                </br>
+                <br>
+                C. Sifat Konstitusi
+                Sifat konstitusi berdasarkan jumlah pasalnya sebagai berikut:
+                </br>
+                <br>
+                1. Fleksibel (luwes)
+                Artinya, pasal-pasal dalam konstitusi jumlahnya sedikit sehingga mudah diubah dan disesuaikan dengan
+                perkembangan zaman.
+                </br>
+                <br>
+                2. Rigid (kaku)
+                Artinya, pasal-pasal dalam konstitusi jumlahnya banyak dan sulit diubah- ubah.
+                </br>
+                <br>
+                D. Konstitusi yang Pernah Berlaku di Indonesia
+                Konstitusi yang pernah berlaku di Indonesia adalah sebagai berikut:
+                </br>
+                <br>
+                1. Undang-Undang Dasar 1945 (UUD 1945)
+                UUD 1945 atau UUD Proklamasi, berlaku pada 18 Agustus 1945- 27 Desember 1949.
+                UUD 1945 ditetapkan dan disahkan oleh PPKI pada 18 Agustus 1945.
+                Pada saat ditetapkan, sistematika UUD 1945 terdiri dari:
+                </br>
+                <br>
+                a. Pembukaan Ada empat alinea.
+                </br>
+                <br>
+                b. Batang tubuh Terdiri dari:
+                16 bab,
+                37 pasal,
+                4 ayat aturan peralihan, dan
+                2 ayat aturan tambahan.
+                </br>
+                <br>
+                c. Penjelasan Terdiri dari:
+                </br>
+                <br>
+                1.penjelasan umum, dan penjelasan khusus (pasal demi pasal).
+                </br>
+                <br>
+                2.Bentuk negara Indonesia adalah kesatuan, berdasarkan Pasal 1 Ayat (1) UUD 1945.
+                </br>
+                <br>
+                3.Bentuk pemerintahan Indonesia adalah republik, berdasarkan Pasal 1 Ayat (1) UUD 1945.
+                </br>
+                <br>
+                4.Sistem pemerintahan adalah kabinet presidensial. Presiden sebagai kepala negara sekaligus sebagai
+                kepala pemerintahan. Dalam menjalankan tugasnya, presiden dibantu oleh wakil presiden dan para
+                menteri.
+                </br>
+                <br>
+                2. Konstitusi Republik Indonesia Serikat (RIS) 1949
+                Undang-Undang Dasar Republik Indonesia Serikat 1949 (UUD RIS 1949) berlaku pada 27 Desember 1949-17
+                Agustus 1950.
+                </br>
+                <br>
+                Sistematika UUD RIS 1949 terdiri dari sebagai berikut:
+                </br>
+                <br>
+                a. Mukadimah Terdiri dari empat alinea.
+                </br>
+                <br>
+                b. Batang tubuh Terdiri dari 6 bab dan 197 pasal.
+                </br>
+                <br>
+                1.Bentuk negara Indonesia adalah serikat atau federasi.
+                </br>
+                <br>
+                2.Bentuk pemerintah Indonesia adalah republik, berdasarkan Pasal 1 Ayat (2) Konstitusi RIS.
+                </br>
+                <br>
+                3.Sistem pemerintahan adalah kabinet parlementer. Presiden sebagai kepala negara dan perdana menteri
+                sebagai kepala pemerintahan.
+
+                <br>
+                3. Undang-Undang Dasar Sementara 1950 (UUDS 1950)
+                UUDS 1950 berlaku pada 17 Agustus 1950-5 Juli 1959.
+                </br>
+                <br>
+                Sistematika UUDS 1950 terdiri dari:
+                </br>
+                <br>
+                a. Mukadimah Terdiri dari empat alinea.
+                </br>
+                <br>
+                b. Bab Indonesia Negara Republik.
+                </br>
+                <br>
+                c. Bab ii: Alat-alat kelengkapan negara.
+                </br>
+                <br>
+                d. Bab III: Tugas alat-alat kelengkapan negara.
+                </br>
+                <br>
+                e. Bab IV: Pemerintahan dan daerah-daerah swapraja.
+                </br>
+                <br>
+                f. Bab V: Konstituante.
+                </br>
+                <br>
+                g. Bab VI: Perubahan, ketentuan-ketentuan peralihan, dan ketentuan-ketentuan penutup.
+                </br>
+                <br>
+                .Bentuk negara Indonesia adalah kesatuan, berdasarkan Pasal 1 Ayat (1) UUDS 1950.
+                </br>
+                <br>
+                .Bentuk pemerintahan Indonesia adalah republik, berdasarkan Pasal 1 Ayat (1) dan Mukadimah alinea IV
+                UUDS 1950.
+                </br>
+                <br>
+                .Sistem pemerintahan adalah kabinet parlementer dengan demokrasi liberal yang masih bersifat semu.
+                Berdasarkan sistem ini, DPR dapat membubarkan kabinet, sedangkan presiden memiliki kedudukan yang kuat
+                dan dapat membubarkan DPR.
+                </br>
+                <br>
+                4. UUD 1945 hasil Dekret Presiden
+                </br>
+                <br>
+                -UUD 1945 hasil Dekret Presiden disebut juga UUD 1945 periode kedua, berlaku pada 5 Juli 1959 -2000.
+                </br>
+                <br>
+                -Gagalnya Badan Konstituante dalam menetapkan rancangan Undang-Undang Dasar berdam- pak pada keadaan
+                politik yang tidak stabil sehingga pada tanggal 5 Juli 1959, Presiden Soekarno mengeluarkan Dekret
+                Presiden, Salah satu isi dekret tersebut memberlakukan kem- bali UUD 1945.
+                </br>
+                <br>
+                -Ketentuan mengenai bentuk negara, bentuk pemerintahan, pembagian kekuasaan, dan sistem pemerintahan
+                sama seperti yang tercantum dalam UUD 1945.
+                </br>
+                <br>
+                5. UUD 1945 hasil amandemen
+                </br>
+                <br>
+                -UUD 1945 hasil amandemen berlaku dari tahun 2000 sampai sekarang.
+                </br>
+                <br>
+                Sistematika UUD 1945 Amandemen terdiri dari:
+                </br>
+                <br>
+                a. Pembukaan Ada empat alinea.
+                </br>
+                <br>
+                b. Batang tubuh Terdiri dari:
+                37 pasal, dan 16 bab.
+                </br>
+                <br>
+                -Beberapa perubahan mendasar dalam sistem ketatanegaraan Indonesia, antara lain:
+                </br>
+                <br>
+                a. Kedudukan yang sejajar dan proporsional antara Presiden dan DPR.
+                </br>
+                <br>
+                b. Masa jabatan presiden diatur dengan tegas, yaitu maksimal dapat dipilih untuk dua kali masa jabatan.
+                </br>
+                <br>
+                c. Dilaksanakannya otonomi daerah.
+                </br>
+                <br>
+                d. Penyelenggaraan pemilu oleh lembaga nonpemerintahan yang netral dan mandiri.
+                </br>
+                <br>
+                E. Berbagai Penyimpangan terhadap Konstitusi
+                </br>
+                <br>
+                Berikut adalah berbagai penyim- pangan terhadap konstitusi yang pernah terjadi di Indonesia.
+                </br>
+                <br>
+                1. Penyimpangan terhadap UUD 1945 periode 1945-1949
+                </br>
+                <br>
+                .Kekuasaan presiden tidak terbatas
+                Masa awal proklamasi dianggap sebagai masa peralihan se- hingga pada masa ini, keku- asaan presiden
+                sangat luas. Selain menjalankan kekuasaan eksekutif, presiden juga men- jalankan kekuasaan MPR dan
+                DPR.
+                </br>
+                <br>
+                .Di samping presiden, hanya ada wakil presiden dan KNIP sebagai pembantu presiden.
+                </br>
+                <br>
+                Pergantian sistem kabinet presidensial menjadi kabinet parlementermenjadikan para menteri diangkat
+                dan bertanggung ja- wab kepada parlemen/DPR.
+                </br>
+                <br>
+                2. Penyimpangan terhadap UUD RIS 1949
+                </br>
+                <br>
+                -Penyimpangan bentuk negara Bentuk negara serikat berten- tangan dengan konsep Negara Kesatuan Republik
+                Indonesia.
+                </br>
+                <br>
+                -Pergantian UUD 1945 menjadi UUD RIS.
+                </br>
+                <br>
+                -Pemerintahan parlementer tidak sesuai dengan semangat UUD 1945.
+                </br>
+                <br>
+                3. Penyimpangan terhadap UUDS 1950
+                </br>
+                <br>
+                -Persaingan tidak sehat Dengan ditetapkannya deno- krasi liberal, ditafsirkan sebagai kebebasan mutlak
+                bagi setiap individu dan partai politik sehingga timbulnya persaingan tidak sehat yang mengancam
+                persatuan dan kesatuan bangsa.
+                </br>
+                <br>
+                Instabilitas nasional
+                Terjadinya instabilitas nasional akibat dari sering berganti- gantinya kabinet sehingga program-program
+                yang disusun sebelumnya tidak berjalan.
+                </br>
+                <br>
+                4. Penyimpangan terhadap UUD 1945 periode 1959-1965 (Orde Lama)
+                </br>
+                <br>
+                .Presiden membubarkan DPR Presiden membubarkan DPR karena tidak menyetujui RAPBN yang disusulkan
+                pemerintah.
+                </br>
+                <br>
+                .Penetapan pidato presiden yang berjudul Penemuan Kembali Revolusi Kita/Manifesto Politik Republik
+                Indonesia (Manipol) menjadi GBHN yang bersifat tetap oleh MPRS.
+                </br>
+                <br>
+                .Pengangkatan presiden seumur hidup
+                Pengangkatan presiden seumur hidup melalui Tap MPR No.JII/ MPRS/1963.
+                </br>
+                <br>
+                .Rangkap jabatan
+                Pimpinan lembaga tinggi dan tertinggi negara diangkat se- bagai menteri negara.
+                </br>
+                <br>
+                .Kekuasaan presiden tidak terbatas
+                Kekuasaan presiden melebihi wewenang yang ditetapkan dalam UUD 1945.
+                </br>
+                <br>
+                .Tidak berjalannya hak bujet DPR karena pemerintah tidak mengajukan rancangan undang undang APBN untuk
+                mendapatkan persetujuan DPR.
+                </br>
+                <br>
+                5. Penyimpangan terhadap UUD 1945 periode 1965 (Orde Baru)
+                </br>
+                <br>
+                Berikut adalah penyimpangan terhadap UUD 1945 periode 1965, yaitu pada masa orde baru sampai munculnya
+                Gerakan Reformasi 1998.
+                </br>
+                <br>
+                -Sistem demokrasi yang dijalan- kan bersifat feodalisme.
+                </br>
+                <br>
+                -Pembatasan aspirasi Kebebasan berbicara terutama yang berkaitan dengan arah kebijakan pemerintah
+                dibungkam.
+                </br>
+                <br>
+                -Ekonomi kerakyatan tidak berjalan
+                Ekonomi kerakyatan berubah menjadi ekonomi kapitalisme, monopoli oleh negara berubah menjadi monopoli
+                oleh keluarga.
+                </br>
+                <br>
+                -Supremasi hukum tidak berjalan Supremasi hukum berubah menjadi supremasi kekuasaan presiden.
+                </br>
+                <br>
+                -Lembaga legislatif tidak berjalan Lembaga legislatif tidak mewa- kili rakyat bahkan tidak inspiratif
+                karena hasil rekayasa politik.
+                </br>
+                <br>
+                -Bermunculnya korupsi, kolusi, dan nepotisme (KKN).
+                </br>
+                <br>
+                F. Amandemen UUD 1945
+                </br>
+                <br>
+                Amandemen adalah penambahan atau perubahan pada sebuah konstitusi yang merupakan bagian yang tidak
+                terpisahkan dari naskah aslinya.
+                </br>
+                <br>
+                1. Kesepakatan dasar dalam mengamandemen UUD 1945
+                </br>
+                <br>
+                a. Tidak mengubah Pembu- kaan UUD 1945,
+                </br>
+                <br>
+                b. Tetapmempertahankan bentuk nyata Negara Kesatuan Republik Indonesia.
+                </br>
+                <br>
+                c. Tetap mempertahankan sistem presidensial.
+                </br>
+                <br>
+                d. Penjelasan UUD 1945 yang bersifat normatif dimasukkan ke dalam pasal-pasal.
+                </br>
+                <br>
+                e. Perubahan dilakukan secara "addendum".
+                </br>
+                <br>
+                2. Tujuan amandemen UUD 1945
+                </br>
+                <br>
+                a. Memenuhi tuntutan-tuntutan reformasi.
+                </br>
+                <br>
+                b. Untuk merevisi ulang UUD 1945.
+                </br>
+                <br>
+                c. Agar isi UUD 1945 lebih jelas setelah diamandemen.
+                </br>
+                <br>
+                3. Perbaikan dan perubahan (amandemen UUD 1945) yang dimaksud adalah:
+                </br>
+                <br>
+                a. Adanya pembatasan-pem- batasan atas kekuasaan Presiden di Indonesia.
+                </br>
+                <br>
+                b. Memperkuat dan menegas- kan kembali peran kekuasaan legislatif di Indonesia.
+                </br>
+                <br>
+                c. Mencantumkan Hak Asasi Manusia Indonesia.
+                </br>
+                <br>
+                d. Menegaskan kembali hak dan kewajiban negara ataupun warga negara.
+                </br>
+                <br>
+                e. Otonomi daerah dan hak- hak rakyat di daerah.
+                </br>
+                <br>
+                f. Perbaruan lembaga-lembaga negara sehingga tidak ada lagi istilah lembaga tertinggi negara dan lembaga
+                tinggi negara.
+                </br>
+            </p>
+            </div>
+            <div class="Back_Bottom">
+                <a href="materi3,1.html">Back</a>
+            </div>
+        </main>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Ikuti Kami</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="https://deepai.org/chat">Chat bot</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="soal_skd.html">Soal CPNS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Jelajahi</h4>
+                <ul>
+                    <li><a href="https://sscasn.bkn.go.id/">Informasi resmi</a></li>
+                    <li><a href="#">Tips dan trik</a></li>
+                    <li><a href="#">Teknis SKD</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

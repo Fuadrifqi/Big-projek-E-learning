@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoring Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(207, 149, 238);
+            background: linear-gradient(90deg, rgb(231, 200, 248) 0%, rgba(249, 249, 249, 1) 39%, rgb(177, 181, 248) 100%);
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .Back {
+            text-align: center;
+            margin-bottom: 1cm;
+        }
+
+        .Back a {
+            font-family: sans-serif;
+            background-color: red;
+            color: white;
+            border-radius: 6px;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        .Back a:hover {
+            background-color: rgb(236, 59, 59);
+        }
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .scores {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .scores li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <h2>TEST KARAKTERISTIK PRIBADI</h2>
+
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Dalam melaksanakan pekerjaan sehari-hari saya adalah tipe pekerja yang</p>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="4"> A) Senang menyelesaikan semua tanggung jawab sebelum
+                        waktunya.</li>
+                    <li><input type="radio" name="q1" value="1"> B) Menyelesaikan pekerjaan mendekati masa akhir
+                        deadline.</li>
+                    <li><input type="radio" name="q1" value="5"> C) Bekerja dengan hati-hati dan tepat waktu.</li>
+                    <li><input type="radio" name="q1" value="3"> D) Melakukan pekerjaan sedikit demi sedikit sampai
+                        tuntas.</li>
+                    <li><input type="radio" name="q1" value="2"> E) Menyelesaikan pekerjaan dengan sangat cepat.</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>2. Jika saya mendapatkan hadiah maka</p>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="4"> A) Saya akan merasa senang.</li>
+                    <li><input type="radio" name="q2" value="5"> B) Saya akan membagi kebahagiaan saya dengan
+                        bersedekah.</li>
+                    <li><input type="radio" name="q2" value="3"> C) Saya akan menolaknya karena saya berkecukupan.</li>
+                    <li><input type="radio" name="q2" value="3"> D) Saya menerima dan saya gunakan sendiri.</li>
+                    <li><input type="radio" name="q2" value="1"> E) Saya tidak peduli dengan orang lain.</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>3. Menurut orang lain kedisiplinan dan rasa tanggung jawab saya</p>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="5"> A) Sangat baik</li>
+                    <li><input type="radio" name="q3" value="4"> B) Baik</li>
+                    <li><input type="radio" name="q3" value="3"> C) Cukup</li>
+                    <li><input type="radio" name="q3" value="2"> D) Kurang</li>
+                    <li><input type="radio" name="q3" value="1"> E) Rendah</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>4. Rekan-rekan kerja saya sering datang terlambat 20 menit setelah aturan jam kerja.</p>
+                <ul class="options">
+                    <li><input type="radio" name="q4" value="1"> A) Saya mengikuti teman-teman saya.</li>
+                    <li><input type="radio" name="q4" value="4"> B) Saya mengetahui aturan jam kerja kantor.</li>
+                    <li><input type="radio" name="q4" value="3"> C) Saya datang sesuai jam kerja kantor karena saya
+                        takut dimarahi pimpinan.</li>
+                    <li><input type="radio" name="q4" value="1"> D) Saya datang bekerja sesuai dengan jam</li>
+                    <li><input type="radio" name="q4" value="2"> E) Saya ingin saya mendapat-kan predikat karyawan yang
+                        rajin bekerja jika saya berangkat sesuai jam kantor.</li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>5. Jika ada gosip atau informasi yang belum ada kejelasannya, saya</p>
+                <ul class="options">
+                    <li><input type="radio" name="q5" value="5"> A) Saya mengkonfirmasi informasi tersebut berdasarkan
+                        fakta.</li>
+                    <li><input type="radio" name="q5" value="2"> B) Saya tetap mempercayainya.</li>
+                    <li><input type="radio" name="q5" value="1"> C) Saya tidak peduli.</li>
+                    <li><input type="radio" name="q5" value="3"> D) Saya ragu-ragu untuk mempercayainya.</li>
+                    <li><input type="radio" name="q5" value="2"> E) Saya percaya jika banyak orang yang mempercayai
+                        informasi tersebut</li>
+                </ul>
+            </div>
+
+            <button type="button" onclick="calculateScore()">Calculate Score</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const form = document.getElementById('quiz-form');
+            const resultElement = document.getElementById('result');
+
+            const scores = [];
+
+            form.querySelectorAll('input[type="radio"]:checked').forEach((input, index) => {
+                const score = parseInt(input.value, 10);
+                scores.push({ question: index + 1, score: score });
+            });
+
+            // Calculate total score
+            const totalScore = scores.reduce((sum, current) => sum + current.score, 0);
+
+            resultElement.innerHTML = `<p>Total Skor: ${totalScore}</p>`;
+            resultElement.innerHTML += `<ul class="scores">${scores.map(score => `<li>Pertanyaan ${score.question}: ${score.score}</li>`).join('')}</ul>`;
+        }
+    </script>
+    <div class="Back">
+        <a href="Menu paket soal.html">Back</a>
+    </div>
+</body>
+
+</html>
